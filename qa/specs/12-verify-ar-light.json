@@ -1,0 +1,33 @@
+{
+  "source": "NO reference capture exists for the Arabic 2FA screen (qa/refs/verify.json: capture null). This scenario is gated by numbers alone: horizontal geometry is the 11-verify-en-light spec mirrored through x' = 394 - x - w, typography and strings come from src/i18n/ar/verify.json, colours from the :root light tokens in src/index.css. Vertical positions below the header are deliberately NOT asserted here — Arabic string lengths change the wrap count of the two banners and the subtitle, and with no capture there is nothing to arbitrate a y against. The OTP row keeps dir=ltr, so its six boxes keep the LTR x values.",
+  "page": { "dir": "rtl", "lang": "ar" },
+  "components": [
+    { "key": "backBtn", "expect": { "x": 373, "y": 92.5, "w": 24, "h": 24, "radius": 12 }, "tol": { "geom": 2 }, "note": "mirrored: the back control moves to the trailing edge, margin-inline-start keeps it 3 CSS off the viewport" },
+    { "key": "title", "expect": { "fontSize": 13.5, "fontWeight": "800", "lineHeight": 20, "text": "المصادقة الثنائية" }, "tol": {} },
+    { "key": "heading", "expect": { "cx": 197, "w": 362, "x": 16, "fontSize": 16, "fontWeight": "800", "lineHeight": 24, "textAlign": "center", "text": "تفعيل المصادقة الثنائية" }, "tol": { "geom": 2 } },
+    { "key": "subtitle", "expect": { "cx": 197, "x": 16, "w": 362, "fontSize": 10.5, "lineHeight": 15, "textAlign": "center", "text": "امسح رمز الاستجابة السريعة هذا باستخدام Google Authenticator او Authy او تطبيق مماثل." }, "tol": { "geom": 2 } },
+    { "key": "infoBanner", "expect": { "x": 16, "w": 362, "radius": 8, "bg": "#e7f8f0", "color": "#0b7a5c" }, "tol": { "geom": 2 } },
+    { "key": "infoText", "expect": { "fontSize": 10, "lineHeight": 13, "fontWeight": "600", "text": "المصادقة الثنائية تحمي حسابك، حتى لو تم الكشف عن كلمة المرور الخاصة بك يوما ما." }, "tol": {} },
+    { "key": "qrCard", "expect": { "cx": 197, "w": 163, "h": 163, "radius": 13, "bg": "#ffffff" }, "tol": { "geom": 2 } },
+    { "key": "qr", "expect": { "cx": 197, "w": 129, "h": 129 }, "tol": { "geom": 2 } },
+    { "key": "warnBanner", "expect": { "x": 16, "w": 362, "radius": 8, "bg": "#fdf1df", "color": "#b0761f" }, "tol": { "geom": 2 } },
+    { "key": "warnText", "expect": { "fontSize": 10, "lineHeight": 13.5, "fontWeight": "500", "text": "في حال فقدان جهازك، يرجى التواصل مع إدارة مؤسستك لإعادة تعيين المصادقة الثنائية." }, "tol": {} },
+    { "key": "manualLabel", "expect": { "fontSize": 9, "lineHeight": 12, "letterSpacing": 0.45, "text": "لا يمكنك المسح؟ أدخل هذا الرمز يدويا" }, "tol": {} },
+    { "key": "secretRow", "expect": { "x": 16, "w": 362 }, "tol": { "geom": 2 } },
+    { "key": "secretText", "expect": { "fontSize": 11.5, "fontWeight": "700", "lineHeight": 16 }, "tol": {}, "note": "the base32 fixture stays LTR glyphs inside the RTL row; x is not asserted because the Arabic label above it wraps differently" },
+    { "key": "copyBtn", "expect": { "x": 29, "w": 15, "h": 15 }, "tol": { "geom": 3 }, "note": "mirrored from x=350: the copy control leads the row in RTL" },
+    { "key": "sheetCard", "expect": { "x": 16, "w": 362, "radius": 20, "bg": "#ffffff" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "sheetBar", "expect": { "x": 16, "w": 362, "h": 5 }, "tol": { "geom": 2 } },
+    { "key": "sheetLabel", "expect": { "fontSize": 9, "lineHeight": 13, "letterSpacing": 0.45, "text": "أدخل الرمز المُنشأ للتأكيد" }, "tol": {} },
+    { "key": "pasteBtn", "expect": { "x": 29, "w": 80.5, "h": 17, "fontSize": 11.5, "fontWeight": "600", "color": "#009577", "text": "لصق الرمز" }, "tol": { "geom": 12 }, "note": "mirrored: the row trails on the left in RTL. geom 12 because the run's width is typeface-driven (Poppins advances wider than the capture's font) — the leading edge is pinned to the 13 CSS content edge" },
+    { "key": "otpRow", "expect": { "x": 49, "w": 296, "h": 54 }, "tol": { "geom": 2 }, "note": "dir=ltr is pinned on the row, so the six boxes keep the LTR x grid even in Arabic" },
+    { "key": "otp0", "expect": { "x": 49, "w": 46, "h": 54, "radius": 8, "borderWidth": 2, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "otp1", "expect": { "x": 99, "w": 46, "h": 54, "radius": 8, "borderWidth": 2, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "otp2", "expect": { "x": 149, "w": 46, "h": 54, "radius": 8, "borderWidth": 2, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "otp3", "expect": { "x": 199, "w": 46, "h": 54, "radius": 8, "borderWidth": 2, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "otp4", "expect": { "x": 249, "w": 46, "h": 54, "radius": 8, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "otp5", "expect": { "x": 299, "w": 46, "h": 54, "radius": 8, "borderColor": "#cfd3da", "bg": "#eef2f3" }, "tol": { "geom": 2, "radius": 2 } },
+    { "key": "cta", "expect": { "x": 29, "cx": 197, "w": 336, "h": 42, "radius": 21, "fontSize": 12.5, "fontWeight": "700", "color": "#ffffff", "text": "تفعيل المصادقة الثنائية" }, "tol": { "geom": 2 } },
+    { "key": "laterBtn", "expect": { "cx": 197, "fontSize": 10.5, "fontWeight": "600", "text": "لاحقا" }, "tol": { "geom": 2 } }
+  ]
+}

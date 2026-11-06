@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "بوابة الطالب",
+    "tagline": "بوابة الطلاب"
+  },
+  "login": {
+    "registrationLabel": "ادخل رقم التسجيل",
+    "passwordLabel": "ادخل كلمة المرور",
+    "continue": "تسجيل الدخول",
+    "registrationRequired": "ادخل رقم التسجيل الخاص بك!",
+    "passwordRequired": "ادخل كلمة المرور الخاص بك!",
+    "copyright": "جميع الحقوق محفوظة © 2026"
+  },
+  "verify": {
+    "title": "المصادقة الثنائية",
+    "enable": "تفعيل المصادقة الثنائية",
+    "scanHint": "امسح رمز الاستجابة السريعة هذا باستخدام Google Authenticator او Authy او تطبيق مماثل.",
+    "protectNote": "المصادقة الثنائية تحمي حسابك، حتى لو تم الكشف عن كلمة المرور الخاصة بك يوما ما.",
+    "loseNote": "في حال فقدان جهازك، يرجى التواصل مع إدارة مؤسستك لإعادة تعيين المصادقة الثنائية.",
+    "manualLabel": "لا يمكنك المسح؟ أدخل هذا الرمز يدويا",
+    "copySecret": "نسخ الرمز",
+    "copied": "تم النسخ",
+    "confirmLabel": "أدخل الرمز المُنشأ للتأكيد",
+    "pasteCode": "لصق الرمز",
+    "turnOn": "تفعيل المصادقة الثنائية",
+    "later": "لاحقا",
+    "invalidCode": "أدخل الرمز المكون من 6 أرقام من تطبيق المصادقة."
+  },
+  "home": {
+    "title": "بوابة الطلاب",
+    "bannerAlt": "الإعلان {{index}} من {{total}}",
+    "goToBanner": "الانتقال إلى الإعلان {{index}}"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "cards": "بطاقاتي",
+    "profile": "حسابي"
+  },
+  "services": {
+    "discharge": "التبرئة الإلكترونية",
+    "timetable": "الجدول الزمني",
+    "group-section": "المجموعة و الفوج",
+    "exams-schedule": "الجدول الزمني للإمتحانات",
+    "exam-grades": "علامات الإمتحانات",
+    "assessment": "التقييم المستمر",
+    "percentage": "النسبة المئوية للمقياس",
+    "academic-transcripts": "كشف النقاط",
+    "debts": "الديون",
+    "academic-vacation": "عطلة أكاديمية",
+    "enrollments": "تسجيلاتي",
+    "absences": "الغيابات و الإقصاءات",
+    "onou": "خدمات جامعية",
+    "other-services": "خدمات أخرى"
+  },
+  "empty": {
+    "notAvailable": "عذرا، انت غير معني"
+  },
+  "years": {
+    "2025-2026": "2025/2026",
+    "2024-2025": "2024/2025",
+    "2023-2024": "2023/2024"
+  },
+  "cards": {
+    "title": "بطاقاتي",
+    "front": "الوجه",
+    "back": "الظهر",
+    "flipHint": "اسحب للقلب"
+  },
+  "profile": {
+    "personalInformation": "المعلومات الشخصية",
+    "placeOfBirth": "مكان الميلاد",
+    "dateOfBirth": "تاريخ الميلاد",
+    "settings": "الإعدادات",
+    "changeLanguage": "تغيير اللغة",
+    "theme": "المظهر",
+    "themeSystem": "النظام",
+    "themeDark": "داكن",
+    "themeLight": "فاتح",
+    "twoFactor": "المصادقة الثنائية",
+    "enabled": "مفعّلة",
+    "informationNote": "ملاحظة معلوماتية",
+    "logout": "تسجيل الخروج"
+  },
+  "common": {
+    "back": "رجوع",
+    "close": "إغلاق"
+  }
+}

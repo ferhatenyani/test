@@ -1,0 +1,53 @@
+(node:8952) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+light/en/anim          focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+light/en/anim          eye        toggle found=1 type password -> text
+light/en/anim          shake      x frames 37.5 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.2 40.7 43.4 | peak-to-trough 11.64 CSS (reduced=false)
+light/en/anim          error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/en/anim          push-fwd   url /verify | swing 190 CSS over 22 distinct position(s) (reduced=false)
+light/en/anim          push-back  url /login | swing 398 CSS over 32 distinct position(s)
+light/en/RM            focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+light/en/RM            eye        toggle found=1 type password -> text
+light/en/RM            shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+light/en/RM            error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/en/RM            push-fwd   url /verify | swing 425 CSS over 4 distinct position(s) (reduced=true)
+light/en/RM            push-back  url /login | swing 425 CSS over 3 distinct position(s)
+light/ar/anim          focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+light/ar/anim          eye        toggle found=1 type password -> text
+light/ar/anim          shake      x frames 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 42.5 | peak-to-trough 11.64 CSS (reduced=false)
+light/ar/anim          error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/ar/anim          push-fwd   url /verify | swing 425 CSS over 23 distinct position(s) (reduced=false)
+light/ar/anim          push-back  url /login | swing 387 CSS over 32 distinct position(s)
+light/ar/RM            focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+light/ar/RM            eye        toggle found=1 type password -> text
+light/ar/RM            shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+light/ar/RM            error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/ar/RM            push-fwd   url /verify | swing 425 CSS over 3 distinct position(s) (reduced=true)
+light/ar/RM            push-back  url /login | swing 425 CSS over 3 distinct position(s)
+dark/en/anim           focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+dark/en/anim           eye        toggle found=1 type password -> text
+dark/en/anim           shake      x frames 37.5 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 | peak-to-trough 11.64 CSS (reduced=false)
+dark/en/anim           error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/en/anim           push-fwd   url /verify | swing 425 CSS over 23 distinct position(s) (reduced=false)
+dark/en/anim           push-back  url /login | swing 388 CSS over 32 distinct position(s)
+dark/en/RM             focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+dark/en/RM             eye        toggle found=1 type password -> text
+dark/en/RM             shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+dark/en/RM             error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/en/RM             push-fwd   url /verify | swing 190 CSS over 3 distinct position(s) (reduced=true)
+dark/en/RM             push-back  url /login | swing 425 CSS over 3 distinct position(s)
+dark/ar/anim           focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+dark/ar/anim           eye        toggle found=1 type password -> text
+dark/ar/anim           shake      x frames 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 42.5 | peak-to-trough 11.63 CSS (reduced=false)
+dark/ar/anim           error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/ar/anim           push-fwd   url /verify | swing 425 CSS over 23 distinct position(s) (reduced=false)
+dark/ar/anim           push-back  url /login | swing 391 CSS over 33 distinct position(s)
+dark/ar/RM             focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 149, 119, 0.13) 0px 0px 0px 3px
+dark/ar/RM             eye        toggle found=1 type password -> text
+dark/ar/RM             shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+dark/ar/RM             error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/ar/RM             push-fwd   url /verify | swing 425 CSS over 3 distinct position(s) (reduced=true)
+dark/ar/RM             push-back  url /login | swing 425 CSS over 3 distinct position(s)
+
+48 probes · 0 failed
+OK — every motion probe measured a real state change

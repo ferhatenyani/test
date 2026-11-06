@@ -1,0 +1,407 @@
+{
+  "source": "NO reference capture exists for the dark 2FA screen (qa/refs/verify.json: capture null). Geometry is identical to 11-verify-en-light (same English strings, same wrap counts); every colour is the [data-theme=\"dark\"] value of the same token the component uses in src/index.css. These assertions therefore prove the page flips tokens rather than hard-coding light values — they are not transcribed from a screenshot. NOTE: dark surfaces re-anchored 2026-10-26 to values measured from the real dark LOGIN capture 18.25.56 (2) (this scenario has capture:null, so its old colour values were render-derived and self-referential): --field #21252e (login: 2000px single-colour sample), --card #171a21 (probe box 30,350 90x18 read #171a21/#171a23), --app #101115 (probe box 200,250 30x15 = 100% one colour).",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "backBtn",
+      "expect": {
+        "x": -3,
+        "y": 92.5,
+        "w": 24,
+        "h": 24,
+        "radius": 12
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "title",
+      "expect": {
+        "x": 26.5,
+        "cy": 105.3,
+        "fontSize": 13.5,
+        "fontWeight": "800",
+        "lineHeight": 20,
+        "color": "#f2f3f7",
+        "text": "Two-factor authentication"
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "heading",
+      "expect": {
+        "cx": 196.8,
+        "cy": 143.8,
+        "x": 16,
+        "w": 362,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "lineHeight": 24,
+        "textAlign": "center",
+        "color": "#f2f3f7",
+        "text": "Enable 2FA"
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "subtitle",
+      "expect": {
+        "cx": 196.5,
+        "cy": 167.5,
+        "x": 16,
+        "w": 362,
+        "fontSize": 10.5,
+        "lineHeight": 15,
+        "textAlign": "center",
+        "color": "#9aa0ad",
+        "text": "Scan this QR code with Google Authenticator, Authy, or a similar app."
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "infoBanner",
+      "expect": {
+        "x": 16,
+        "y": 186,
+        "w": 362,
+        "h": 27.5,
+        "radius": 8,
+        "bg": "#10322a",
+        "color": "#6fdcb6"
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "infoText",
+      "expect": {
+        "fontSize": 10,
+        "lineHeight": 13,
+        "fontWeight": "600",
+        "color": "#6fdcb6",
+        "text": "2FA protects your account, even if your password is ever exposed."
+      },
+      "tol": {}
+    },
+    {
+      "key": "qrCard",
+      "expect": {
+        "x": 115.5,
+        "y": 218.5,
+        "cx": 197,
+        "w": 163,
+        "h": 163,
+        "radius": 13,
+        "bg": "#171a21"
+      },
+      "tol": {
+        "geom": 2
+      },
+      "note": "a QR needs a light field; the code module itself renders #000 on #fff from react-qr-code, only the card surface flips"
+    },
+    {
+      "key": "qr",
+      "expect": {
+        "x": 132.5,
+        "y": 235.5,
+        "w": 129,
+        "h": 129
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "warnBanner",
+      "expect": {
+        "x": 16,
+        "y": 391.5,
+        "w": 362,
+        "h": 35,
+        "radius": 8,
+        "bg": "#33270f",
+        "color": "#e0b872"
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "warnText",
+      "expect": {
+        "fontSize": 10,
+        "lineHeight": 13.5,
+        "fontWeight": "500",
+        "color": "#e0b872",
+        "text": "If you lose this device, contact your institution's administration to reset your two-facto"
+      },
+      "tol": {},
+      "note": "90 chars — measure.mjs truncates the dumped textContent at 90"
+    },
+    {
+      "key": "manualLabel",
+      "expect": {
+        "x": 17,
+        "cy": 443,
+        "fontSize": 9,
+        "lineHeight": 12,
+        "letterSpacing": 0.45,
+        "color": "#9aa0ad",
+        "text": "Can't scan? Enter this code manually"
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "secretRow",
+      "expect": {
+        "x": 16,
+        "y": 457,
+        "w": 362,
+        "h": 36
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "secretText",
+      "expect": {
+        "x": 29,
+        "cy": 475,
+        "fontSize": 11.5,
+        "fontWeight": "700",
+        "lineHeight": 16,
+        "color": "#f2f3f7"
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "copyBtn",
+      "expect": {
+        "x": 350,
+        "cy": 473,
+        "w": 15,
+        "h": 15
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "sheetCard",
+      "expect": {
+        "x": 16,
+        "y": 500,
+        "w": 362,
+        "h": 198,
+        "radius": 20,
+        "bg": "#171a21"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "sheetBar",
+      "expect": {
+        "x": 16,
+        "y": 500,
+        "w": 362,
+        "h": 5
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "sheetLabel",
+      "expect": {
+        "x": 29,
+        "cy": 524.5,
+        "fontSize": 9,
+        "lineHeight": 13,
+        "letterSpacing": 0.45,
+        "color": "#9aa0ad",
+        "text": "Enter the generated code to confirm"
+      },
+      "tol": {
+        "geom": 3
+      }
+    },
+    {
+      "key": "pasteBtn",
+      "expect": {
+        "x": 284.5,
+        "cy": 552.5,
+        "w": 80.5,
+        "h": 17,
+        "fontSize": 11.5,
+        "fontWeight": "600",
+        "color": "#009577",
+        "text": "Paste code"
+      },
+      "tol": {
+        "geom": 12
+      },
+      "note": "geom 12 on x/w only (Poppins advance, see 11-verify-en-light); the rest is at the default tolerance"
+    },
+    {
+      "key": "otpRow",
+      "expect": {
+        "x": 49,
+        "y": 579,
+        "w": 296,
+        "h": 54
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "otp0",
+      "expect": {
+        "x": 49,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "otp1",
+      "expect": {
+        "x": 99,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "otp2",
+      "expect": {
+        "x": 149,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "otp3",
+      "expect": {
+        "x": 199,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "otp4",
+      "expect": {
+        "x": 249,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "otp5",
+      "expect": {
+        "x": 299,
+        "y": 579,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderColor": "#3a3f4d",
+        "bg": "#21252e"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      }
+    },
+    {
+      "key": "cta",
+      "expect": {
+        "x": 29,
+        "y": 644,
+        "cx": 197,
+        "w": 336,
+        "h": 42,
+        "radius": 21,
+        "fontSize": 12.5,
+        "fontWeight": "700",
+        "color": "#ffffff",
+        "text": "Turn on 2FA"
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "laterBtn",
+      "expect": {
+        "cx": 197,
+        "cy": 719,
+        "fontSize": 10.5,
+        "fontWeight": "600",
+        "color": "#9aa0ad",
+        "text": "Later"
+      },
+      "tol": {
+        "geom": 3
+      }
+    }
+  ]
+}

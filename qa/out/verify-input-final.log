@@ -1,0 +1,125 @@
+(node:1576) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+light/en     mount            boxes 46x54 46x54 46x54 46x54 46x54 46x54 | gap 4 4 4 4 4 | x 49 99 149 199 249 299 ascending=true | focus 0 | filled ''
+light/en     no-mirror        box0 x 49 -> box5 x 299 (dir=ltr page, row must stay ltr)
+light/en     advance 1        ''@0 -> '1'@1 | want '1'@1
+light/en     advance 2        '1'@1 -> '12'@2 | want '12'@2
+light/en     advance 3        '12'@2 -> '123'@3 | want '123'@3
+light/en     advance 4        '123'@3 -> '1234'@4 | want '1234'@4
+light/en     advance 5        '1234'@4 -> '12345'@5 | want '12345'@5
+light/en     advance 6        '12345'@5 -> '123456'@5 | want '123456'@5
+light/en     backspace 1      '123456'@5 -> '12345'@5 | want '12345'@5
+light/en     backspace 2      '12345'@5 -> '1234'@4 | want '1234'@4
+light/en     backspace 3      '1234'@4 -> '123'@3 | want '123'@3
+light/en     backspace 4      '123'@3 -> '12'@2 | want '12'@2
+light/en     backspace 5      '12'@2 -> '1'@1 | want '1'@1
+light/en     backspace 6      '1'@1 -> ''@0 | want ''@0
+light/en     backspace clears after 6 presses: ''@0 (want ''@0) | all boxes empty=true
+light/en     non-digit drop   typed a1b2c3-4 -> '1234'@4 | want '1234'@4
+light/en     clear-to-empty   ''@0 (want ''@0)
+light/en     paste 6          via ctrl+v -> '246813'@5 | want '246813'@5 | radius 8px border 2px
+light/en     paste junk       via ctrl+v 'a1-2b3 45z678' -> '123456'@5 | want '123456'@5
+light/en     pasteBtn         clipboard write ok=true -> '135790'@-1 | want '135790'@?
+light/en     cta paint @1     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/en     cta paint @2     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/en     cta paint @3     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/en     cta paint @4     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/en     cta paint @5     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/en     cta paint @6     gradient=false (want false) bg rgba(0, 149, 119, 0.92) disabled=false h 42
+light/en     cta one flip     transitions at len 1:G 2:G 3:G 4:G 5:G 6:flat | flips 1 (want 1, at 6)
+light/en     gate @5          url /verify | filled '12345'@-1 | errH 14 | box border rgb(207, 211, 218) -> rgb(217, 83, 79) (reddish=true) w 2px
+light/en     error clears @6  '123456'@5 | errH null (want null) | gradient=false border rgb(207, 211, 218)
+light/en     confirm @6       url /home (want /home)
+light/ar     mount            boxes 46x54 46x54 46x54 46x54 46x54 46x54 | gap 4 4 4 4 4 | x 49 99 149 199 249 299 ascending=true | focus 0 | filled ''
+light/ar     no-mirror        box0 x 49 -> box5 x 299 (dir=rtl page, row must stay ltr)
+light/ar     advance 1        ''@0 -> '1'@1 | want '1'@1
+light/ar     advance 2        '1'@1 -> '12'@2 | want '12'@2
+light/ar     advance 3        '12'@2 -> '123'@3 | want '123'@3
+light/ar     advance 4        '123'@3 -> '1234'@4 | want '1234'@4
+light/ar     advance 5        '1234'@4 -> '12345'@5 | want '12345'@5
+light/ar     advance 6        '12345'@5 -> '123456'@5 | want '123456'@5
+light/ar     backspace 1      '123456'@5 -> '12345'@5 | want '12345'@5
+light/ar     backspace 2      '12345'@5 -> '1234'@4 | want '1234'@4
+light/ar     backspace 3      '1234'@4 -> '123'@3 | want '123'@3
+light/ar     backspace 4      '123'@3 -> '12'@2 | want '12'@2
+light/ar     backspace 5      '12'@2 -> '1'@1 | want '1'@1
+light/ar     backspace 6      '1'@1 -> ''@0 | want ''@0
+light/ar     backspace clears after 6 presses: ''@0 (want ''@0) | all boxes empty=true
+light/ar     non-digit drop   typed a1b2c3-4 -> '1234'@4 | want '1234'@4
+light/ar     clear-to-empty   ''@0 (want ''@0)
+light/ar     paste 6          via ctrl+v -> '246813'@5 | want '246813'@5 | radius 8px border 2px
+light/ar     paste junk       via ctrl+v 'a1-2b3 45z678' -> '123456'@5 | want '123456'@5
+light/ar     pasteBtn         clipboard write ok=true -> '135790'@-1 | want '135790'@?
+light/ar     cta paint @1     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/ar     cta paint @2     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/ar     cta paint @3     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/ar     cta paint @4     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/ar     cta paint @5     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+light/ar     cta paint @6     gradient=false (want false) bg rgba(0, 149, 119, 0.97) disabled=false h 42
+light/ar     cta one flip     transitions at len 1:G 2:G 3:G 4:G 5:G 6:flat | flips 1 (want 1, at 6)
+light/ar     gate @5          url /verify | filled '12345'@-1 | errH 14 | box border rgb(207, 211, 218) -> rgb(217, 83, 79) (reddish=true) w 2px
+light/ar     error clears @6  '123456'@5 | errH null (want null) | gradient=false border rgb(207, 211, 218)
+light/ar     confirm @6       url /home (want /home)
+dark/en      mount            boxes 46x54 46x54 46x54 46x54 46x54 46x54 | gap 4 4 4 4 4 | x 49 99 149 199 249 299 ascending=true | focus 0 | filled ''
+dark/en      no-mirror        box0 x 49 -> box5 x 299 (dir=ltr page, row must stay ltr)
+dark/en      advance 1        ''@0 -> '1'@1 | want '1'@1
+dark/en      advance 2        '1'@1 -> '12'@2 | want '12'@2
+dark/en      advance 3        '12'@2 -> '123'@3 | want '123'@3
+dark/en      advance 4        '123'@3 -> '1234'@4 | want '1234'@4
+dark/en      advance 5        '1234'@4 -> '12345'@5 | want '12345'@5
+dark/en      advance 6        '12345'@5 -> '123456'@5 | want '123456'@5
+dark/en      backspace 1      '123456'@5 -> '12345'@5 | want '12345'@5
+dark/en      backspace 2      '12345'@5 -> '1234'@4 | want '1234'@4
+dark/en      backspace 3      '1234'@4 -> '123'@3 | want '123'@3
+dark/en      backspace 4      '123'@3 -> '12'@2 | want '12'@2
+dark/en      backspace 5      '12'@2 -> '1'@1 | want '1'@1
+dark/en      backspace 6      '1'@1 -> ''@0 | want ''@0
+dark/en      backspace clears after 6 presses: ''@0 (want ''@0) | all boxes empty=true
+dark/en      non-digit drop   typed a1b2c3-4 -> '1234'@4 | want '1234'@4
+dark/en      clear-to-empty   ''@0 (want ''@0)
+dark/en      paste 6          via ctrl+v -> '246813'@5 | want '246813'@5 | radius 8px border 2px
+dark/en      paste junk       via ctrl+v 'a1-2b3 45z678' -> '123456'@5 | want '123456'@5
+dark/en      pasteBtn         clipboard write ok=true -> '135790'@-1 | want '135790'@?
+dark/en      cta paint @1     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/en      cta paint @2     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/en      cta paint @3     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/en      cta paint @4     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/en      cta paint @5     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/en      cta paint @6     gradient=false (want false) bg rgba(0, 149, 119, 0.97) disabled=false h 42
+dark/en      cta one flip     transitions at len 1:G 2:G 3:G 4:G 5:G 6:flat | flips 1 (want 1, at 6)
+dark/en      gate @5          url /verify | filled '12345'@-1 | errH 14 | box border rgb(58, 63, 77) -> rgb(240, 112, 108) (reddish=true) w 2px
+dark/en      error clears @6  '123456'@5 | errH null (want null) | gradient=false border rgb(58, 63, 77)
+dark/en      confirm @6       url /home (want /home)
+dark/ar      mount            boxes 46x54 46x54 46x54 46x54 46x54 46x54 | gap 4 4 4 4 4 | x 49 99 149 199 249 299 ascending=true | focus 0 | filled ''
+dark/ar      no-mirror        box0 x 49 -> box5 x 299 (dir=rtl page, row must stay ltr)
+dark/ar      advance 1        ''@0 -> '1'@1 | want '1'@1
+dark/ar      advance 2        '1'@1 -> '12'@2 | want '12'@2
+dark/ar      advance 3        '12'@2 -> '123'@3 | want '123'@3
+dark/ar      advance 4        '123'@3 -> '1234'@4 | want '1234'@4
+dark/ar      advance 5        '1234'@4 -> '12345'@5 | want '12345'@5
+dark/ar      advance 6        '12345'@5 -> '123456'@5 | want '123456'@5
+dark/ar      backspace 1      '123456'@5 -> '12345'@5 | want '12345'@5
+dark/ar      backspace 2      '12345'@5 -> '1234'@4 | want '1234'@4
+dark/ar      backspace 3      '1234'@4 -> '123'@3 | want '123'@3
+dark/ar      backspace 4      '123'@3 -> '12'@2 | want '12'@2
+dark/ar      backspace 5      '12'@2 -> '1'@1 | want '1'@1
+dark/ar      backspace 6      '1'@1 -> ''@0 | want ''@0
+dark/ar      backspace clears after 6 presses: ''@0 (want ''@0) | all boxes empty=true
+dark/ar      non-digit drop   typed a1b2c3-4 -> '1234'@4 | want '1234'@4
+dark/ar      clear-to-empty   ''@0 (want ''@0)
+dark/ar      paste 6          via ctrl+v -> '246813'@5 | want '246813'@5 | radius 8px border 2px
+dark/ar      paste junk       via ctrl+v 'a1-2b3 45z678' -> '123456'@5 | want '123456'@5
+dark/ar      pasteBtn         clipboard write ok=true -> '135790'@-1 | want '135790'@?
+dark/ar      cta paint @1     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/ar      cta paint @2     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/ar      cta paint @3     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/ar      cta paint @4     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/ar      cta paint @5     gradient=true (want true) bg rgba(0, 0, 0, 0) disabled=false h 42
+dark/ar      cta paint @6     gradient=false (want false) bg rgba(0, 149, 119, 0.97) disabled=false h 42
+dark/ar      cta one flip     transitions at len 1:G 2:G 3:G 4:G 5:G 6:flat | flips 1 (want 1, at 6)
+dark/ar      gate @5          url /verify | filled '12345'@-1 | errH 14 | box border rgb(58, 63, 77) -> rgb(240, 112, 108) (reddish=true) w 2px
+dark/ar      error clears @6  '123456'@5 | errH null (want null) | gradient=false border rgb(58, 63, 77)
+dark/ar      confirm @6       url /home (want /home)
+
+120 probes · 0 failed
+OK — advance, backspace walk, digit-only paste, and the 6-digit CTA gate all measured real state

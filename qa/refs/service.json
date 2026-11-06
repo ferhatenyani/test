@@ -1,0 +1,83 @@
+{
+  "30-service-discharge-en": {
+    "route": "/service/discharge",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.05 (1).jpeg",
+    "pairing": "verified"
+  },
+  "31-service-discharge-ar": {
+    "route": "/service/discharge",
+    "lang": "ar",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.05.jpeg",
+    "pairing": "verified"
+  },
+  "32-service-exam-grades": {
+    "route": "/service/exam-grades",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.06.jpeg",
+    "pairing": "verified"
+  },
+  "33-service-group-section": {
+    "route": "/service/group-section",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.06 (1).jpeg",
+    "pairing": "verified"
+  },
+  "34-service-exams-schedule": {
+    "route": "/service/exams-schedule",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.06 (2).jpeg",
+    "pairing": "verified"
+  },
+  "35-service-assessment-blank": {
+    "route": "/service/assessment",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.06 (3).jpeg",
+    "pairing": "verified"
+  },
+  "36-service-transcripts-chips": {
+    "route": "/service/academic-transcripts",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.06 (4).jpeg",
+    "pairing": "verified"
+  },
+  "37-service-timetable-days": {
+    "route": "/service/timetable",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.26.05 (2).jpeg",
+    "pairing": "verified",
+    "note": "reference shows a 122 CSS band + a scrolling day-pill row + 'No classes scheduled'; no such variant exists in src/data/services.js. Kept in the set so the gap stays visible — see qa/requests/service.md"
+  },
+  "38-service-unknown-slug": {
+    "route": "/service/not-a-real-service",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": null,
+    "pairing": "no reference — deep-link guard, behaviour only"
+  },
+  "39-service-transcripts-chips-rtl": {
+    "route": "/service/academic-transcripts",
+    "lang": "ar",
+    "theme": "light",
+    "profile": "a360",
+    "capture": null,
+    "pairing": "no reference — mirrors 36 to pin the RTL pill row and arrow flip"
+  }
+}

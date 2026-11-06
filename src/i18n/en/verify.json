@@ -1,0 +1,15 @@
+{
+  "title": "Two-factor authentication",
+  "enable": "Enable 2FA",
+  "scanHint": "Scan this QR code with Google Authenticator, Authy, or a similar app.",
+  "protectNote": "2FA protects your account, even if your password is ever exposed.",
+  "loseNote": "If you lose this device, contact your institution's administration to reset your two-factor authentication.",
+  "manualLabel": "Can't scan? Enter this code manually",
+  "copySecret": "Copy secret",
+  "copied": "Copied",
+  "confirmLabel": "Enter the generated code to confirm",
+  "pasteCode": "Paste code",
+  "turnOn": "Turn on 2FA",
+  "later": "Later",
+  "invalidCode": "Enter the 6-digit code from your authenticator app."
+}

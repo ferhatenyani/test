@@ -1,0 +1,34 @@
+(node:19464) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+20-home-en-light             394x853@1.5  qa=69  dir=ltr
+21-home-en-light-slide2      394x853@1.5  qa=69  dir=ltr
+22-home-en-dark              394x853@1.5  qa=69  dir=ltr
+23-home-en-dark-slide2       394x853@1.5  qa=69  dir=ltr
+24-home-ar-dark              394x853@1.5  qa=69  dir=rtl
+25-home-ar-dark-slide2       394x853@1.5  qa=69  dir=rtl
+01-login-en-light            360x780@1.5  qa=16  dir=ltr
+02-login-en-light-filled     360x780@1.5  qa=16  dir=ltr
+03-login-en-light-focus      360x780@1.5  qa=16  dir=ltr
+04-login-en-dark             360x780@1.5  qa=16  dir=ltr
+05-login-en-dark-focus       360x780@1.5  qa=16  dir=ltr
+06-login-ar-dark             360x780@1.5  qa=16  dir=rtl
+07-login-ar-dark-filled      360x780@1.5  qa=16  dir=rtl
+08-login-ar-light            360x780@1.5  qa=16  dir=rtl
+09-login-ar-light-focus      360x780@1.5  qa=16  dir=rtl
+10-login-en-light-error      360x780@1.5  qa=18  dir=ltr
+30-service-discharge-en      360x780@1.5  qa=8  dir=ltr
+31-service-discharge-ar      360x780@1.5  qa=8  dir=rtl
+32-service-exam-grades       360x780@1.5  qa=8  dir=ltr
+33-service-group-section     360x780@1.5  qa=8  dir=ltr
+34-service-exams-schedule    360x780@1.5  qa=8  dir=ltr
+35-service-assessment-blank  360x780@1.5  qa=5  dir=ltr
+36-service-transcripts-chips 360x780@1.5  qa=10  dir=ltr
+37-service-timetable-days    360x780@1.5  qa=8  dir=ltr
+38-service-unknown-slug      360x780@1.5  qa=69  dir=ltr
+39-service-transcripts-chips-rtl 360x780@1.5  qa=10  dir=rtl
+11-verify-en-light           394x853@1.5  qa=28  dir=ltr
+12-verify-ar-light           394x853@1.5  qa=28  dir=rtl
+13-verify-en-dark            394x853@1.5  qa=28  dir=ltr
+14-verify-ar-dark            394x853@1.5  qa=28  dir=rtl
+
+renders -> qa/out   measurements -> qa/measured

@@ -1,0 +1,10 @@
+WhatsApp Image 2026-10-25 at 18.35.12.jpeg  591x1280 device = 394x853 CSS (÷1.5)
+box 24,596 44x44 CSS — 209 colours, top:
+  #ffffff  832 px  43.0%
+  #eef2f3  393 px  20.3%
+  #fffeff  74 px  3.8%
+  #feffff  54 px  2.8%
+  #fbfffd  41 px  2.1%
+  #edf3f3  30 px  1.5%
+  #fcffff  28 px  1.4%
+  #1f816a  23 px  1.2%

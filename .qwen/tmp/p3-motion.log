@@ -1,0 +1,66 @@
+(node:16112) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+light/en/anim          focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+light/en/anim          eye        toggle found=1 type password -> text
+light/en/anim          shake      x frames 37.5 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 | peak-to-trough 11.63 CSS (reduced=false)
+light/en/anim          error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/en/anim          push-fwd   url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+light/en/anim          push-back  url /login | swing 0 CSS
+light/en/RM            focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+light/en/RM            eye        toggle found=1 type password -> text
+light/en/RM            shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+light/en/RM            error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/en/RM            push-fwd   url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+light/en/RM            push-back  url /login | swing 0 CSS
+light/ar/anim          focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+light/ar/anim          eye        toggle found=1 type password -> text
+light/ar/anim          shake      x frames 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 42.5 | peak-to-trough 11.63 CSS (reduced=false)
+light/ar/anim          error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/ar/anim          push-fwd   url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+light/ar/anim          push-back  url /login | swing 0 CSS
+light/ar/RM            focus      border rgb(161, 163, 162) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+light/ar/RM            eye        toggle found=1 type password -> text
+light/ar/RM            shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+light/ar/RM            error      pill border rgb(217, 83, 79) (reddish=true), message box h 21.8 opacity 1
+light/ar/RM            push-fwd   url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+light/ar/RM            push-back  url /login | swing 0 CSS
+dark/en/anim           focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+dark/en/anim           eye        toggle found=1 type password -> text
+dark/en/anim           shake      x frames 37.5 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.3 40.7 43.4 | peak-to-trough 11.63 CSS (reduced=false)
+dark/en/anim           error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/en/anim           push-fwd   url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+dark/en/anim           push-back  url /login | swing 0 CSS
+dark/en/RM             focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+dark/en/RM             eye        toggle found=1 type password -> text
+dark/en/RM             shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+dark/en/RM             error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/en/RM             push-fwd   url /verify | enter x 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+dark/en/RM             push-back  url /login | swing 65 CSS
+dark/ar/anim           focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+dark/ar/anim           eye        toggle found=1 type password -> text
+dark/ar/anim           shake      x frames 37.5 37.5 37.5 37.5 36.5 33.9 31.8 31.8 35.2 40.7 43.4 42.5 | peak-to-trough 11.63 CSS (reduced=false)
+dark/ar/anim           error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/ar/anim           push-fwd   url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+dark/ar/anim           push-back  url /login | swing 0 CSS
+dark/ar/RM             focus      border rgb(147, 150, 157) -> rgb(0, 149, 119); shadow none -> rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+dark/ar/RM             eye        toggle found=1 type password -> text
+dark/ar/RM             shake      x frames 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 37.5 | peak-to-trough 0.00 CSS (reduced=true)
+dark/ar/RM             error      pill border rgb(240, 112, 108) (reddish=true), message box h 21.8 opacity 1
+dark/ar/RM             push-fwd   url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+dark/ar/RM             push-back  url /login | swing 65 CSS
+
+48 probes · 14 failed
+  FAIL light/en/anim / push-fwd: url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+  FAIL light/en/anim / push-back: url /login | swing 0 CSS
+  FAIL light/en/RM / push-fwd: url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+  FAIL light/ar/anim / push-fwd: url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+  FAIL light/ar/anim / push-back: url /login | swing 0 CSS
+  FAIL light/ar/RM / push-fwd: url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+  FAIL dark/en/anim / push-fwd: url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+  FAIL dark/en/anim / push-back: url /login | swing 0 CSS
+  FAIL dark/en/RM / push-fwd: url /verify | enter x 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+  FAIL dark/en/RM / push-back: url /login | swing 65 CSS
+  FAIL dark/ar/anim / push-fwd: url /verify | enter x 0 0 0 0 0 0 0 0 0 0 0 0 0 0 | swing 0 CSS (reduced=false)
+  FAIL dark/ar/anim / push-back: url /login | swing 0 CSS
+  FAIL dark/ar/RM / push-fwd: url /verify | enter x 0 0 0 0 0 0 -65 -65 -65 -65 -65 -65 -65 -65 | swing 65 CSS (reduced=true)
+  FAIL dark/ar/RM / push-back: url /login | swing 65 CSS

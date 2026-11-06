@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Offline — Progress Webetu</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: #f2f3f5;
+        color: #1b1c1f;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        text-align: center;
+        padding: 24px;
+      }
+      h1 { font-size: 20px; margin: 0; }
+      p { font-size: 14px; color: #8a8f98; margin: 0; max-width: 32ch; }
+      a {
+        margin-top: 8px;
+        background: #009577;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 28px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #171922; color: #f2f3f7; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>You're offline</h1>
+    <p>Progress Webetu needs a connection to reach the student portal.</p>
+    <a href="/">Try again</a>
+  </body>
+</html>

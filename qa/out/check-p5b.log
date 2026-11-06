@@ -1,0 +1,10 @@
+PASS  40-profile-en-light  (56 measured)
+PASS  41-profile-en-dark  (56 measured)
+PASS  42-profile-ar-light  (56 measured)
+PASS  43-profile-ar-dark  (56 measured)
+PASS  44-profile-en-light-a360  (56 measured)
+PASS  45-profile-en-dark-a360  (56 measured)
+PASS  46-profile-ar-light-a360  (56 measured)
+PASS  47-profile-ar-dark-a360  (56 measured)
+
+308 assertions passed, 0 failed across 8 scenarios

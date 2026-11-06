@@ -1,0 +1,74 @@
+{
+  "40-profile-en-light": {
+    "route": "/profile",
+    "lang": "en",
+    "theme": "light",
+    "session": true,
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no readable reference exists — Profile's only refs are two 2048x1536 photos OF A PHYSICAL SCREEN (18.34.09), moire + perspective + landscape, good for ORDER only, never for px or colour. See qa/PENDING.md PHASE 5."
+  },
+  "41-profile-en-dark": {
+    "route": "/profile",
+    "lang": "en",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no readable reference; dark COLOURS come from the clean login/home dark captures (#101115 page, #171a21 card — each flat over 200-2000 px), not from this render"
+  },
+  "42-profile-ar-light": {
+    "route": "/profile",
+    "lang": "ar",
+    "theme": "light",
+    "session": true,
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no readable reference; RTL contract asserted as page.dir=rtl plus the nav NOT mirroring (dir=ltr), transferred from the capture-verified home AR spec"
+  },
+  "43-profile-ar-dark": {
+    "route": "/profile",
+    "lang": "ar",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no readable reference; combines the 41 colour source and the 42 RTL contract"
+  },
+  "44-profile-en-light-a360": {
+    "route": "/profile",
+    "lang": "en",
+    "theme": "light",
+    "session": true,
+    "profile": "a360",
+    "capture": null,
+    "pairing": "no readable reference. Carries ORDER + COLOUR + TEXT assertions ONLY — no absolute nav geometry, because there is no verified a360 Profile/home nav number to transfer (home's nav is capture-verified on a394 only)."
+  },
+  "45-profile-en-dark-a360": {
+    "route": "/profile",
+    "lang": "en",
+    "theme": "dark",
+    "session": true,
+    "profile": "a360",
+    "capture": null,
+    "pairing": "as 44: order + colour + text only, no absolute geometry"
+  },
+  "46-profile-ar-light-a360": {
+    "route": "/profile",
+    "lang": "ar",
+    "theme": "light",
+    "session": true,
+    "profile": "a360",
+    "capture": null,
+    "pairing": "as 44 plus the RTL contract (page.dir=rtl, nav stays ltr)"
+  },
+  "47-profile-ar-dark-a360": {
+    "route": "/profile",
+    "lang": "ar",
+    "theme": "dark",
+    "session": true,
+    "profile": "a360",
+    "capture": null,
+    "pairing": "as 46 with the dark colours from the clean login/home dark captures"
+  }
+}

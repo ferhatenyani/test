@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* 3-way theme: driven by data-theme on <html>, never prefers-color-scheme in CSS alone. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-cairo: "Cairo", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #009577;
+  --color-brand-dark: #008168;
+  --color-tile: #009576;
+  --color-tile-border: #39a38c;
+  --color-nav: #33354e;
+  --color-nav-active: #009577;
+  --color-nav-active-border: #328c7a;
+  --color-mint: #7fd6be;
+  --color-danger: #e14b3b;
+}
+
+/* Semantic tokens that flip with the theme. */
+@theme inline {
+  --color-app: var(--app);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-label: var(--label);
+  --color-hairline: var(--hairline);
+  --color-field: var(--field);
+  --color-field-border: var(--field-border);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-fg: var(--warn-fg);
+  --color-error: var(--err);
+}
+
+:root {
+  --app: #eef0f3;
+  --card: #ffffff;
+  --ink: #1f2430;
+  --muted: #8a8f98;
+  --label: #6b7280;
+  --hairline: #ececef;
+  --field: #e8eaee;
+  --field-border: #cfd3da;
+  --info-bg: #e7f8f0;
+  --info-fg: #0b7a5c;
+  --warn-bg: #fdf1df;
+  --warn-fg: #b0761f;
+  --err: #d9534f;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --app: #171922;
+  --card: #20232e;
+  --ink: #f2f3f7;
+  --muted: #8b90a0;
+  --label: #9aa0ad;
+  --hairline: #2c3040;
+  --field: #2a2e3a;
+  --field-border: #3a3f4d;
+  --info-bg: #10322a;
+  --info-fg: #6fdcb6;
+  --warn-bg: #33270f;
+  --warn-fg: #e0b872;
+  --err: #f0706c;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--app);
+  color: var(--ink);
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Arabic swaps the whole stack to Cairo (D10). */
+html[dir="rtl"] body {
+  font-family: var(--font-cairo);
+}
+
+/* The keyed logo is black ink, which vanishes on the dark card. The reference
+   dark login shows it in white, so invert the ink while the alpha-keyed
+   background stays transparent; hue-rotate puts the swoosh colours back. */
+[data-theme="dark"] .logo-ink {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* iOS Safari URL bar: 100dvh only, never 100vh. */
+.app-shell {
+  min-height: 100dvh;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+/* Remove iOS's native pill rendering on inputs. */
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  appearance: none;
+  border-radius: 0;
+}
+
+@keyframes shake-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: shake-x 300ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shake {
+    animation: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}

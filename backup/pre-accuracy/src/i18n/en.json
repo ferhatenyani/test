@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "Student Portal",
+    "tagline": "Student Portal"
+  },
+  "login": {
+    "registrationLabel": "Registration number",
+    "passwordLabel": "Password",
+    "continue": "LOGIN",
+    "registrationRequired": "Enter your registration number!",
+    "passwordRequired": "Enter your password!",
+    "copyright": "Copyright © 2026"
+  },
+  "verify": {
+    "title": "Two-factor authentication",
+    "enable": "Enable 2FA",
+    "scanHint": "Scan this QR code with Google Authenticator, Authy, or a similar app.",
+    "protectNote": "2FA protects your account, even if your password is ever exposed.",
+    "loseNote": "If you lose this device, contact your institution's administration to reset your two-factor authentication.",
+    "manualLabel": "Can't scan? Enter this code manually",
+    "copySecret": "Copy secret",
+    "copied": "Copied",
+    "confirmLabel": "Enter the generated code to confirm",
+    "pasteCode": "Paste code",
+    "turnOn": "Turn on 2FA",
+    "later": "Later",
+    "invalidCode": "Enter the 6-digit code from your authenticator app."
+  },
+  "home": {
+    "title": "Student Portal",
+    "bannerAlt": "Announcement {{index}} of {{total}}",
+    "goToBanner": "Go to banner {{index}}"
+  },
+  "nav": {
+    "home": "Home",
+    "cards": "Cards",
+    "profile": "Profile"
+  },
+  "services": {
+    "discharge": "Discharge",
+    "timetable": "Timetable",
+    "group-section": "Group and Section",
+    "exams-schedule": "Exams Schedule",
+    "exam-grades": "Exam Grades",
+    "assessment": "Assessment",
+    "percentage": "Percentage (%)",
+    "academic-transcripts": "Academic transcripts",
+    "debts": "Debts",
+    "academic-vacation": "Academic vacation",
+    "enrollments": "Enrollments",
+    "absences": "Absences & Exclusions",
+    "onou": "ONOU Services",
+    "other-services": "Other services"
+  },
+  "empty": {
+    "notAvailable": "Data not available currently!"
+  },
+  "years": {
+    "2025-2026": "2025/2026",
+    "2024-2025": "2024/2025",
+    "2023-2024": "2023/2024"
+  },
+  "cards": {
+    "title": "Cards",
+    "front": "FRONT",
+    "back": "BACK",
+    "flipHint": "Drag to flip"
+  },
+  "profile": {
+    "personalInformation": "Personal information",
+    "placeOfBirth": "Place of Birth",
+    "dateOfBirth": "Date of Birth",
+    "settings": "Settings",
+    "changeLanguage": "Change Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "twoFactor": "Two-factor authentication",
+    "enabled": "Enabled",
+    "informationNote": "Information note",
+    "logout": "LOGOUT"
+  },
+  "common": {
+    "back": "Back",
+    "close": "Close"
+  }
+}

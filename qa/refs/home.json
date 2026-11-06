@@ -1,0 +1,59 @@
+{
+  "20-home-en-light": {
+    "route": "/home",
+    "lang": "en",
+    "theme": "light",
+    "session": true,
+    "profile": "a394",
+    "capture": "WhatsApp Image 2026-10-25 at 18.18.55.jpeg",
+    "pairing": "Home LIGHT EN, banner slide 1 — given by the parent brief, confirmed on the 18.56/18.18/18.22 contact sheet"
+  },
+  "21-home-en-light-slide2": {
+    "route": "/home",
+    "lang": "en",
+    "theme": "light",
+    "session": true,
+    "profile": "a394",
+    "actions": ["swipeBanner"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.22.04.jpeg",
+    "pairing": "Home LIGHT EN, banner slide 2"
+  },
+  "22-home-en-dark": {
+    "route": "/home",
+    "lang": "en",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "capture": "WhatsApp Image 2026-10-25 at 18.56.55 (1).jpeg",
+    "pairing": "Home DARK EN, banner slide 1"
+  },
+  "23-home-en-dark-slide2": {
+    "route": "/home",
+    "lang": "en",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "actions": ["swipeBanner"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.56.55.jpeg",
+    "pairing": "Home DARK EN, banner slide 2"
+  },
+  "24-home-ar-dark": {
+    "route": "/home",
+    "lang": "ar",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "capture": "WhatsApp Image 2026-10-25 at 18.56.17.jpeg",
+    "pairing": "Home DARK AR, banner slide 1"
+  },
+  "25-home-ar-dark-slide2": {
+    "route": "/home",
+    "lang": "ar",
+    "theme": "dark",
+    "session": true,
+    "profile": "a394",
+    "actions": ["swipeBanner"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.56.18.jpeg",
+    "pairing": "Home DARK AR, banner slide 2"
+  }
+}

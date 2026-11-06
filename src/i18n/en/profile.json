@@ -1,0 +1,28 @@
+{
+  "personalInformation": "Personal information",
+  "placeOfBirth": "Place of Birth",
+  "dateOfBirth": "Date of Birth",
+  "settings": "Settings",
+  "changeLanguage": "Change Language",
+  "theme": "Theme",
+  "themeSystem": "System",
+  "themeDark": "Dark",
+  "themeLight": "Light",
+  "twoFactor": "Two-factor authentication",
+  "enabled": "Enabled",
+  "informationNote": "Information note",
+  "logout": "LOGOUT",
+  "note": {
+    "title": "Information note",
+    "close": "Close",
+    "university": "UNIVERSITY",
+    "undersigned": "I, THE UNDERSIGNED",
+    "d1": "I declare that I have been informed that my personal data will be processed in accordance with the provisions of Law No. 18-07 dated June 10, 2018, as amended and supplemented.",
+    "d2a": "I declare that I have read the University Code of Ethics and Conduct",
+    "d2b": "(August 2023 version).",
+    "d3": "I declare that I have read the Code of Conduct for Staff and Students of the Higher Education and Scientific Research Sector",
+    "d4": "I declare that I have read the Policy of the Higher Education and Scientific Research Sector on the Protection of Personal Data",
+    "see": "See",
+    "seeDetails": "See"
+  }
+}

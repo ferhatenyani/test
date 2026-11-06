@@ -1,0 +1,98 @@
+{
+  "01-login-en-light": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.55.jpeg",
+    "pairing": "verified"
+  },
+  "02-login-en-light-filled": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "actions": ["fillLogin"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (1).jpeg",
+    "pairing": "verified"
+  },
+  "03-login-en-light-focus": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "actions": ["focusRegFilled"],
+    "focusTarget": "#reg",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56.jpeg",
+    "pairing": "verified",
+    "mask": [[0, 38], [628, 1170]],
+    "note": "iOS keyboard fills the lower ~46% of the capture; compare only the band above it. Wave-1 measurement: this capture is ALSO translated, not just covered — `col 30 0 400` puts the form card top edge at y 208 and `col 178 240 430` the reg pill top hairline at y 351, where the three still captures read 328.5 and 379.5, i.e. the whole page sits 120.5 CSS px higher. A static render cannot reproduce that scroll, so this scenario's pixdiff is dominated by the offset (24.29% after the geometry pass, ~14% before it) and is NOT a geometry signal. Mask left as found — see the report."
+  },
+  "04-login-en-dark": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "dark",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (2).jpeg",
+    "pairing": "verified"
+  },
+  "05-login-en-dark-focus": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "dark",
+    "profile": "a360",
+    "actions": ["focusRegFilled"],
+    "focusTarget": "#reg",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (3).jpeg",
+    "pairing": "verified",
+    "mask": [[0, 38], [628, 1170]],
+    "note": "Same keyboard-shot caveat as 03: `col 30 0 400` reads the form card top edge at y 207-208 (stills: 328.5), so this page is translated up ~120.5 CSS px and a static render cannot meet it."
+  },
+  "06-login-ar-dark": {
+    "route": "/login",
+    "lang": "ar",
+    "theme": "dark",
+    "profile": "a360",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (4).jpeg",
+    "pairing": "verified"
+  },
+  "07-login-ar-dark-filled": {
+    "route": "/login",
+    "lang": "ar",
+    "theme": "dark",
+    "profile": "a360",
+    "actions": ["fillLogin"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (5).jpeg",
+    "pairing": "verified"
+  },
+  "08-login-ar-light": {
+    "route": "/login",
+    "lang": "ar",
+    "theme": "light",
+    "profile": "a360",
+    "actions": ["fillLogin"],
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (6).jpeg",
+    "pairing": "verified"
+  },
+  "09-login-ar-light-focus": {
+    "route": "/login",
+    "lang": "ar",
+    "theme": "light",
+    "profile": "a360",
+    "actions": ["fillLogin", "focusPass"],
+    "focusTarget": "#pass",
+    "capture": "WhatsApp Image 2026-10-25 at 18.25.57.jpeg",
+    "pairing": "verified",
+    "mask": [[0, 38], [628, 1170]],
+    "note": "Third keyboard shot, same finding as 03/05: `col 30 0 400` puts the form card top edge at y 208 vs 328.5 in the stills, i.e. this page is translated up 120.5 CSS px, so its pixdiff is a scroll offset and not a geometry signal."
+  },
+  "10-login-en-light-error": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a360",
+    "actions": ["submitEmpty"],
+    "capture": null,
+    "pairing": "no reference — behaviour comes from the video, not a still"
+  }
+}

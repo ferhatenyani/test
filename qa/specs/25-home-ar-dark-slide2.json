@@ -1,0 +1,698 @@
+{
+  "source": "WhatsApp Image 2026-10-25 at 18.56.18.jpeg (profile a394, 591x1280 device = 394x853 CSS, device px / 1.5). All numbers read with scripts/qa/pxprobe.mjs and re-checked against the matching qa/out render with the identical call. Header/banner/grid/nav edges from row+col scanlines; glyph and label sizes from bbox with BG set to the tile green (#019477) or the nav green/navy. Text colours from the darkest / lightest 6% mean of the title band. Tile order and wording verified per position: the AR capture glyph ink boxes are identical to the EN capture glyph ink boxes at the same screen position, so tile 0 sits top-LEFT in Arabic too.",
+  "page": {
+    "dir": "rtl",
+    "lang": "ar"
+  },
+  "components": [
+    {
+      "key": "homeShell",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 394,
+        "bg": "#101115"
+      }
+    },
+    {
+      "key": "homeHeader",
+      "expect": {
+        "x": 24,
+        "y": 51.5,
+        "w": 346,
+        "h": 52
+      }
+    },
+    {
+      "key": "homeTitle",
+      "expect": {
+        "y": 66.5,
+        "h": 22,
+        "fontSize": 22,
+        "fontWeight": "800",
+        "color": "#f2f3f7",
+        "text": "بوابة الطلاب"
+      }
+    },
+    {
+      "key": "themeToggle",
+      "expect": {
+        "x": 31,
+        "y": 57.5,
+        "w": 40,
+        "h": 40
+      }
+    },
+    {
+      "key": "themeToggleIcon",
+      "expect": {
+        "x": 36.5,
+        "y": 63,
+        "w": 29,
+        "h": 29
+      }
+    },
+    {
+      "key": "bannerViewport",
+      "expect": {
+        "x": 24,
+        "y": 111,
+        "w": 346,
+        "h": 101,
+        "radius": 10
+      }
+    },
+    {
+      "key": "bannerSlide-0",
+      "expect": {
+        "w": 346,
+        "h": 101
+      }
+    },
+    {
+      "key": "bannerDots",
+      "expect": {
+        "x": 24,
+        "y": 222.5,
+        "w": 346,
+        "h": 8
+      }
+    },
+    {
+      "key": "bannerDot-0",
+      "expect": {
+        "y": 222.5,
+        "h": 8,
+        "radius": 4,
+        "x": 181,
+        "w": 8,
+        "bg": "#cbcbcb"
+      },
+      "tol": {
+        "color": 2
+      }
+    },
+    {
+      "key": "bannerDot-1",
+      "expect": {
+        "y": 222.5,
+        "h": 8,
+        "radius": 4,
+        "x": 197,
+        "w": 16,
+        "bg": "#009577"
+      },
+      "tol": {
+        "color": 2
+      }
+    },
+    {
+      "key": "tileGrid",
+      "expect": {
+        "x": 24,
+        "y": 235.5,
+        "w": 346,
+        "h": 427.5
+      }
+    },
+    {
+      "key": "tile-0",
+      "expect": {
+        "x": 24,
+        "y": 235.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "التبرئة الإلكترونية"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-0",
+      "expect": {
+        "x": 97.5,
+        "y": 243.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-0",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "التبرئة الإلكترونية"
+      }
+    },
+    {
+      "key": "tile-1",
+      "expect": {
+        "x": 203,
+        "y": 235.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "الجدول الزمني"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-1",
+      "expect": {
+        "x": 276.5,
+        "y": 243.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-1",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "الجدول الزمني"
+      }
+    },
+    {
+      "key": "tile-2",
+      "expect": {
+        "x": 24,
+        "y": 297.2,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "المجموعة و الفوج"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-2",
+      "expect": {
+        "x": 97.5,
+        "y": 305.2,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-2",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "المجموعة و الفوج"
+      }
+    },
+    {
+      "key": "tile-3",
+      "expect": {
+        "x": 203,
+        "y": 297.2,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "الجدول الزمني للإمتحانات"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-3",
+      "expect": {
+        "x": 276.5,
+        "y": 305.2,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-3",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "الجدول الزمني للإمتحانات"
+      }
+    },
+    {
+      "key": "tile-4",
+      "expect": {
+        "x": 24,
+        "y": 358.8,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "علامات الإمتحانات"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-4",
+      "expect": {
+        "x": 97.5,
+        "y": 366.8,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-4",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "علامات الإمتحانات"
+      }
+    },
+    {
+      "key": "tile-5",
+      "expect": {
+        "x": 203,
+        "y": 358.8,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "التقييم المستمر"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-5",
+      "expect": {
+        "x": 276.5,
+        "y": 366.8,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-5",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "التقييم المستمر"
+      }
+    },
+    {
+      "key": "tile-6",
+      "expect": {
+        "x": 24,
+        "y": 420.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "النسبة المئوية للمقياس"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-6",
+      "expect": {
+        "x": 97.5,
+        "y": 428.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-6",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "النسبة المئوية للمقياس"
+      }
+    },
+    {
+      "key": "tile-7",
+      "expect": {
+        "x": 203,
+        "y": 420.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "كشف النقاط"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-7",
+      "expect": {
+        "x": 276.5,
+        "y": 428.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-7",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "كشف النقاط"
+      }
+    },
+    {
+      "key": "tile-8",
+      "expect": {
+        "x": 24,
+        "y": 482.2,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "الديون"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-8",
+      "expect": {
+        "x": 97.5,
+        "y": 490.2,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-8",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "الديون"
+      }
+    },
+    {
+      "key": "tile-9",
+      "expect": {
+        "x": 203,
+        "y": 482.2,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "عطلة أكاديمية"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-9",
+      "expect": {
+        "x": 276.5,
+        "y": 490.2,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-9",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "عطلة أكاديمية"
+      }
+    },
+    {
+      "key": "tile-10",
+      "expect": {
+        "x": 24,
+        "y": 543.8,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "تسجيلاتي"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-10",
+      "expect": {
+        "x": 97.5,
+        "y": 551.8,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-10",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "تسجيلاتي"
+      }
+    },
+    {
+      "key": "tile-11",
+      "expect": {
+        "x": 203,
+        "y": 543.8,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "الغيابات و الإقصاءات"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-11",
+      "expect": {
+        "x": 276.5,
+        "y": 551.8,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-11",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "الغيابات و الإقصاءات"
+      }
+    },
+    {
+      "key": "tile-12",
+      "expect": {
+        "x": 24,
+        "y": 605.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "خدمات جامعية"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-12",
+      "expect": {
+        "x": 97.5,
+        "y": 613.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-12",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "خدمات جامعية"
+      }
+    },
+    {
+      "key": "tile-13",
+      "expect": {
+        "x": 203,
+        "y": 605.5,
+        "w": 167,
+        "h": 58,
+        "radius": 9,
+        "borderWidth": 1,
+        "bg": "#009577",
+        "text": "خدمات أخرى"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "tileGlyph-13",
+      "expect": {
+        "x": 276.5,
+        "y": 613.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "tileLabel-13",
+      "expect": {
+        "fontSize": 11.4,
+        "fontWeight": "600",
+        "color": "#ffffff",
+        "text": "خدمات أخرى"
+      }
+    },
+    {
+      "key": "navBar",
+      "expect": {
+        "x": 24,
+        "y": 744.5,
+        "w": 346,
+        "h": 66,
+        "radius": 12,
+        "bg": "#33354e"
+      }
+    },
+    {
+      "key": "navPill",
+      "expect": {
+        "x": 24,
+        "y": 744.5,
+        "w": 115.3,
+        "h": 66,
+        "radius": 12,
+        "bg": "#009577"
+      },
+      "tol": {
+        "color": 1
+      }
+    },
+    {
+      "key": "navItem-home",
+      "expect": {
+        "x": 24,
+        "y": 744.5,
+        "w": 115.3,
+        "h": 66
+      }
+    },
+    {
+      "key": "navIcon-home",
+      "expect": {
+        "x": 71.7,
+        "y": 756.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "navLabel-home",
+      "expect": {
+        "fontSize": 10,
+        "color": "#ffffff",
+        "text": "الرئيسية"
+      }
+    },
+    {
+      "key": "navItem-cards",
+      "expect": {
+        "x": 139.3,
+        "y": 744.5,
+        "w": 115.3,
+        "h": 66
+      }
+    },
+    {
+      "key": "navIcon-cards",
+      "expect": {
+        "x": 187,
+        "y": 756.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "navLabel-cards",
+      "expect": {
+        "fontSize": 10,
+        "color": "#ffffff",
+        "text": "بطاقاتي"
+      }
+    },
+    {
+      "key": "navItem-profile",
+      "expect": {
+        "x": 254.7,
+        "y": 744.5,
+        "w": 115.3,
+        "h": 66
+      }
+    },
+    {
+      "key": "navIcon-profile",
+      "expect": {
+        "x": 302.4,
+        "y": 756.5,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "key": "navLabel-profile",
+      "expect": {
+        "fontSize": 10,
+        "color": "#ffffff",
+        "text": "حسابي"
+      }
+    }
+  ]
+}

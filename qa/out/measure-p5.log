@@ -1,0 +1,12 @@
+(node:20052) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+40-profile-en-light          394x853@1.5  qa=56  dir=ltr
+41-profile-en-dark           394x853@1.5  qa=56  dir=ltr
+42-profile-ar-light          394x853@1.5  qa=56  dir=rtl
+43-profile-ar-dark           394x853@1.5  qa=56  dir=rtl
+44-profile-en-light-a360     360x780@1.5  qa=56  dir=ltr
+45-profile-en-dark-a360      360x780@1.5  qa=56  dir=ltr
+46-profile-ar-light-a360     360x780@1.5  qa=56  dir=rtl
+47-profile-ar-dark-a360      360x780@1.5  qa=56  dir=rtl
+
+renders -> qa/out   measurements -> qa/measured

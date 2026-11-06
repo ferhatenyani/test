@@ -1,0 +1,981 @@
+y=  25 css=     0 mean= 85 W=  0 G= 19 D= 64 grn=17 red= 0
+y=  27 css=   0.9 mean=104 W=  0 G= 36 D= 56 grn= 0 red= 0
+y=  29 css=   1.7 mean=127 W=  0 G= 44 D= 43 grn= 2 red= 0
+y=  31 css=   2.6 mean=146 W=  0 G= 55 D= 31 grn= 0 red= 0
+y=  33 css=   3.5 mean=158 W=  0 G= 63 D= 24 grn= 6 red= 0
+y=  35 css=   4.3 mean=163 W=  0 G= 59 D= 21 grn= 1 red= 0
+y=  37 css=   5.2 mean=167 W=  0 G= 61 D= 19 grn= 0 red= 0
+y=  39 css=   6.1 mean=169 W=  0 G= 57 D= 18 grn= 0 red= 0
+y=  41 css=     7 mean=171 W=  0 G= 59 D= 17 grn= 0 red= 0
+y=  43 css=   7.8 mean=173 W=  0 G= 59 D= 16 grn= 0 red= 0
+y=  45 css=   8.7 mean=175 W=  0 G= 58 D= 15 grn= 0 red= 0
+y=  47 css=   9.6 mean=174 W=  0 G= 52 D= 14 grn= 0 red= 0
+y=  49 css=  10.4 mean=171 W=  0 G= 46 D= 17 grn= 0 red= 0
+y=  51 css=  11.3 mean=173 W=  0 G= 47 D= 15 grn= 0 red= 0
+y=  53 css=  12.2 mean=173 W=  0 G= 47 D= 14 grn= 1 red= 0
+y=  55 css=    13 mean=170 W=  0 G= 48 D= 16 grn= 0 red= 0
+y=  57 css=  13.9 mean=170 W=  0 G= 49 D= 17 grn= 0 red= 0
+y=  59 css=  14.8 mean=171 W=  0 G= 49 D= 15 grn= 0 red= 0
+y=  61 css=  15.7 mean=172 W=  0 G= 51 D= 16 grn= 0 red= 0
+y=  63 css=  16.5 mean=171 W=  0 G= 46 D= 16 grn= 0 red= 0
+y=  65 css=  17.4 mean=170 W=  0 G= 48 D= 16 grn= 0 red= 0
+y=  67 css=  18.3 mean=170 W=  0 G= 46 D= 17 grn= 0 red= 0
+y=  69 css=  19.1 mean=173 W=  0 G= 48 D= 15 grn= 0 red= 0
+y=  71 css=    20 mean=177 W=  0 G= 46 D= 11 grn= 0 red= 0
+y=  73 css=  20.9 mean=180 W=  0 G= 49 D= 10 grn= 0 red= 0
+y=  75 css=  21.7 mean=181 W=  0 G= 42 D=  9 grn= 0 red= 0
+y=  77 css=  22.6 mean=180 W=  0 G= 39 D=  9 grn= 0 red= 0
+y=  79 css=  23.5 mean=183 W=  0 G= 41 D=  8 grn= 0 red= 0
+y=  81 css=  24.3 mean=186 W=  0 G= 32 D=  6 grn= 0 red= 0
+y=  83 css=  25.2 mean=190 W=  0 G= 31 D=  5 grn= 0 red= 0
+y=  85 css=  26.1 mean=192 W=  0 G= 31 D=  4 grn= 0 red= 0
+y=  87 css=    27 mean=195 W=  0 G= 41 D=  2 grn= 0 red= 0
+y=  89 css=  27.8 mean=201 W=  0 G= 59 D=  0 grn= 0 red= 0
+y=  91 css=  28.7 mean=204 W=  0 G= 68 D=  0 grn= 0 red= 0
+y=  93 css=  29.6 mean=204 W=  0 G= 75 D=  0 grn= 0 red= 0
+y=  95 css=  30.4 mean=205 W=  0 G= 84 D=  0 grn= 0 red= 0
+y=  97 css=  31.3 mean=205 W=  0 G= 89 D=  0 grn= 0 red= 0
+y=  99 css=  32.2 mean=206 W=  0 G= 91 D=  0 grn= 0 red= 0
+y= 101 css=    33 mean=205 W=  0 G= 91 D=  0 grn= 0 red= 0
+y= 103 css=  33.9 mean=205 W=  0 G= 90 D=  0 grn= 0 red= 0
+y= 105 css=  34.8 mean=205 W=  0 G= 89 D=  0 grn= 0 red= 0
+y= 107 css=  35.7 mean=205 W=  0 G= 89 D=  0 grn= 0 red= 0
+y= 109 css=  36.5 mean=205 W=  0 G= 88 D=  0 grn= 0 red= 0
+y= 111 css=  37.4 mean=205 W=  0 G= 87 D=  0 grn= 0 red= 0
+y= 113 css=  38.3 mean=204 W=  0 G= 86 D=  0 grn= 0 red= 0
+y= 115 css=  39.1 mean=204 W=  0 G= 86 D=  0 grn= 0 red= 0
+y= 117 css=    40 mean=204 W=  0 G= 85 D=  0 grn= 0 red= 0
+y= 119 css=  40.9 mean=204 W=  0 G= 83 D=  0 grn= 0 red= 0
+y= 121 css=  41.7 mean=204 W=  0 G= 80 D=  0 grn= 0 red= 0
+y= 123 css=  42.6 mean=202 W=  0 G= 78 D=  0 grn= 0 red= 0
+y= 125 css=  43.5 mean=197 W=  0 G= 77 D=  4 grn= 0 red= 0
+y= 127 css=  44.3 mean=195 W=  0 G= 76 D=  5 grn= 0 red= 0
+y= 129 css=  45.2 mean=193 W=  0 G= 76 D=  6 grn= 0 red= 0
+y= 131 css=  46.1 mean=192 W=  0 G= 74 D=  7 grn= 0 red= 0
+y= 133 css=    47 mean=191 W=  0 G= 73 D=  8 grn= 0 red= 0
+y= 135 css=  47.8 mean=190 W=  0 G= 72 D=  8 grn= 0 red= 0
+y= 137 css=  48.7 mean=189 W=  0 G= 73 D=  9 grn= 0 red= 0
+y= 139 css=  49.6 mean=190 W=  0 G= 73 D=  9 grn= 0 red= 0
+y= 141 css=  50.4 mean=190 W=  0 G= 72 D=  9 grn= 0 red= 0
+y= 143 css=  51.3 mean=191 W=  0 G= 73 D=  8 grn= 0 red= 0
+y= 145 css=  52.2 mean=192 W=  0 G= 72 D=  6 grn= 0 red= 0
+y= 147 css=    53 mean=193 W=  0 G= 72 D=  5 grn= 0 red= 0
+y= 149 css=  53.9 mean=194 W=  0 G= 71 D=  5 grn= 0 red= 0
+y= 151 css=  54.8 mean=194 W=  0 G= 72 D=  5 grn= 0 red= 0
+y= 153 css=  55.6 mean=194 W=  0 G= 72 D=  5 grn= 0 red= 0
+y= 155 css=  56.5 mean=194 W=  0 G= 73 D=  4 grn= 0 red= 0
+y= 157 css=  57.4 mean=194 W=  0 G= 73 D=  4 grn= 0 red= 0
+y= 159 css=  58.3 mean=194 W=  0 G= 72 D=  4 grn= 0 red= 0
+y= 161 css=  59.1 mean=194 W=  0 G= 71 D=  4 grn= 0 red= 0
+y= 163 css=    60 mean=195 W=  0 G= 71 D=  3 grn= 0 red= 0
+y= 165 css=  60.9 mean=195 W=  0 G= 69 D=  3 grn= 0 red= 0
+y= 167 css=  61.7 mean=194 W=  0 G= 71 D=  4 grn= 0 red= 0
+y= 169 css=  62.6 mean=193 W=  0 G= 70 D=  5 grn= 0 red= 0
+y= 171 css=  63.5 mean=192 W=  0 G= 73 D=  6 grn= 0 red= 0
+y= 173 css=  64.3 mean=191 W=  0 G= 68 D=  8 grn= 0 red= 0
+y= 175 css=  65.2 mean=192 W=  0 G= 68 D=  7 grn= 0 red= 0
+y= 177 css=  66.1 mean=193 W=  0 G= 68 D=  6 grn= 0 red= 0
+y= 179 css=    67 mean=192 W=  0 G= 69 D=  7 grn= 0 red= 0
+y= 181 css=  67.8 mean=192 W=  0 G= 70 D=  8 grn= 0 red= 0
+y= 183 css=  68.7 mean=192 W=  0 G= 69 D=  8 grn= 0 red= 0
+y= 185 css=  69.6 mean=192 W=  0 G= 72 D=  7 grn= 0 red= 0
+y= 187 css=  70.4 mean=193 W=  0 G= 72 D=  6 grn= 0 red= 0
+y= 189 css=  71.3 mean=194 W=  0 G= 72 D=  5 grn= 0 red= 0
+y= 191 css=  72.2 mean=195 W=  0 G= 72 D=  3 grn= 0 red= 0
+y= 193 css=    73 mean=196 W=  0 G= 74 D=  2 grn= 0 red= 0
+y= 195 css=  73.9 mean=197 W=  0 G= 71 D=  2 grn= 0 red= 0
+y= 197 css=  74.8 mean=197 W=  0 G= 71 D=  1 grn= 0 red= 0
+y= 199 css=  75.6 mean=198 W=  0 G= 74 D=  1 grn= 0 red= 0
+y= 201 css=  76.5 mean=198 W=  0 G= 73 D=  0 grn= 0 red= 0
+y= 203 css=  77.4 mean=198 W=  0 G= 75 D=  0 grn= 0 red= 0
+y= 205 css=  78.3 mean=197 W=  0 G= 76 D=  0 grn= 0 red= 0
+y= 207 css=  79.1 mean=197 W=  0 G= 77 D=  0 grn= 0 red= 0
+y= 209 css=    80 mean=197 W=  0 G= 74 D=  1 grn= 0 red= 0
+y= 211 css=  80.9 mean=197 W=  0 G= 73 D=  0 grn= 0 red= 0
+y= 213 css=  81.7 mean=197 W=  0 G= 74 D=  0 grn= 0 red= 0
+y= 215 css=  82.6 mean=197 W=  0 G= 74 D=  0 grn= 0 red= 0
+y= 217 css=  83.5 mean=198 W=  0 G= 75 D=  0 grn= 0 red= 0
+y= 219 css=  84.3 mean=198 W=  0 G= 77 D=  1 grn= 0 red= 0
+y= 221 css=  85.2 mean=197 W=  0 G= 77 D=  3 grn= 0 red= 0
+y= 223 css=  86.1 mean=197 W=  0 G= 77 D=  4 grn= 0 red= 1
+y= 225 css=    87 mean=198 W=  0 G= 78 D=  3 grn= 0 red= 1
+y= 227 css=  87.8 mean=198 W=  0 G= 79 D=  1 grn= 0 red= 1
+y= 229 css=  88.7 mean=198 W=  0 G= 79 D=  2 grn= 0 red= 0
+y= 231 css=  89.6 mean=198 W=  0 G= 78 D=  2 grn= 0 red= 0
+y= 233 css=  90.4 mean=197 W=  0 G= 80 D=  3 grn= 1 red= 0
+y= 235 css=  91.3 mean=197 W=  0 G= 79 D=  3 grn= 1 red= 0
+y= 237 css=  92.2 mean=196 W=  0 G= 81 D=  4 grn= 1 red= 0
+y= 239 css=    93 mean=196 W=  0 G= 79 D=  4 grn= 1 red= 0
+y= 241 css=  93.9 mean=197 W=  0 G= 85 D=  4 grn= 2 red= 0
+y= 243 css=  94.8 mean=197 W=  0 G= 83 D=  6 grn= 1 red= 0
+y= 245 css=  95.6 mean=198 W=  0 G= 85 D=  5 grn= 1 red= 0
+y= 247 css=  96.5 mean=199 W=  0 G= 85 D=  4 grn= 1 red= 0
+y= 249 css=  97.4 mean=201 W=  0 G= 87 D=  1 grn= 1 red= 0
+y= 251 css=  98.3 mean=202 W=  0 G= 89 D=  1 grn= 0 red= 0
+y= 253 css=  99.1 mean=203 W=  0 G= 88 D=  0 grn= 0 red= 0
+y= 255 css=   100 mean=205 W=  0 G= 88 D=  0 grn= 0 red= 0
+y= 257 css= 100.9 mean=206 W=  0 G= 90 D=  0 grn= 0 red= 0
+y= 259 css= 101.7 mean=207 W=  0 G= 92 D=  0 grn= 0 red= 0
+y= 261 css= 102.6 mean=207 W=  0 G= 96 D=  0 grn= 0 red= 0
+y= 263 css= 103.5 mean=207 W=  0 G= 95 D=  0 grn= 0 red= 0
+y= 265 css= 104.3 mean=208 W=  0 G= 97 D=  0 grn= 0 red= 0
+y= 267 css= 105.2 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y= 269 css= 106.1 mean=208 W=  0 G= 97 D=  0 grn= 0 red= 0
+y= 271 css=   107 mean=209 W=  1 G= 97 D=  0 grn= 0 red= 0
+y= 273 css= 107.8 mean=209 W=  0 G= 98 D=  0 grn= 0 red= 0
+y= 275 css= 108.7 mean=209 W=  0 G= 99 D=  0 grn= 0 red= 0
+y= 277 css= 109.6 mean=210 W=  0 G= 98 D=  0 grn= 0 red= 0
+y= 279 css= 110.4 mean=210 W=  0 G= 98 D=  0 grn= 0 red= 0
+y= 281 css= 111.3 mean=210 W=  0 G= 99 D=  0 grn= 0 red= 0
+y= 283 css= 112.2 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 285 css=   113 mean=211 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 287 css= 113.9 mean=211 W=  5 G= 93 D=  0 grn= 0 red= 0
+y= 289 css= 114.8 mean=211 W=  6 G= 93 D=  0 grn= 0 red= 0
+y= 291 css= 115.6 mean=210 W=  6 G= 94 D=  0 grn= 0 red= 0
+y= 293 css= 116.5 mean=200 W=  6 G= 77 D=  5 grn= 0 red= 0
+y= 295 css= 117.4 mean=179 W=  6 G= 68 D= 18 grn= 0 red= 0
+y= 297 css= 118.3 mean=175 W=  5 G= 69 D= 23 grn= 0 red= 0
+y= 299 css= 119.1 mean=181 W=  7 G= 66 D= 17 grn= 0 red= 0
+y= 301 css=   120 mean=190 W= 11 G= 69 D= 12 grn= 0 red= 0
+y= 303 css= 120.9 mean=192 W= 16 G= 68 D= 12 grn= 0 red= 0
+y= 305 css= 121.7 mean=191 W= 16 G= 65 D= 12 grn= 0 red= 0
+y= 307 css= 122.6 mean=184 W= 11 G= 66 D= 16 grn= 0 red= 0
+y= 309 css= 123.5 mean=179 W=  9 G= 65 D= 18 grn= 0 red= 0
+y= 311 css= 124.3 mean=173 W=  8 G= 63 D= 22 grn= 0 red= 0
+y= 313 css= 125.2 mean=174 W= 10 G= 62 D= 23 grn= 0 red= 0
+y= 315 css= 126.1 mean=178 W= 11 G= 62 D= 19 grn= 0 red= 0
+y= 317 css=   127 mean=184 W= 14 G= 63 D= 16 grn= 0 red= 0
+y= 319 css= 127.8 mean=184 W= 16 G= 62 D= 18 grn= 0 red= 0
+y= 321 css= 128.7 mean=184 W= 15 G= 64 D= 17 grn= 0 red= 0
+y= 323 css= 129.6 mean=185 W= 14 G= 65 D= 17 grn= 0 red= 0
+y= 325 css= 130.4 mean=186 W= 12 G= 67 D= 16 grn= 0 red= 0
+y= 327 css= 131.3 mean=183 W= 13 G= 64 D= 20 grn= 0 red= 0
+y= 329 css= 132.2 mean=185 W= 14 G= 62 D= 20 grn= 0 red= 0
+y= 331 css=   133 mean=191 W= 15 G= 61 D= 12 grn= 0 red= 0
+y= 333 css= 133.9 mean=207 W= 22 G= 66 D=  3 grn= 0 red= 0
+y= 335 css= 134.8 mean=214 W= 27 G= 69 D=  0 grn= 0 red= 0
+y= 337 css= 135.6 mean=214 W= 23 G= 77 D=  0 grn= 0 red= 0
+y= 339 css= 136.5 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y= 341 css= 137.4 mean=213 W=  4 G= 96 D=  0 grn= 0 red= 0
+y= 343 css= 138.3 mean=213 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 345 css= 139.1 mean=213 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 347 css=   140 mean=213 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 349 css= 140.9 mean=213 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 351 css= 141.7 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 353 css= 142.6 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 355 css= 143.5 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 357 css= 144.3 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 359 css= 145.2 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 361 css= 146.1 mean=212 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 363 css= 146.9 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 365 css= 147.8 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 367 css= 148.7 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 369 css= 149.6 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 371 css= 150.4 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 373 css= 151.3 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 375 css= 152.2 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 377 css=   153 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 379 css= 153.9 mean=212 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 381 css= 154.8 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 383 css= 155.6 mean=212 W=  7 G= 93 D=  0 grn= 0 red= 0
+y= 385 css= 156.5 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 387 css= 157.4 mean=212 W=  5 G= 95 D=  0 grn= 0 red= 0
+y= 389 css= 158.3 mean=212 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 391 css= 159.1 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 393 css=   160 mean=212 W=  6 G= 94 D=  0 grn= 0 red= 0
+y= 395 css= 160.9 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 397 css= 161.7 mean=212 W=  8 G= 92 D=  0 grn= 0 red= 0
+y= 399 css= 162.6 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 401 css= 163.5 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 403 css= 164.3 mean=212 W=  7 G= 93 D=  0 grn= 0 red= 0
+y= 405 css= 165.2 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y= 407 css= 166.1 mean=213 W= 14 G= 86 D=  0 grn= 0 red= 0
+y= 409 css= 166.9 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 411 css= 167.8 mean=212 W=  5 G= 95 D=  0 grn= 0 red= 0
+y= 413 css= 168.7 mean=212 W=  8 G= 92 D=  0 grn= 0 red= 0
+y= 415 css= 169.6 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y= 417 css= 170.4 mean=212 W= 12 G= 88 D=  0 grn= 0 red= 0
+y= 419 css= 171.3 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y= 421 css= 172.2 mean=212 W=  9 G= 91 D=  0 grn= 0 red= 0
+y= 423 css=   173 mean=212 W=  7 G= 93 D=  0 grn= 0 red= 0
+y= 425 css= 173.9 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y= 427 css= 174.8 mean=212 W=  8 G= 91 D=  0 grn= 0 red= 0
+y= 429 css= 175.6 mean=211 W=  1 G= 98 D=  0 grn= 0 red= 0
+y= 431 css= 176.5 mean=212 W= 10 G= 89 D=  0 grn= 0 red= 0
+y= 433 css= 177.4 mean=211 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 435 css= 178.3 mean=211 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 437 css= 179.1 mean=209 W=  2 G= 95 D=  0 grn= 0 red= 0
+y= 439 css=   180 mean=192 W=  0 G= 43 D=  0 grn= 0 red= 0
+y= 441 css= 180.9 mean=185 W=  0 G= 24 D=  0 grn= 0 red= 0
+y= 443 css= 181.7 mean=183 W=  0 G= 11 D=  0 grn= 0 red= 0
+y= 445 css= 182.6 mean=182 W=  0 G=  1 D=  0 grn= 0 red= 0
+y= 447 css= 183.5 mean=184 W=  0 G=  2 D=  0 grn= 0 red= 0
+y= 449 css= 184.3 mean=187 W=  0 G=  1 D=  0 grn= 0 red= 0
+y= 451 css= 185.2 mean=190 W=  0 G=  7 D=  0 grn= 0 red= 0
+y= 453 css= 186.1 mean=193 W=  0 G=  9 D=  0 grn= 0 red= 0
+y= 455 css= 186.9 mean=195 W=  0 G= 22 D=  0 grn= 0 red= 0
+y= 457 css= 187.8 mean=197 W=  0 G= 32 D=  0 grn= 0 red= 0
+y= 459 css= 188.7 mean=199 W=  0 G= 43 D=  0 grn= 0 red= 0
+y= 461 css= 189.6 mean=201 W=  0 G= 53 D=  0 grn= 0 red= 0
+y= 463 css= 190.4 mean=202 W=  0 G= 58 D=  0 grn= 0 red= 0
+y= 465 css= 191.3 mean=203 W=  0 G= 64 D=  0 grn= 0 red= 0
+y= 467 css= 192.2 mean=203 W=  0 G= 68 D=  0 grn= 0 red= 0
+y= 469 css=   193 mean=204 W=  0 G= 72 D=  0 grn= 0 red= 0
+y= 471 css= 193.9 mean=204 W=  0 G= 80 D=  0 grn= 0 red= 0
+y= 473 css= 194.8 mean=204 W=  0 G= 78 D=  0 grn= 0 red= 0
+y= 475 css= 195.6 mean=205 W=  0 G= 81 D=  0 grn= 0 red= 0
+y= 477 css= 196.5 mean=205 W=  0 G= 81 D=  0 grn= 0 red= 0
+y= 479 css= 197.4 mean=205 W=  0 G= 81 D=  0 grn= 0 red= 0
+y= 481 css= 198.3 mean=202 W=  0 G= 67 D=  0 grn= 0 red= 0
+y= 483 css= 199.1 mean=190 W=  1 G= 57 D=  4 grn= 0 red= 0
+y= 485 css=   200 mean=195 W=  2 G= 63 D=  1 grn= 0 red= 0
+y= 487 css= 200.9 mean=196 W=  2 G= 61 D=  1 grn= 0 red= 0
+y= 489 css= 201.7 mean=195 W=  0 G= 60 D=  1 grn= 0 red= 0
+y= 491 css= 202.6 mean=193 W=  2 G= 54 D=  2 grn= 0 red= 0
+y= 493 css= 203.5 mean=194 W=  2 G= 55 D=  2 grn= 0 red= 0
+y= 495 css= 204.3 mean=196 W=  3 G= 62 D=  1 grn= 0 red= 0
+y= 497 css= 205.2 mean=194 W=  1 G= 58 D=  0 grn= 0 red= 0
+y= 499 css= 206.1 mean=202 W=  1 G= 66 D=  0 grn= 0 red= 0
+y= 501 css= 206.9 mean=206 W=  2 G= 78 D=  0 grn= 0 red= 0
+y= 503 css= 207.8 mean=205 W=  1 G= 79 D=  0 grn= 0 red= 0
+y= 505 css= 208.7 mean=205 W=  1 G= 79 D=  0 grn= 0 red= 0
+y= 507 css= 209.6 mean=205 W=  0 G= 80 D=  0 grn= 0 red= 0
+y= 509 css= 210.4 mean=205 W=  1 G= 79 D=  0 grn= 0 red= 0
+y= 511 css= 211.3 mean=205 W=  1 G= 83 D=  0 grn= 0 red= 0
+y= 513 css= 212.2 mean=205 W=  0 G= 77 D=  0 grn= 0 red= 0
+y= 515 css=   213 mean=204 W=  0 G= 78 D=  0 grn= 0 red= 0
+y= 517 css= 213.9 mean=205 W=  0 G= 76 D=  0 grn= 0 red= 0
+y= 519 css= 214.8 mean=204 W=  0 G= 75 D=  0 grn= 0 red= 0
+y= 521 css= 215.6 mean=203 W=  2 G= 72 D=  0 grn= 0 red= 0
+y= 523 css= 216.5 mean=202 W=  1 G= 58 D=  0 grn= 0 red= 0
+y= 525 css= 217.4 mean=200 W=  0 G= 33 D=  0 grn= 0 red= 0
+y= 527 css= 218.2 mean=199 W=  0 G= 36 D=  0 grn= 0 red= 0
+y= 529 css= 219.1 mean=205 W=  5 G= 54 D=  0 grn= 0 red= 0
+y= 531 css=   220 mean=209 W= 11 G= 68 D=  0 grn= 0 red= 0
+y= 533 css= 220.9 mean=211 W= 13 G= 80 D=  0 grn= 0 red= 0
+y= 535 css= 221.7 mean=212 W=  8 G= 90 D=  0 grn= 0 red= 0
+y= 537 css= 222.6 mean=212 W= 14 G= 83 D=  0 grn= 0 red= 0
+y= 539 css= 223.5 mean=212 W=  7 G= 91 D=  0 grn= 0 red= 0
+y= 541 css= 224.3 mean=212 W=  9 G= 89 D=  0 grn= 0 red= 0
+y= 543 css= 225.2 mean=212 W= 13 G= 85 D=  0 grn= 0 red= 0
+y= 545 css= 226.1 mean=211 W=  5 G= 92 D=  0 grn= 0 red= 0
+y= 547 css= 226.9 mean=211 W= 11 G= 88 D=  0 grn= 0 red= 0
+y= 549 css= 227.8 mean=211 W=  7 G= 90 D=  0 grn= 0 red= 0
+y= 551 css= 228.7 mean=211 W=  6 G= 93 D=  0 grn= 0 red= 0
+y= 553 css= 229.6 mean=211 W= 11 G= 86 D=  0 grn= 0 red= 0
+y= 555 css= 230.4 mean=211 W=  7 G= 91 D=  0 grn= 0 red= 0
+y= 557 css= 231.3 mean=211 W= 11 G= 86 D=  0 grn= 0 red= 0
+y= 559 css= 232.2 mean=211 W= 11 G= 87 D=  0 grn= 0 red= 0
+y= 561 css=   233 mean=209 W=  8 G= 86 D=  0 grn= 0 red= 0
+y= 563 css= 233.9 mean=207 W= 15 G= 77 D=  2 grn= 0 red= 0
+y= 565 css= 234.8 mean=207 W= 12 G= 80 D=  1 grn= 0 red= 0
+y= 567 css= 235.6 mean=207 W= 15 G= 77 D=  1 grn= 0 red= 0
+y= 569 css= 236.5 mean=201 W= 11 G= 72 D=  4 grn= 0 red= 0
+y= 571 css= 237.4 mean=203 W= 10 G= 77 D=  3 grn= 0 red= 0
+y= 573 css= 238.2 mean=204 W= 16 G= 71 D=  4 grn= 0 red= 0
+y= 575 css= 239.1 mean=202 W= 13 G= 75 D=  4 grn= 0 red= 0
+y= 577 css=   240 mean=205 W= 14 G= 75 D=  3 grn= 0 red= 0
+y= 579 css= 240.9 mean=205 W= 16 G= 74 D=  3 grn= 0 red= 0
+y= 581 css= 241.7 mean=201 W= 10 G= 74 D=  3 grn= 1 red= 0
+y= 583 css= 242.6 mean=200 W= 11 G= 74 D=  3 grn= 2 red= 0
+y= 585 css= 243.5 mean=207 W= 15 G= 77 D=  3 grn= 3 red= 0
+y= 587 css= 244.3 mean=206 W=  8 G= 87 D=  3 grn= 3 red= 0
+y= 589 css= 245.2 mean=206 W= 10 G= 84 D=  3 grn= 3 red= 0
+y= 591 css= 246.1 mean=206 W=  7 G= 87 D=  3 grn= 4 red= 0
+y= 593 css= 246.9 mean=207 W=  8 G= 86 D=  2 grn= 4 red= 0
+y= 595 css= 247.8 mean=207 W= 10 G= 85 D=  2 grn= 3 red= 0
+y= 597 css= 248.7 mean=207 W=  8 G= 85 D=  2 grn= 3 red= 0
+y= 599 css= 249.6 mean=207 W= 10 G= 85 D=  2 grn= 3 red= 0
+y= 601 css= 250.4 mean=206 W=  6 G= 89 D=  2 grn= 3 red= 0
+y= 603 css= 251.3 mean=205 W=  5 G= 88 D=  3 grn= 4 red= 0
+y= 605 css= 252.2 mean=205 W=  7 G= 84 D=  3 grn= 4 red= 0
+y= 607 css=   253 mean=205 W=  5 G= 89 D=  3 grn= 4 red= 0
+y= 609 css= 253.9 mean=206 W=  8 G= 86 D=  3 grn= 3 red= 0
+y= 611 css= 254.8 mean=206 W=  7 G= 88 D=  2 grn= 3 red= 0
+y= 613 css= 255.6 mean=206 W=  6 G= 88 D=  2 grn= 3 red= 0
+y= 615 css= 256.5 mean=207 W=  7 G= 88 D=  2 grn= 3 red= 0
+y= 617 css= 257.4 mean=207 W=  7 G= 88 D=  2 grn= 2 red= 0
+y= 619 css= 258.2 mean=208 W=  9 G= 87 D=  1 grn= 2 red= 0
+y= 621 css= 259.1 mean=208 W= 14 G= 82 D=  1 grn= 2 red= 0
+y= 623 css=   260 mean=208 W=  9 G= 87 D=  0 grn= 1 red= 0
+y= 625 css= 260.9 mean=203 W= 11 G= 78 D=  3 grn= 1 red= 0
+y= 627 css= 261.7 mean=200 W= 10 G= 79 D=  6 grn= 1 red= 0
+y= 629 css= 262.6 mean=202 W=  9 G= 79 D=  4 grn= 0 red= 0
+y= 631 css= 263.5 mean=202 W=  9 G= 81 D=  3 grn= 0 red= 0
+y= 633 css= 264.3 mean=202 W=  7 G= 83 D=  4 grn= 0 red= 0
+y= 635 css= 265.2 mean=200 W=  6 G= 83 D=  5 grn= 0 red= 0
+y= 637 css= 266.1 mean=201 W=  6 G= 82 D=  5 grn= 0 red= 0
+y= 639 css= 266.9 mean=201 W=  7 G= 83 D=  4 grn= 0 red= 0
+y= 641 css= 267.8 mean=201 W=  9 G= 81 D=  5 grn= 0 red= 0
+y= 643 css= 268.7 mean=201 W=  7 G= 82 D=  4 grn= 0 red= 0
+y= 645 css= 269.6 mean=199 W=  8 G= 81 D=  6 grn= 0 red= 0
+y= 647 css= 270.4 mean=204 W=  9 G= 80 D=  2 grn= 0 red= 0
+y= 649 css= 271.3 mean=210 W= 13 G= 84 D=  0 grn= 0 red= 0
+y= 651 css= 272.2 mean=209 W= 11 G= 87 D=  0 grn= 0 red= 0
+y= 653 css=   273 mean=209 W=  7 G= 89 D=  0 grn= 0 red= 0
+y= 655 css= 273.9 mean=209 W=  5 G= 92 D=  0 grn= 0 red= 0
+y= 657 css= 274.8 mean=209 W=  5 G= 93 D=  0 grn= 0 red= 0
+y= 659 css= 275.6 mean=209 W=  3 G= 96 D=  0 grn= 0 red= 0
+y= 661 css= 276.5 mean=209 W=  5 G= 92 D=  0 grn= 0 red= 0
+y= 663 css= 277.4 mean=209 W=  5 G= 92 D=  0 grn= 0 red= 0
+y= 665 css= 278.2 mean=209 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 667 css= 279.1 mean=209 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 669 css=   280 mean=209 W=  5 G= 92 D=  0 grn= 0 red= 0
+y= 671 css= 280.9 mean=209 W=  4 G= 95 D=  0 grn= 0 red= 0
+y= 673 css= 281.7 mean=209 W=  5 G= 93 D=  0 grn= 0 red= 0
+y= 675 css= 282.6 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 677 css= 283.5 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 679 css= 284.3 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 681 css= 285.2 mean=208 W=  0 G= 98 D=  0 grn= 0 red= 0
+y= 683 css= 286.1 mean=207 W=  1 G= 97 D=  0 grn= 0 red= 0
+y= 685 css= 286.9 mean=206 W=  6 G= 73 D=  0 grn= 0 red= 0
+y= 687 css= 287.8 mean=208 W=  3 G= 91 D=  0 grn= 0 red= 0
+y= 689 css= 288.7 mean=209 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 691 css= 289.6 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 693 css= 290.4 mean=209 W=  4 G= 95 D=  0 grn= 0 red= 0
+y= 695 css= 291.3 mean=209 W=  5 G= 93 D=  0 grn= 0 red= 0
+y= 697 css= 292.2 mean=209 W=  2 G= 96 D=  0 grn= 0 red= 0
+y= 699 css=   293 mean=209 W=  3 G= 96 D=  0 grn= 0 red= 0
+y= 701 css= 293.9 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 703 css= 294.8 mean=209 W=  4 G= 95 D=  0 grn= 0 red= 0
+y= 705 css= 295.6 mean=209 W=  4 G= 93 D=  0 grn= 0 red= 0
+y= 707 css= 296.5 mean=209 W=  3 G= 94 D=  0 grn= 0 red= 0
+y= 709 css= 297.4 mean=209 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 711 css= 298.2 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 713 css= 299.1 mean=209 W=  2 G= 97 D=  0 grn= 0 red= 0
+y= 715 css=   300 mean=209 W=  2 G= 95 D=  0 grn= 0 red= 0
+y= 717 css= 300.9 mean=208 W=  3 G= 93 D=  0 grn= 0 red= 0
+y= 719 css= 301.7 mean=205 W=  4 G= 89 D=  2 grn= 0 red= 0
+y= 721 css= 302.6 mean=206 W=  7 G= 86 D=  1 grn= 0 red= 0
+y= 723 css= 303.5 mean=206 W=  8 G= 84 D=  2 grn= 0 red= 0
+y= 725 css= 304.3 mean=200 W=  6 G= 78 D=  4 grn= 0 red= 0
+y= 727 css= 305.2 mean=201 W=  8 G= 80 D=  4 grn= 0 red= 0
+y= 729 css= 306.1 mean=203 W= 10 G= 79 D=  4 grn= 0 red= 0
+y= 731 css= 306.9 mean=202 W= 11 G= 77 D=  3 grn= 0 red= 0
+y= 733 css= 307.8 mean=203 W= 12 G= 75 D=  3 grn= 0 red= 0
+y= 735 css= 308.7 mean=203 W= 13 G= 75 D=  4 grn= 0 red= 0
+y= 737 css= 309.5 mean=200 W=  6 G= 78 D=  4 grn= 2 red= 0
+y= 739 css= 310.4 mean=196 W=  7 G= 75 D=  7 grn= 4 red= 0
+y= 741 css= 311.3 mean=202 W=  6 G= 84 D=  5 grn= 5 red= 0
+y= 743 css= 312.2 mean=203 W=  9 G= 84 D=  5 grn= 5 red= 0
+y= 745 css=   313 mean=203 W=  3 G= 90 D=  5 grn= 5 red= 0
+y= 747 css= 313.9 mean=203 W=  5 G= 88 D=  5 grn= 5 red= 0
+y= 749 css= 314.8 mean=205 W=  5 G= 88 D=  1 grn= 5 red= 0
+y= 751 css= 315.6 mean=208 W=  7 G= 90 D=  0 grn= 5 red= 0
+y= 753 css= 316.5 mean=208 W=  8 G= 88 D=  0 grn= 1 red= 0
+y= 755 css= 317.4 mean=209 W=  9 G= 89 D=  0 grn= 1 red= 0
+y= 757 css= 318.2 mean=208 W=  9 G= 88 D=  0 grn= 1 red= 0
+y= 759 css= 319.1 mean=208 W=  7 G= 89 D=  0 grn= 1 red= 0
+y= 761 css=   320 mean=207 W=  6 G= 89 D=  2 grn= 3 red= 0
+y= 763 css= 320.9 mean=207 W=  5 G= 91 D=  2 grn= 3 red= 0
+y= 765 css= 321.7 mean=207 W=  7 G= 88 D=  2 grn= 3 red= 0
+y= 767 css= 322.6 mean=207 W=  6 G= 90 D=  2 grn= 3 red= 0
+y= 769 css= 323.5 mean=207 W=  7 G= 88 D=  2 grn= 3 red= 0
+y= 771 css= 324.3 mean=207 W=  7 G= 88 D=  1 grn= 2 red= 0
+y= 773 css= 325.2 mean=209 W=  7 G= 90 D=  1 grn= 2 red= 0
+y= 775 css= 326.1 mean=208 W=  9 G= 88 D=  0 grn= 1 red= 0
+y= 777 css= 326.9 mean=206 W=  7 G= 87 D=  1 grn= 2 red= 0
+y= 779 css= 327.8 mean=205 W= 11 G= 83 D=  4 grn= 5 red= 0
+y= 781 css= 328.7 mean=204 W= 10 G= 79 D=  0 grn= 5 red= 0
+y= 783 css= 329.5 mean=196 W= 13 G= 73 D=  9 grn= 0 red= 0
+y= 785 css= 330.4 mean=196 W= 11 G= 74 D=  7 grn= 0 red= 0
+y= 787 css= 331.3 mean=201 W= 14 G= 76 D=  6 grn= 0 red= 0
+y= 789 css= 332.2 mean=202 W= 15 G= 75 D=  4 grn= 0 red= 0
+y= 791 css=   333 mean=201 W= 15 G= 75 D=  5 grn= 0 red= 0
+y= 793 css= 333.9 mean=199 W= 12 G= 74 D=  6 grn= 0 red= 0
+y= 795 css= 334.8 mean=197 W= 12 G= 75 D=  7 grn= 0 red= 0
+y= 797 css= 335.6 mean=201 W= 14 G= 73 D=  6 grn= 0 red= 0
+y= 799 css= 336.5 mean=201 W= 12 G= 78 D=  5 grn= 0 red= 0
+y= 801 css= 337.4 mean=195 W= 10 G= 76 D=  8 grn= 0 red= 0
+y= 803 css= 338.2 mean=198 W=  9 G= 78 D=  7 grn= 0 red= 0
+y= 805 css= 339.1 mean=209 W= 15 G= 80 D=  0 grn= 0 red= 0
+y= 807 css=   340 mean=211 W= 15 G= 84 D=  0 grn= 0 red= 0
+y= 809 css= 340.9 mean=210 W=  8 G= 91 D=  0 grn= 0 red= 0
+y= 811 css= 341.7 mean=210 W=  6 G= 93 D=  0 grn= 0 red= 0
+y= 813 css= 342.6 mean=210 W=  6 G= 92 D=  0 grn= 0 red= 0
+y= 815 css= 343.5 mean=210 W=  4 G= 94 D=  0 grn= 0 red= 0
+y= 817 css= 344.3 mean=210 W=  5 G= 93 D=  0 grn= 0 red= 0
+y= 819 css= 345.2 mean=210 W=  3 G= 94 D=  0 grn= 0 red= 0
+y= 821 css= 346.1 mean=210 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 823 css= 346.9 mean=209 W=  2 G= 96 D=  0 grn= 0 red= 0
+y= 825 css= 347.8 mean=209 W=  3 G= 95 D=  0 grn= 0 red= 0
+y= 827 css= 348.7 mean=209 W=  2 G= 95 D=  0 grn= 0 red= 0
+y= 829 css= 349.5 mean=209 W=  1 G= 95 D=  0 grn= 0 red= 0
+y= 831 css= 350.4 mean=209 W=  2 G= 94 D=  0 grn= 0 red= 0
+y= 833 css= 351.3 mean=209 W=  3 G= 92 D=  0 grn= 0 red= 0
+y= 835 css= 352.2 mean=209 W=  0 G= 94 D=  0 grn= 0 red= 0
+y= 837 css=   353 mean=202 W=  0 G= 71 D=  0 grn= 0 red= 0
+y= 839 css= 353.9 mean=185 W=  0 G=  9 D=  0 grn= 0 red= 0
+y= 841 css= 354.8 mean=178 W=  0 G=  9 D=  0 grn= 0 red= 0
+y= 843 css= 355.6 mean=186 W=  0 G= 10 D=  0 grn= 0 red= 0
+y= 845 css= 356.5 mean=191 W=  0 G= 14 D=  0 grn= 0 red= 0
+y= 847 css= 357.4 mean=195 W=  0 G= 21 D=  0 grn= 0 red= 0
+y= 849 css= 358.2 mean=198 W=  0 G= 33 D=  0 grn= 0 red= 0
+y= 851 css= 359.1 mean=200 W=  0 G= 45 D=  0 grn= 0 red= 0
+y= 853 css=   360 mean=202 W=  0 G= 55 D=  0 grn= 0 red= 0
+y= 855 css= 360.9 mean=202 W=  0 G= 62 D=  0 grn= 0 red= 0
+y= 857 css= 361.7 mean=203 W=  0 G= 68 D=  0 grn= 0 red= 0
+y= 859 css= 362.6 mean=203 W=  0 G= 65 D=  0 grn= 0 red= 0
+y= 861 css= 363.5 mean=203 W=  0 G= 64 D=  0 grn= 0 red= 0
+y= 863 css= 364.3 mean=203 W=  0 G= 66 D=  0 grn= 0 red= 0
+y= 865 css= 365.2 mean=202 W=  0 G= 61 D=  0 grn= 0 red= 0
+y= 867 css= 366.1 mean=203 W=  0 G= 64 D=  0 grn= 0 red= 0
+y= 869 css= 366.9 mean=203 W=  0 G= 63 D=  0 grn= 0 red= 0
+y= 871 css= 367.8 mean=203 W=  0 G= 64 D=  0 grn= 0 red= 0
+y= 873 css= 368.7 mean=203 W=  0 G= 67 D=  0 grn= 0 red= 0
+y= 875 css= 369.5 mean=200 W=  0 G= 54 D=  0 grn= 0 red= 0
+y= 877 css= 370.4 mean=195 W=  0 G= 58 D=  3 grn= 0 red= 0
+y= 879 css= 371.3 mean=200 W=  2 G= 54 D=  1 grn= 0 red= 0
+y= 881 css= 372.2 mean=200 W=  1 G= 58 D=  1 grn= 0 red= 0
+y= 883 css=   373 mean=198 W=  0 G= 59 D=  1 grn= 0 red= 0
+y= 885 css= 373.9 mean=198 W=  0 G= 53 D=  1 grn= 0 red= 0
+y= 887 css= 374.8 mean=199 W=  1 G= 58 D=  1 grn= 0 red= 0
+y= 889 css= 375.6 mean=199 W=  0 G= 54 D=  0 grn= 0 red= 0
+y= 891 css= 376.5 mean=196 W=  0 G= 51 D=  2 grn= 0 red= 0
+y= 893 css= 377.4 mean=201 W=  0 G= 59 D=  0 grn= 0 red= 0
+y= 895 css= 378.2 mean=202 W=  0 G= 58 D=  0 grn= 0 red= 0
+y= 897 css= 379.1 mean=202 W=  0 G= 61 D=  0 grn= 0 red= 0
+y= 899 css=   380 mean=202 W=  0 G= 61 D=  0 grn= 0 red= 0
+y= 901 css= 380.9 mean=202 W=  0 G= 68 D=  0 grn= 0 red= 0
+y= 903 css= 381.7 mean=202 W=  0 G= 62 D=  0 grn= 0 red= 0
+y= 905 css= 382.6 mean=202 W=  0 G= 63 D=  0 grn= 0 red= 0
+y= 907 css= 383.5 mean=202 W=  0 G= 63 D=  0 grn= 0 red= 0
+y= 909 css= 384.3 mean=202 W=  0 G= 59 D=  0 grn= 0 red= 0
+y= 911 css= 385.2 mean=202 W=  0 G= 64 D=  0 grn= 0 red= 0
+y= 913 css= 386.1 mean=202 W=  0 G= 62 D=  0 grn= 0 red= 0
+y= 915 css= 386.9 mean=201 W=  0 G= 59 D=  0 grn= 0 red= 0
+y= 917 css= 387.8 mean=201 W=  0 G= 63 D=  0 grn= 0 red= 0
+y= 919 css= 388.7 mean=200 W=  0 G= 46 D=  0 grn= 0 red= 0
+y= 921 css= 389.5 mean=197 W=  0 G= 25 D=  0 grn= 0 red= 0
+y= 923 css= 390.4 mean=200 W=  0 G= 41 D=  0 grn= 0 red= 0
+y= 925 css= 391.3 mean=209 W=  1 G= 97 D=  0 grn= 0 red= 0
+y= 927 css= 392.2 mean=210 W=  1 G= 97 D=  0 grn= 0 red= 0
+y= 929 css=   393 mean=209 W=  0 G= 97 D=  0 grn= 0 red= 0
+y= 931 css= 393.9 mean=210 W=  0 G= 97 D=  0 grn= 0 red= 0
+y= 933 css= 394.8 mean=210 W=  2 G= 95 D=  0 grn= 0 red= 0
+y= 935 css= 395.6 mean=209 W=  1 G= 96 D=  0 grn= 0 red= 0
+y= 937 css= 396.5 mean=210 W=  4 G= 93 D=  0 grn= 0 red= 0
+y= 939 css= 397.4 mean=209 W=  2 G= 96 D=  0 grn= 0 red= 0
+y= 941 css= 398.2 mean=209 W=  2 G= 92 D=  0 grn= 0 red= 0
+y= 943 css= 399.1 mean=208 W=  1 G= 94 D=  0 grn= 0 red= 0
+y= 945 css=   400 mean=208 W=  0 G= 90 D=  0 grn= 0 red= 0
+y= 947 css= 400.8 mean=202 W=  2 G= 89 D=  5 grn= 6 red= 0
+y= 949 css= 401.7 mean=201 W=  1 G= 84 D=  6 grn= 6 red= 0
+y= 951 css= 402.6 mean=200 W=  1 G= 87 D=  7 grn= 7 red= 0
+y= 953 css= 403.5 mean=199 W=  1 G= 86 D=  7 grn= 8 red= 0
+y= 955 css= 404.3 mean=195 W=  1 G= 82 D= 10 grn= 9 red= 0
+y= 957 css= 405.2 mean=194 W=  1 G= 81 D= 12 grn=12 red= 0
+y= 959 css= 406.1 mean=196 W=  1 G= 81 D=  8 grn=13 red= 0
+y= 961 css= 406.9 mean=199 W=  5 G= 82 D=  8 grn=10 red= 0
+y= 963 css= 407.8 mean=198 W=  5 G= 81 D=  8 grn= 9 red= 0
+y= 965 css= 408.7 mean=196 W=  3 G= 80 D= 10 grn= 9 red= 0
+y= 967 css= 409.5 mean=197 W=  4 G= 80 D=  9 grn=10 red= 0
+y= 969 css= 410.4 mean=198 W=  7 G= 73 D=  8 grn=10 red= 0
+y= 971 css= 411.3 mean=184 W=  4 G= 62 D= 17 grn=10 red= 0
+y= 973 css= 412.2 mean=188 W=  5 G= 63 D= 12 grn= 9 red= 0
+y= 975 css=   413 mean=192 W= 11 G= 62 D= 12 grn= 9 red= 0
+y= 977 css= 413.9 mean=188 W=  8 G= 60 D= 14 grn= 9 red= 0
+y= 979 css= 414.8 mean=185 W=  5 G= 61 D= 15 grn= 9 red= 0
+y= 981 css= 415.6 mean=190 W= 11 G= 59 D= 13 grn=11 red= 0
+y= 983 css= 416.5 mean=189 W=  7 G= 61 D= 11 grn=10 red= 0
+y= 985 css= 417.4 mean=183 W=  5 G= 58 D= 15 grn= 9 red= 0
+y= 987 css= 418.2 mean=196 W= 10 G= 70 D= 12 grn=11 red= 0
+y= 989 css= 419.1 mean=195 W=  8 G= 72 D= 11 grn=11 red= 0
+y= 991 css=   420 mean=194 W=  4 G= 78 D= 11 grn=11 red= 0
+y= 993 css= 420.8 mean=197 W=  4 G= 77 D=  8 grn=10 red= 0
+y= 995 css= 421.7 mean=199 W=  3 G= 85 D=  8 grn=10 red= 0
+y= 997 css= 422.6 mean=199 W=  4 G= 81 D=  8 grn= 9 red= 0
+y= 999 css= 423.5 mean=200 W=  5 G= 85 D=  7 grn= 8 red= 0
+y=1001 css= 424.3 mean=200 W=  3 G= 86 D=  7 grn= 8 red= 0
+y=1003 css= 425.2 mean=201 W=  4 G= 86 D=  7 grn= 7 red= 0
+y=1005 css= 426.1 mean=202 W=  4 G= 84 D=  6 grn= 7 red= 0
+y=1007 css= 426.9 mean=203 W=  1 G= 90 D=  5 grn= 6 red= 0
+y=1009 css= 427.8 mean=209 W=  2 G= 93 D=  0 grn= 4 red= 0
+y=1011 css= 428.7 mean=210 W=  2 G= 96 D=  0 grn= 0 red= 0
+y=1013 css= 429.5 mean=211 W=  8 G= 89 D=  0 grn= 0 red= 0
+y=1015 css= 430.4 mean=211 W=  5 G= 93 D=  0 grn= 0 red= 0
+y=1017 css= 431.3 mean=211 W=  6 G= 92 D=  0 grn= 0 red= 0
+y=1019 css= 432.2 mean=211 W=  6 G= 92 D=  0 grn= 0 red= 0
+y=1021 css=   433 mean=211 W=  8 G= 90 D=  0 grn= 0 red= 0
+y=1023 css= 433.9 mean=211 W=  6 G= 92 D=  0 grn= 0 red= 0
+y=1025 css= 434.8 mean=211 W=  9 G= 86 D=  0 grn= 0 red= 0
+y=1027 css= 435.6 mean=206 W=  1 G= 85 D=  0 grn= 0 red= 0
+y=1029 css= 436.5 mean=207 W=  1 G= 85 D=  0 grn= 0 red= 0
+y=1031 css= 437.4 mean=211 W=  5 G= 91 D=  0 grn= 0 red= 0
+y=1033 css= 438.2 mean=211 W=  5 G= 92 D=  0 grn= 0 red= 0
+y=1035 css= 439.1 mean=211 W=  4 G= 92 D=  0 grn= 0 red= 0
+y=1037 css=   440 mean=210 W=  7 G= 89 D=  0 grn= 0 red= 0
+y=1039 css= 440.8 mean=210 W=  4 G= 93 D=  0 grn= 0 red= 0
+y=1041 css= 441.7 mean=210 W=  5 G= 92 D=  0 grn= 0 red= 0
+y=1043 css= 442.6 mean=210 W=  3 G= 94 D=  0 grn= 0 red= 0
+y=1045 css= 443.5 mean=210 W=  4 G= 92 D=  0 grn= 0 red= 0
+y=1047 css= 444.3 mean=208 W=  2 G= 95 D=  0 grn= 0 red= 0
+y=1049 css= 445.2 mean=208 W=  1 G= 92 D=  0 grn= 0 red= 0
+y=1051 css= 446.1 mean=206 W=  2 G= 91 D=  0 grn= 0 red= 0
+y=1053 css= 446.9 mean=202 W=  1 G= 85 D=  4 grn= 5 red= 0
+y=1055 css= 447.8 mean=201 W=  1 G= 89 D=  5 grn= 5 red= 0
+y=1057 css= 448.7 mean=200 W=  2 G= 84 D=  6 grn= 6 red= 0
+y=1059 css= 449.5 mean=199 W=  1 G= 86 D=  7 grn= 7 red= 0
+y=1061 css= 450.4 mean=198 W=  3 G= 82 D=  7 grn= 8 red= 0
+y=1063 css= 451.3 mean=198 W=  2 G= 84 D=  8 grn= 9 red= 0
+y=1065 css= 452.2 mean=199 W=  2 G= 84 D=  7 grn= 9 red= 0
+y=1067 css=   453 mean=198 W=  4 G= 82 D=  8 grn= 9 red= 0
+y=1069 css= 453.9 mean=195 W=  2 G= 78 D=  8 grn= 9 red= 0
+y=1071 css= 454.8 mean=194 W=  2 G= 78 D= 10 grn=10 red= 0
+y=1073 css= 455.6 mean=197 W=  6 G= 75 D=  8 grn= 9 red= 0
+y=1075 css= 456.5 mean=196 W=  5 G= 74 D=  8 grn= 8 red= 0
+y=1077 css= 457.4 mean=192 W=  4 G= 69 D= 12 grn= 8 red= 0
+y=1079 css= 458.2 mean=195 W=  6 G= 73 D=  8 grn= 8 red= 0
+y=1081 css= 459.1 mean=196 W=  6 G= 70 D=  7 grn= 8 red= 0
+y=1083 css=   460 mean=194 W=  4 G= 74 D= 10 grn= 7 red= 0
+y=1085 css= 460.8 mean=195 W=  5 G= 75 D= 10 grn= 8 red= 0
+y=1087 css= 461.7 mean=194 W=  6 G= 74 D= 11 grn= 8 red= 0
+y=1089 css= 462.6 mean=190 W=  4 G= 70 D= 12 grn= 9 red= 0
+y=1091 css= 463.5 mean=193 W=  2 G= 75 D= 10 grn=11 red= 0
+y=1093 css= 464.3 mean=197 W=  4 G= 76 D=  9 grn=11 red= 0
+y=1095 css= 465.2 mean=196 W=  3 G= 81 D= 10 grn=10 red= 0
+y=1097 css= 466.1 mean=200 W=  3 G= 82 D=  6 grn=10 red= 0
+y=1099 css= 466.9 mean=199 W=  3 G= 84 D=  7 grn= 8 red= 0
+y=1101 css= 467.8 mean=200 W=  3 G= 83 D=  7 grn= 8 red= 0
+y=1103 css= 468.7 mean=201 W=  5 G= 84 D=  6 grn= 7 red= 0
+y=1105 css= 469.5 mean=201 W=  2 G= 88 D=  6 grn= 6 red= 0
+y=1107 css= 470.4 mean=202 W=  2 G= 88 D=  5 grn= 6 red= 0
+y=1109 css= 471.3 mean=202 W=  3 G= 86 D=  5 grn= 6 red= 0
+y=1111 css= 472.1 mean=204 W=  2 G= 90 D=  3 grn= 5 red= 0
+y=1113 css=   473 mean=209 W=  3 G= 91 D=  0 grn= 4 red= 0
+y=1115 css= 473.9 mean=209 W=  3 G= 93 D=  0 grn= 0 red= 0
+y=1117 css= 474.8 mean=211 W=  5 G= 93 D=  0 grn= 0 red= 0
+y=1119 css= 475.6 mean=211 W=  6 G= 92 D=  0 grn= 0 red= 0
+y=1121 css= 476.5 mean=211 W=  5 G= 93 D=  0 grn= 0 red= 0
+y=1123 css= 477.4 mean=211 W=  4 G= 95 D=  0 grn= 0 red= 0
+y=1125 css= 478.2 mean=211 W=  5 G= 94 D=  0 grn= 0 red= 0
+y=1127 css= 479.1 mean=211 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1129 css=   480 mean=211 W=  6 G= 93 D=  0 grn= 0 red= 0
+y=1131 css= 480.8 mean=210 W=  1 G= 97 D=  0 grn= 0 red= 0
+y=1133 css= 481.7 mean=205 W=  1 G= 85 D=  0 grn= 0 red= 0
+y=1135 css= 482.6 mean=209 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1137 css= 483.5 mean=211 W=  2 G= 96 D=  0 grn= 0 red= 0
+y=1139 css= 484.3 mean=211 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1141 css= 485.2 mean=211 W=  4 G= 94 D=  0 grn= 0 red= 0
+y=1143 css= 486.1 mean=211 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1145 css= 486.9 mean=211 W=  3 G= 94 D=  0 grn= 0 red= 0
+y=1147 css= 487.8 mean=211 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1149 css= 488.7 mean=211 W=  4 G= 94 D=  0 grn= 0 red= 0
+y=1151 css= 489.5 mean=211 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1153 css= 490.4 mean=211 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1155 css= 491.3 mean=212 W=  2 G= 96 D=  0 grn= 0 red= 0
+y=1157 css= 492.1 mean=211 W=  5 G= 92 D=  0 grn= 0 red= 0
+y=1159 css=   493 mean=207 W=  3 G= 90 D=  3 grn= 0 red= 0
+y=1161 css= 493.9 mean=209 W=  6 G= 87 D=  2 grn= 0 red= 0
+y=1163 css= 494.8 mean=208 W= 11 G= 75 D=  2 grn= 0 red= 0
+y=1165 css= 495.6 mean=187 W=  9 G= 61 D= 17 grn= 0 red= 0
+y=1167 css= 496.5 mean=198 W= 10 G= 70 D=  8 grn= 0 red= 0
+y=1169 css= 497.4 mean=200 W= 17 G= 64 D=  7 grn= 0 red= 0
+y=1171 css= 498.2 mean=194 W= 14 G= 62 D= 12 grn= 1 red= 0
+y=1173 css= 499.1 mean=196 W= 15 G= 62 D=  9 grn= 3 red= 0
+y=1175 css=   500 mean=196 W= 14 G= 63 D= 10 grn= 3 red= 0
+y=1177 css= 500.8 mean=187 W=  6 G= 61 D= 13 grn= 4 red= 0
+y=1179 css= 501.7 mean=192 W=  5 G= 65 D=  8 grn= 5 red= 0
+y=1181 css= 502.6 mean=207 W= 12 G= 82 D=  5 grn= 5 red= 0
+y=1183 css= 503.5 mean=205 W=  6 G= 87 D=  5 grn= 5 red= 0
+y=1185 css= 504.3 mean=205 W=  2 G= 91 D=  5 grn= 5 red= 0
+y=1187 css= 505.2 mean=205 W=  2 G= 91 D=  4 grn= 5 red= 0
+y=1189 css= 506.1 mean=206 W=  5 G= 89 D=  4 grn= 5 red= 0
+y=1191 css= 506.9 mean=206 W=  3 G= 90 D=  4 grn= 5 red= 0
+y=1193 css= 507.8 mean=206 W=  2 G= 91 D=  4 grn= 5 red= 0
+y=1195 css= 508.7 mean=206 W=  3 G= 90 D=  3 grn= 5 red= 0
+y=1197 css= 509.5 mean=207 W=  3 G= 90 D=  3 grn= 5 red= 0
+y=1199 css= 510.4 mean=207 W=  2 G= 92 D=  3 grn= 4 red= 0
+y=1201 css= 511.3 mean=207 W=  3 G= 91 D=  3 grn= 3 red= 0
+y=1203 css= 512.1 mean=206 W=  2 G= 92 D=  4 grn= 4 red= 0
+y=1205 css=   513 mean=206 W=  4 G= 89 D=  4 grn= 4 red= 0
+y=1207 css= 513.9 mean=206 W=  1 G= 93 D=  4 grn= 4 red= 0
+y=1209 css= 514.8 mean=206 W=  2 G= 93 D=  3 grn= 4 red= 0
+y=1211 css= 515.6 mean=207 W=  3 G= 92 D=  3 grn= 4 red= 0
+y=1213 css= 516.5 mean=208 W=  3 G= 92 D=  3 grn= 3 red= 0
+y=1215 css= 517.4 mean=208 W=  3 G= 92 D=  2 grn= 3 red= 0
+y=1217 css= 518.2 mean=208 W=  3 G= 90 D=  1 grn= 2 red= 0
+y=1219 css= 519.1 mean=209 W=  3 G= 92 D=  1 grn= 2 red= 0
+y=1221 css=   520 mean=210 W=  7 G= 87 D=  0 grn= 1 red= 0
+y=1223 css= 520.8 mean=207 W=  5 G= 87 D=  1 grn= 0 red= 0
+y=1225 css= 521.7 mean=209 W=  4 G= 89 D=  1 grn= 0 red= 0
+y=1227 css= 522.6 mean=208 W=  4 G= 88 D=  1 grn= 0 red= 0
+y=1229 css= 523.5 mean=208 W=  6 G= 87 D=  1 grn= 0 red= 0
+y=1231 css= 524.3 mean=210 W=  7 G= 87 D=  0 grn= 0 red= 0
+y=1233 css= 525.2 mean=206 W=  2 G= 89 D=  1 grn= 0 red= 0
+y=1235 css= 526.1 mean=210 W=  3 G= 89 D=  0 grn= 0 red= 0
+y=1237 css= 526.9 mean=212 W=  4 G= 95 D=  0 grn= 0 red= 0
+y=1239 css= 527.8 mean=212 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1241 css= 528.7 mean=212 W=  2 G= 97 D=  0 grn= 0 red= 0
+y=1243 css= 529.5 mean=212 W=  1 G= 98 D=  0 grn= 0 red= 0
+y=1245 css= 530.4 mean=212 W=  1 G= 97 D=  0 grn= 0 red= 0
+y=1247 css= 531.3 mean=212 W=  2 G= 97 D=  0 grn= 0 red= 0
+y=1249 css= 532.1 mean=212 W=  2 G= 97 D=  0 grn= 0 red= 0
+y=1251 css=   533 mean=212 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1253 css= 533.9 mean=212 W=  2 G= 96 D=  0 grn= 0 red= 0
+y=1255 css= 534.8 mean=207 W=  0 G= 94 D=  0 grn= 0 red= 0
+y=1257 css= 535.6 mean=210 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1259 css= 536.5 mean=213 W=  2 G= 97 D=  0 grn= 0 red= 0
+y=1261 css= 537.4 mean=213 W=  5 G= 94 D=  0 grn= 0 red= 0
+y=1263 css= 538.2 mean=213 W=  6 G= 93 D=  0 grn= 0 red= 0
+y=1265 css= 539.1 mean=213 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1267 css=   540 mean=213 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1269 css= 540.8 mean=213 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1271 css= 541.7 mean=213 W=  3 G= 95 D=  0 grn= 0 red= 0
+y=1273 css= 542.6 mean=212 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1275 css= 543.5 mean=213 W=  2 G= 96 D=  0 grn= 0 red= 0
+y=1277 css= 544.3 mean=213 W=  4 G= 94 D=  0 grn= 0 red= 0
+y=1279 css= 545.2 mean=213 W=  2 G= 97 D=  0 grn= 0 red= 0
+y=1281 css= 546.1 mean=213 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1283 css= 546.9 mean=213 W=  4 G= 94 D=  0 grn= 0 red= 0
+y=1285 css= 547.8 mean=213 W=  5 G= 92 D=  0 grn= 0 red= 0
+y=1287 css= 548.7 mean=211 W=  6 G= 90 D=  2 grn= 2 red= 0
+y=1289 css= 549.5 mean=210 W=  3 G= 92 D=  2 grn= 3 red= 0
+y=1291 css= 550.4 mean=211 W=  6 G= 91 D=  1 grn= 3 red= 0
+y=1293 css= 551.3 mean=212 W=  8 G= 89 D=  1 grn= 2 red= 0
+y=1295 css= 552.1 mean=212 W=  7 G= 90 D=  1 grn= 2 red= 0
+y=1297 css=   553 mean=211 W=  8 G= 86 D=  1 grn= 2 red= 0
+y=1299 css= 553.9 mean=209 W=  9 G= 84 D=  2 grn= 1 red= 0
+y=1301 css= 554.8 mean=210 W= 14 G= 79 D=  2 grn= 2 red= 0
+y=1303 css= 555.6 mean=208 W= 11 G= 75 D=  2 grn= 2 red= 0
+y=1305 css= 556.5 mean=195 W=  7 G= 69 D= 11 grn= 1 red= 0
+y=1307 css= 557.4 mean=201 W=  7 G= 74 D=  6 grn= 1 red= 0
+y=1309 css= 558.2 mean=203 W= 11 G= 73 D=  6 grn= 1 red= 0
+y=1311 css= 559.1 mean=201 W= 11 G= 71 D=  8 grn= 2 red= 0
+y=1313 css=   560 mean=203 W= 11 G= 72 D=  6 grn= 2 red= 0
+y=1315 css= 560.8 mean=203 W= 11 G= 71 D=  6 grn= 2 red= 0
+y=1317 css= 561.7 mean=199 W= 10 G= 69 D=  7 grn= 2 red= 0
+y=1319 css= 562.6 mean=205 W= 12 G= 70 D=  3 grn= 2 red= 0
+y=1321 css= 563.4 mean=212 W=  9 G= 87 D=  0 grn= 2 red= 0
+y=1323 css= 564.3 mean=213 W= 14 G= 82 D=  1 grn= 2 red= 0
+y=1325 css= 565.2 mean=213 W= 13 G= 83 D=  1 grn= 2 red= 0
+y=1327 css= 566.1 mean=212 W= 12 G= 83 D=  1 grn= 2 red= 0
+y=1329 css= 566.9 mean=211 W=  8 G= 87 D=  2 grn= 3 red= 0
+y=1331 css= 567.8 mean=212 W=  8 G= 87 D=  1 grn= 3 red= 0
+y=1333 css= 568.7 mean=214 W=  9 G= 88 D=  0 grn= 2 red= 0
+y=1335 css= 569.5 mean=215 W= 14 G= 84 D=  0 grn= 0 red= 0
+y=1337 css= 570.4 mean=215 W= 11 G= 88 D=  0 grn= 0 red= 0
+y=1339 css= 571.3 mean=215 W= 13 G= 85 D=  0 grn= 0 red= 0
+y=1341 css= 572.1 mean=215 W= 11 G= 86 D=  0 grn= 0 red= 0
+y=1343 css=   573 mean=215 W= 15 G= 82 D=  0 grn= 0 red= 0
+y=1345 css= 573.9 mean=215 W= 14 G= 83 D=  0 grn= 0 red= 0
+y=1347 css= 574.8 mean=215 W= 18 G= 79 D=  0 grn= 0 red= 0
+y=1349 css= 575.6 mean=216 W= 22 G= 75 D=  0 grn= 0 red= 0
+y=1351 css= 576.5 mean=215 W= 21 G= 76 D=  0 grn= 0 red= 0
+y=1353 css= 577.4 mean=216 W= 28 G= 69 D=  0 grn= 0 red= 0
+y=1355 css= 578.2 mean=216 W= 37 G= 59 D=  0 grn= 0 red= 0
+y=1357 css= 579.1 mean=217 W= 51 G= 45 D=  0 grn= 0 red= 0
+y=1359 css=   580 mean=212 W= 24 G= 69 D=  0 grn= 0 red= 0
+y=1361 css= 580.8 mean=180 W=  0 G=  8 D=  0 grn= 0 red= 0
+y=1363 css= 581.7 mean=180 W=  0 G=  8 D=  0 grn= 0 red= 0
+y=1365 css= 582.6 mean=186 W=  0 G=  9 D=  0 grn= 0 red= 0
+y=1367 css= 583.4 mean=192 W=  0 G=  9 D=  0 grn= 0 red= 0
+y=1369 css= 584.3 mean=198 W=  1 G= 23 D=  0 grn= 0 red= 0
+y=1371 css= 585.2 mean=203 W=  0 G= 78 D=  0 grn= 0 red= 0
+y=1373 css= 586.1 mean=208 W=  0 G= 97 D=  0 grn= 0 red= 0
+y=1375 css= 586.9 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1377 css= 587.8 mean=213 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1379 css= 588.7 mean=214 W=  5 G= 95 D=  0 grn= 0 red= 0
+y=1381 css= 589.5 mean=215 W= 12 G= 88 D=  0 grn= 0 red= 0
+y=1383 css= 590.4 mean=218 W= 45 G= 55 D=  0 grn= 0 red= 0
+y=1385 css= 591.3 mean=149 W=  0 G= 11 D=  8 grn= 0 red=37
+y=1387 css= 592.1 mean=116 W=  0 G= 10 D= 89 grn= 0 red=90
+y=1389 css=   593 mean=108 W=  0 G=  9 D= 90 grn= 0 red=91
+y=1391 css= 593.9 mean=104 W=  0 G=  8 D= 91 grn= 0 red=91
+y=1393 css= 594.8 mean=104 W=  1 G=  7 D= 92 grn= 0 red=92
+y=1395 css= 595.6 mean=103 W=  0 G=  7 D= 92 grn= 0 red=92
+y=1397 css= 596.5 mean=102 W=  0 G=  7 D= 92 grn= 0 red=93
+y=1399 css= 597.4 mean=103 W=  0 G=  6 D= 93 grn= 0 red=93
+y=1401 css= 598.2 mean=102 W=  0 G=  6 D= 93 grn= 0 red=93
+y=1403 css= 599.1 mean=102 W=  0 G=  6 D= 93 grn= 0 red=93
+y=1405 css=   600 mean=103 W=  0 G=  6 D= 93 grn= 0 red=93
+y=1407 css= 600.8 mean=102 W=  0 G=  6 D= 93 grn= 0 red=94
+y=1409 css= 601.7 mean=103 W=  0 G=  6 D= 93 grn= 0 red=94
+y=1411 css= 602.6 mean=102 W=  0 G=  6 D= 93 grn= 0 red=94
+y=1413 css= 603.4 mean=103 W=  0 G=  6 D= 93 grn= 0 red=94
+y=1415 css= 604.3 mean=103 W=  0 G=  6 D= 94 grn= 0 red=94
+y=1417 css= 605.2 mean=102 W=  0 G=  6 D= 94 grn= 0 red=94
+y=1419 css= 606.1 mean=103 W=  1 G=  5 D= 94 grn= 0 red=94
+y=1421 css= 606.9 mean=106 W=  0 G=  6 D= 86 grn= 0 red=94
+y=1423 css= 607.8 mean=117 W=  7 G=  8 D= 81 grn= 0 red=88
+y=1425 css= 608.7 mean=117 W=  7 G=  8 D= 80 grn= 0 red=85
+y=1427 css= 609.5 mean=113 W=  5 G=  7 D= 82 grn= 0 red=87
+y=1429 css= 610.4 mean=113 W=  5 G=  6 D= 85 grn= 0 red=87
+y=1431 css= 611.3 mean=112 W=  5 G=  6 D= 85 grn= 0 red=88
+y=1433 css= 612.1 mean=114 W=  4 G=  7 D= 82 grn= 0 red=88
+y=1435 css=   613 mean=116 W=  7 G=  7 D= 81 grn= 0 red=86
+y=1437 css= 613.9 mean=114 W=  5 G=  7 D= 82 grn= 0 red=87
+y=1439 css= 614.8 mean=114 W=  5 G=  7 D= 84 grn= 0 red=87
+y=1441 css= 615.6 mean=114 W=  4 G=  8 D= 83 grn= 0 red=87
+y=1443 css= 616.5 mean=117 W=  5 G=  9 D= 80 grn= 0 red=87
+y=1445 css= 617.4 mean=117 W=  8 G=  7 D= 81 grn= 0 red=85
+y=1447 css= 618.2 mean=112 W=  1 G=  7 D= 82 grn= 0 red=89
+y=1449 css= 619.1 mean=106 W=  0 G=  6 D= 91 grn= 0 red=94
+y=1451 css=   620 mean=104 W=  0 G=  6 D= 93 grn= 0 red=94
+y=1453 css= 620.8 mean=103 W=  1 G=  5 D= 93 grn= 0 red=94
+y=1455 css= 621.7 mean=103 W=  1 G=  6 D= 93 grn= 0 red=94
+y=1457 css= 622.6 mean=103 W=  1 G=  6 D= 93 grn= 0 red=93
+y=1459 css= 623.4 mean=103 W=  0 G=  6 D= 93 grn= 0 red=93
+y=1461 css= 624.3 mean=103 W=  1 G=  6 D= 93 grn= 0 red=93
+y=1463 css= 625.2 mean=103 W=  2 G=  5 D= 93 grn= 0 red=93
+y=1465 css= 626.1 mean=103 W=  1 G=  5 D= 93 grn= 0 red=93
+y=1467 css= 626.9 mean=104 W=  1 G=  6 D= 92 grn= 0 red=93
+y=1469 css= 627.8 mean=104 W=  1 G=  6 D= 92 grn= 0 red=92
+y=1471 css= 628.7 mean=104 W=  1 G=  6 D= 92 grn= 0 red=92
+y=1473 css= 629.5 mean=104 W=  0 G=  7 D= 92 grn= 0 red=92
+y=1475 css= 630.4 mean=105 W=  1 G=  7 D= 91 grn= 0 red=92
+y=1477 css= 631.3 mean=105 W=  0 G=  8 D= 90 grn= 0 red=91
+y=1479 css= 632.1 mean=106 W=  1 G=  7 D= 90 grn= 0 red=90
+y=1481 css=   633 mean=108 W=  1 G=  9 D= 88 grn= 0 red=90
+y=1483 css= 633.9 mean=136 W=  1 G= 11 D= 46 grn= 0 red=82
+y=1485 css= 634.8 mean=208 W=  1 G= 94 D=  0 grn= 0 red= 3
+y=1487 css= 635.6 mean=214 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1489 css= 636.5 mean=214 W=  9 G= 91 D=  0 grn= 0 red= 0
+y=1491 css= 637.4 mean=215 W=  5 G= 95 D=  0 grn= 0 red= 0
+y=1493 css= 638.2 mean=215 W= 10 G= 90 D=  0 grn= 0 red= 0
+y=1495 css= 639.1 mean=215 W=  6 G= 94 D=  0 grn= 0 red= 0
+y=1497 css=   640 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y=1499 css= 640.8 mean=214 W=  4 G= 96 D=  0 grn= 0 red= 0
+y=1501 css= 641.7 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y=1503 css= 642.6 mean=214 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1505 css= 643.4 mean=214 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1507 css= 644.3 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1509 css= 645.2 mean=213 W=  4 G= 96 D=  0 grn= 0 red= 0
+y=1511 css= 646.1 mean=213 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1513 css= 646.9 mean=213 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1515 css= 647.8 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1517 css= 648.7 mean=213 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1519 css= 649.5 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1521 css= 650.4 mean=213 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1523 css= 651.3 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1525 css= 652.1 mean=212 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1527 css=   653 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1529 css= 653.9 mean=212 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1531 css= 654.7 mean=212 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1533 css= 655.6 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1535 css= 656.5 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1537 css= 657.4 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1539 css= 658.2 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1541 css= 659.1 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1543 css=   660 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1545 css= 660.8 mean=211 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1547 css= 661.7 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1549 css= 662.6 mean=210 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1551 css= 663.4 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1553 css= 664.3 mean=210 W=  1 G= 98 D=  0 grn= 0 red= 0
+y=1555 css= 665.2 mean=210 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1557 css= 666.1 mean=210 W=  1 G= 98 D=  0 grn= 0 red= 0
+y=1559 css= 666.9 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1561 css= 667.8 mean=210 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1563 css= 668.7 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1565 css= 669.5 mean=210 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1567 css= 670.4 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1569 css= 671.3 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1571 css= 672.1 mean=209 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1573 css=   673 mean=209 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1575 css= 673.9 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1577 css= 674.7 mean=209 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1579 css= 675.6 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1581 css= 676.5 mean=209 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1583 css= 677.4 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1585 css= 678.2 mean=209 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1587 css= 679.1 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1589 css=   680 mean=209 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1591 css= 680.8 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1593 css= 681.7 mean=209 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1595 css= 682.6 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1597 css= 683.4 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1599 css= 684.3 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1601 css= 685.2 mean=208 W=  1 G= 98 D=  0 grn= 0 red= 0
+y=1603 css= 686.1 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1605 css= 686.9 mean=208 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1607 css= 687.8 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1609 css= 688.7 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1611 css= 689.5 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1613 css= 690.4 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1615 css= 691.3 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1617 css= 692.1 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1619 css=   693 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1621 css= 693.9 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1623 css= 694.7 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1625 css= 695.6 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1627 css= 696.5 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1629 css= 697.4 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1631 css= 698.2 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1633 css= 699.1 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1635 css=   700 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1637 css= 700.8 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1639 css= 701.7 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1641 css= 702.6 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1643 css= 703.4 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1645 css= 704.3 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1647 css= 705.2 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1649 css= 706.1 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1651 css= 706.9 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1653 css= 707.8 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1655 css= 708.7 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1657 css= 709.5 mean=207 W=  0 G= 97 D=  0 grn= 0 red= 0
+y=1659 css= 710.4 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1661 css= 711.3 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1663 css= 712.1 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1665 css=   713 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1667 css= 713.9 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1669 css= 714.7 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1671 css= 715.6 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1673 css= 716.5 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1675 css= 717.4 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1677 css= 718.2 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1679 css= 719.1 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1681 css=   720 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1683 css= 720.8 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1685 css= 721.7 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1687 css= 722.6 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1689 css= 723.4 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1691 css= 724.3 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1693 css= 725.2 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1695 css=   726 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1697 css= 726.9 mean=207 W=  0 G= 98 D=  0 grn= 0 red= 0
+y=1699 css= 727.8 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1701 css= 728.7 mean=207 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1703 css= 729.5 mean=207 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1705 css= 730.4 mean=208 W=  0 G= 99 D=  0 grn= 0 red= 0
+y=1707 css= 731.3 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1709 css= 732.1 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1711 css=   733 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1713 css= 733.9 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1715 css= 734.7 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1717 css= 735.6 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1719 css= 736.5 mean=208 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1721 css= 737.4 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1723 css= 738.2 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1725 css= 739.1 mean=209 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1727 css=   740 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1729 css= 740.8 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1731 css= 741.7 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1733 css= 742.6 mean=210 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1735 css= 743.4 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1737 css= 744.3 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1739 css= 745.2 mean=211 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1741 css=   746 mean=211 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1743 css= 746.9 mean=212 W=  0 G=100 D=  0 grn= 0 red= 0
+y=1745 css= 747.8 mean=212 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1747 css= 748.7 mean=213 W=  1 G= 99 D=  0 grn= 0 red= 0
+y=1749 css= 749.5 mean=213 W=  2 G= 98 D=  0 grn= 0 red= 0
+y=1751 css= 750.4 mean=213 W=  4 G= 96 D=  0 grn= 0 red= 0
+y=1753 css= 751.3 mean=213 W=  3 G= 96 D=  0 grn= 0 red= 0
+y=1755 css= 752.1 mean=214 W=  3 G= 97 D=  0 grn= 0 red= 0
+y=1757 css=   753 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y=1759 css= 753.9 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y=1761 css= 754.7 mean=214 W=  7 G= 93 D=  0 grn= 0 red= 0
+y=1763 css= 755.6 mean=214 W=  4 G= 96 D=  0 grn= 0 red= 0
+y=1765 css= 756.5 mean=215 W=  8 G= 92 D=  0 grn= 0 red= 0
+y=1767 css= 757.4 mean=215 W=  8 G= 92 D=  0 grn= 0 red= 0
+y=1769 css= 758.2 mean=215 W= 10 G= 90 D=  0 grn= 0 red= 0
+y=1771 css= 759.1 mean=215 W= 10 G= 90 D=  0 grn= 0 red= 0
+y=1773 css=   760 mean=215 W= 17 G= 83 D=  0 grn= 0 red= 0
+y=1775 css= 760.8 mean=216 W= 18 G= 82 D=  0 grn= 0 red= 0
+y=1777 css= 761.7 mean=215 W= 14 G= 86 D=  0 grn= 0 red= 0
+y=1779 css= 762.6 mean=214 W= 14 G= 85 D=  0 grn= 0 red= 0
+y=1781 css= 763.4 mean=206 W=  0 G= 84 D=  0 grn= 0 red= 0
+y=1783 css= 764.3 mean=186 W=  0 G= 57 D=  0 grn= 4 red= 0
+y=1785 css= 765.2 mean=137 W=  0 G= 13 D= 32 grn=22 red= 0
+y=1787 css=   766 mean=105 W=  0 G= 12 D= 86 grn=27 red= 0
+y=1789 css= 766.9 mean= 91 W=  0 G= 11 D= 88 grn=28 red= 0
+y=1791 css= 767.8 mean= 82 W=  0 G= 11 D= 88 grn=28 red= 0
+y=1793 css= 768.7 mean= 78 W=  0 G= 10 D= 88 grn=29 red= 0
+y=1795 css= 769.5 mean= 76 W=  0 G= 10 D= 89 grn=29 red= 0
+y=1797 css= 770.4 mean= 74 W=  0 G= 10 D= 89 grn=29 red= 0
+y=1799 css= 771.3 mean= 74 W=  0 G= 10 D= 89 grn=29 red= 0
+y=1801 css= 772.1 mean= 73 W=  0 G= 10 D= 90 grn=30 red= 0
+y=1803 css=   773 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1805 css= 773.9 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1807 css= 774.7 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1809 css= 775.6 mean= 74 W=  0 G=  9 D= 89 grn=30 red= 0
+y=1811 css= 776.5 mean= 75 W=  0 G= 10 D= 88 grn=30 red= 0
+y=1813 css= 777.4 mean= 75 W=  0 G=  9 D= 88 grn=29 red= 0
+y=1815 css= 778.2 mean= 75 W=  0 G=  9 D= 88 grn=30 red= 0
+y=1817 css= 779.1 mean= 77 W=  0 G= 10 D= 88 grn=30 red= 0
+y=1819 css=   780 mean= 83 W=  0 G= 12 D= 83 grn=30 red= 0
+y=1821 css= 780.8 mean= 85 W=  3 G= 11 D= 82 grn=30 red= 0
+y=1823 css= 781.7 mean= 86 W=  4 G= 10 D= 82 grn=30 red= 0
+y=1825 css= 782.6 mean= 84 W=  0 G= 10 D= 82 grn=30 red= 0
+y=1827 css= 783.4 mean= 80 W=  0 G= 10 D= 86 grn=30 red= 0
+y=1829 css= 784.3 mean= 83 W=  1 G=  9 D= 81 grn=30 red= 0
+y=1831 css= 785.2 mean= 85 W=  2 G= 13 D= 82 grn=30 red= 0
+y=1833 css=   786 mean= 85 W=  2 G= 11 D= 81 grn=29 red= 0
+y=1835 css= 786.9 mean= 88 W=  4 G= 13 D= 80 grn=28 red= 0
+y=1837 css= 787.8 mean= 88 W=  5 G=  9 D= 79 grn=27 red= 0
+y=1839 css= 788.7 mean= 88 W=  5 G= 11 D= 80 grn=29 red= 0
+y=1841 css= 789.5 mean= 87 W=  5 G= 10 D= 81 grn=30 red= 0
+y=1843 css= 790.4 mean= 87 W=  5 G= 10 D= 82 grn=30 red= 0
+y=1845 css= 791.3 mean= 86 W=  5 G= 10 D= 82 grn=30 red= 0
+y=1847 css= 792.1 mean= 85 W=  1 G= 13 D= 82 grn=29 red= 0
+y=1849 css=   793 mean= 82 W=  0 G= 10 D= 83 grn=30 red= 0
+y=1851 css= 793.9 mean= 85 W=  0 G= 12 D= 81 grn=30 red= 0
+y=1853 css= 794.7 mean= 82 W=  0 G= 13 D= 82 grn=30 red= 0
+y=1855 css= 795.6 mean= 76 W=  0 G=  9 D= 85 grn=25 red= 0
+y=1857 css= 796.5 mean= 74 W=  0 G=  9 D= 89 grn=30 red= 0
+y=1859 css= 797.4 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1861 css= 798.2 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1863 css= 799.1 mean= 72 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1865 css=   800 mean= 72 W=  0 G=  8 D= 90 grn=30 red= 0
+y=1867 css= 800.8 mean= 72 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1869 css= 801.7 mean= 72 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1871 css= 802.6 mean= 72 W=  0 G=  9 D= 89 grn=30 red= 0
+y=1873 css= 803.4 mean= 75 W=  0 G=  9 D= 87 grn=30 red= 0
+y=1875 css= 804.3 mean= 77 W=  0 G=  9 D= 86 grn=30 red= 0
+y=1877 css= 805.2 mean= 80 W=  0 G= 10 D= 83 grn=30 red= 0
+y=1879 css=   806 mean= 86 W=  0 G= 11 D= 78 grn=30 red= 0
+y=1881 css= 806.9 mean= 89 W=  0 G= 10 D= 76 grn=29 red= 0
+y=1883 css= 807.8 mean= 89 W=  0 G= 11 D= 76 grn=28 red= 0
+y=1885 css= 808.7 mean= 88 W=  0 G= 11 D= 78 grn=28 red= 0
+y=1887 css= 809.5 mean= 87 W=  0 G= 11 D= 78 grn=29 red= 0
+y=1889 css= 810.4 mean= 88 W=  0 G=  9 D= 77 grn=30 red= 0
+y=1891 css= 811.3 mean= 83 W=  0 G=  9 D= 83 grn=30 red= 0
+y=1893 css= 812.1 mean= 75 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1895 css=   813 mean= 73 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1897 css= 813.9 mean= 72 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1899 css= 814.7 mean= 72 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1901 css= 815.6 mean= 71 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1903 css= 816.5 mean= 71 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1905 css= 817.3 mean= 71 W=  0 G=  9 D= 90 grn=30 red= 0
+y=1907 css= 818.2 mean= 71 W=  0 G=  8 D= 90 grn=30 red= 0
+y=1909 css= 819.1 mean= 71 W=  0 G=  8 D= 90 grn=30 red= 0
+y=1911 css=   820 mean= 71 W=  0 G=  8 D= 90 grn=30 red= 0
+y=1913 css= 820.8 mean= 71 W=  0 G=  9 D= 89 grn=30 red= 0
+y=1915 css= 821.7 mean= 71 W=  0 G=  9 D= 89 grn=29 red= 0
+y=1917 css= 822.6 mean= 71 W=  0 G=  8 D= 89 grn=29 red= 0
+y=1919 css= 823.4 mean= 71 W=  0 G=  8 D= 89 grn=29 red= 0
+y=1921 css= 824.3 mean= 71 W=  0 G=  9 D= 89 grn=29 red= 0
+y=1923 css= 825.2 mean= 71 W=  0 G=  9 D= 88 grn=28 red= 0
+y=1925 css=   826 mean= 72 W=  0 G=  9 D= 88 grn=28 red= 0
+y=1927 css= 826.9 mean= 72 W=  0 G= 10 D= 87 grn=28 red= 0
+y=1929 css= 827.8 mean= 73 W=  0 G= 10 D= 87 grn=27 red= 0
+y=1931 css= 828.7 mean= 78 W=  0 G= 10 D= 78 grn=26 red= 0
+y=1933 css= 829.5 mean=105 W=  0 G= 11 D= 58 grn=25 red= 0
+y=1935 css= 830.4 mean=155 W=  0 G= 11 D= 23 grn= 4 red= 0
+y=1937 css= 831.3 mean=182 W=  0 G= 19 D=  0 grn= 0 red= 0
+y=1939 css= 832.1 mean=199 W=  0 G= 59 D=  0 grn= 0 red= 0
+y=1941 css=   833 mean=205 W=  0 G= 90 D=  0 grn= 0 red= 0
+y=1943 css= 833.9 mean=206 W=  0 G= 96 D=  1 grn= 0 red= 0
+y=1945 css= 834.7 mean=206 W=  0 G= 96 D=  1 grn= 0 red= 0
+y=1947 css= 835.6 mean=206 W=  0 G= 97 D=  1 grn= 0 red= 0
+y=1949 css= 836.5 mean=206 W=  0 G= 96 D=  1 grn= 0 red= 0
+y=1951 css= 837.3 mean=205 W=  0 G= 97 D=  1 grn= 0 red= 0
+y=1953 css= 838.2 mean=205 W=  0 G= 96 D=  2 grn= 0 red= 0
+y=1955 css= 839.1 mean=204 W=  0 G= 95 D=  2 grn= 0 red= 0
+y=1957 css=   840 mean=203 W=  0 G= 95 D=  3 grn= 0 red= 0
+y=1959 css= 840.8 mean=202 W=  0 G= 94 D=  3 grn= 0 red= 0
+y=1961 css= 841.7 mean=202 W=  0 G= 94 D=  4 grn= 0 red= 0
+y=1963 css= 842.6 mean=200 W=  0 G= 87 D=  4 grn= 0 red= 0
+y=1965 css= 843.4 mean=187 W=  0 G= 56 D=  5 grn= 0 red= 0
+y=1967 css= 844.3 mean=176 W=  0 G= 55 D=  6 grn= 0 red= 0
+y=1969 css= 845.2 mean=172 W=  0 G= 55 D=  6 grn= 0 red= 0
+y=1971 css=   846 mean=170 W=  0 G= 53 D=  7 grn= 0 red= 0
+y=1973 css= 846.9 mean=177 W=  0 G= 53 D=  8 grn= 0 red= 0
+y=1975 css= 847.8 mean=188 W=  0 G= 75 D=  9 grn= 0 red= 0
+y=1977 css= 848.7 mean=189 W=  0 G= 86 D= 10 grn= 0 red= 0
+y=1979 css= 849.5 mean=187 W=  0 G= 85 D= 11 grn= 0 red= 0
+y=1981 css= 850.4 mean=183 W=  0 G= 80 D= 13 grn= 0 red= 0
+y=1983 css= 851.3 mean=169 W=  0 G= 62 D= 20 grn= 0 red= 0
+y=1985 css= 852.1 mean=138 W=  0 G= 29 D= 35 grn= 0 red= 0

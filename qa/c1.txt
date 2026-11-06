@@ -1,0 +1,13 @@
+WhatsApp Image 2026-10-25 at 18.26.06 (1).jpeg  540x1170 device = 360x780 CSS (÷1.5)
+col x=167 CSS, scanning 380..500 (edge Δ>24)
+    380.0  #1b5c56   start
+    420.0  #e9fdfc   (was #1b5c56 from 380.0)
+    466.5  #c6cbcf   (was #e9fdfc from 420.0)
+    467.0  #777c80   (was #c6cbcf from 466.5)
+    468.0  #5d646a   (was #777c80 from 467.0)
+    468.5  #858c92   (was #5d646a from 468.0)
+    470.0  #60656b   (was #858c92 from 468.5)
+    471.0  #8f939c   (was #60656b from 470.0)
+    473.0  #686b72   (was #8f939c from 471.0)
+    474.0  #96999e   (was #686b72 from 473.0)
+    474.5  #f3f7fa   (was #96999e from 474.0)

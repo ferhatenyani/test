@@ -1,0 +1,88 @@
+{
+  "source": "18.26.05 (2).jpeg — the ONLY capture of the Timetable day-pill variant, profile a360 (540x1170 device / 1.5 = 360x780 CSS). Re-transcribed 2026-10-26 from this capture with scripts/qa/pxprobe.mjs. PREVIOUS VERSION WAS WRONG: it asserted svcHeader h 91.7 / svcBand h 66.7 copied from the discharge/grades pages and did not match its own reference, which is why scenario 37 passed green while pixel-diffing at 14.41% (the worst non-keyboard row). This variant's band is 123.2 tall and it has NO sad-box art, so the header assertions below are measured, not inherited.",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "svcHeader",
+      "note": "The header now totals 148.2, not 91.7. `col 8 140 300` reads flat green #009575 from <=140 to 148.0, then #d9ffff/#f2ffff at 148.5/149.0. `bbox 0 92 360 148` against #009577 at Δ>30 returns ink ONLY on the y148.0 bottom edge (720 of 81,360 px), so y92..148 is empty green — there is no second row of content inside the band.",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 148.2,
+        "bg": "#009577"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 8
+      }
+    },
+    {
+      "key": "svcBand",
+      "note": "Band top 25 (the a360 status reserve) -> bottom 148.2 = h 123.2, confirmed on three separate columns (x=8, x=139, x=180) which all agree on 148.0/148.5. `col 180 60 150` shows green uninterrupted from 68.5 to 148.0.",
+      "expect": {
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 123.2
+      },
+      "tol": {
+        "geom": 1.5
+      }
+    },
+    {
+      "key": "svcBack",
+      "note": "UNCHANGED by the taller band — the disc is top-biased, not centred, so growing the band does not move it. `row 56` reads band->disc at x18.0 and disc->band at x59.0 (w 41), and `col 38 25 100` reads the disc 36..76.5 (h 40.5) -> same x18 / y35.7 / 41.3 / r20.65 as the other seven service pages. This is the assertion that proves the band grows DOWNWARD only.",
+      "expect": {
+        "x": 18,
+        "y": 35.7,
+        "w": 41.3,
+        "h": 41.3,
+        "radius": 20.65,
+        "bg": "rgba(255,255,255,0.2)"
+      },
+      "tol": {
+        "geom": 1.5,
+        "radius": 1,
+        "color": 12
+      }
+    },
+    {
+      "key": "svcTitle",
+      "note": "Top-biased like the disc, NOT centred in the 123.2 band. `col 180 0 230` puts the white title ink at y59..62, which is the cap-height zone of the SAME 50.3..66.3 box every other service page uses; flex-centring this band would have put it at y78.6. Implemented as an explicit top-[25.3px] on the absolutely-positioned title (25 + 25.3 = 50.3), which is numerically identical to the old (66.7-16)/2 centring, so specs 30-36/38/39 do not move.",
+      "expect": {
+        "y": 50.3,
+        "h": 16,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "textAlign": "center",
+        "color": "#ffffff",
+        "text": "Timetable"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 8
+      }
+    },
+    {
+      "key": "svcDayStrip",
+      "note": "The white full-bleed strip the day-pills sit in — NOT in the previous spec at all. `col 8` reads #f2ffff from 149.0 to 208.0, then a #d7d8da/#e5e6e8 hairline 208..212, then page bg #f1f2f4. `row 170` and `row 194` both start at #ffffff at x=0, so it is full-bleed (x 0..360), and the pill borders (#f1f1f1 at x92/186/270/342.5 on white) prove the strip is the pills' surface rather than the page. y 148.2 -> 208 = h 59.8.",
+      "expect": {
+        "x": 0,
+        "y": 148.2,
+        "w": 360,
+        "h": 59.8,
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 8
+      }
+    }
+  ]
+}

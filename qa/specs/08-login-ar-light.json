@@ -1,0 +1,232 @@
+{
+  "source": "WhatsApp Image 2026-10-25 at 18.25.56 (6).jpeg, profile a360 (540x1170 device / 1.5 = 360x780 CSS), transcribed with scripts/qa/pxprobe.mjs row|col|at|box|bbox and re-read with the IDENTICAL call on qa/out/08-login-ar-light.png. Origin: every capture paints the first 25 CSS px with the page background (#f5f6f8 light / #101115 dark) and starts the green band at 25, while a headless render resolves env(safe-area-inset-top) to 0px — so the page floors that reserve at max(25px, env(safe-area-inset-top)) and DOM y and capture y then share one origin.",
+  "page": {
+    "dir": "rtl",
+    "lang": "ar"
+  },
+  "components": [
+    {
+      "key": "band",
+      "note": "col 20 0 60 on 18.25.55 paints page bg #f5f6f8 to 24.5 then brand (dark 18.25.56 (2): #101115 to 25) -> the web view starts BELOW a 25 CSS status strip, so the render floors that inset at 25px. Flat bottom edge 137->139 at x=35 and x=325; at x=10 it curls to 133.5, which solves for r=25 (r=27 would read 131.5). at 20 40 = #009577; box 12,60 20x20 in dark = 400 px of one colour #1bb495. radius 0 is the TOP-left corner (measure.mjs reads borderTopLeftRadius); the 25 is on the bottom corners and is asserted by the arc reading above.",
+      "expect": {
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 113.5,
+        "radius": 0,
+        "bg": "#009577"
+      },
+      "tol": {
+        "geom": 1,
+        "color": 4,
+        "radius": 0
+      }
+    },
+    {
+      "key": "logoCard",
+      "note": "row 120: band->card at 42.75, card->band at 316.25 (w 273.5, cx 179.5). col 60: green to 72.75, card 73..234.5 (h 162). row 76 (dy 3.25) inset 7.75 and row 80 (dy 7.25) inset 3.5 both solve r=16. It lies ON the band: 65 CSS of the card is over green and 96.75 hangs below the band edge — the header+card pair is what the user meant by the header not being the same.",
+      "expect": {
+        "x": 43.3,
+        "y": 73,
+        "w": 273.5,
+        "h": 162.3,
+        "radius": 16,
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "geom": 1.5,
+        "radius": 2,
+        "color": 4
+      }
+    },
+    {
+      "key": "title",
+      "note": "bbox 30 245 330 300 (BG=page bg, MIN=60) -> ink x 110.5..247.5 (w 137) y 269..284.5 (h 15.5), cx 179. The DOM box y is that ink top minus the half-leading of 21.5px in a 26px line box, verified by running the identical bbox call on qa/out/01-login-en-light.png until the ink landed on 269..284.5. Height matches; the ink width still reads ~14 CSS over because Poppins is ~11 per cent wider than the face in the capture (see qa/requests/login.md).",
+      "expect": {
+        "cx": 180,
+        "y": 265.3,
+        "h": 26,
+        "fontSize": 21.5,
+        "fontWeight": "800",
+        "textAlign": "center",
+        "color": "#1c1d21",
+        "text": "بوابة الطالب"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 8
+      }
+    },
+    {
+      "key": "titleBar",
+      "note": "bbox 100 296 260 326 (BG=page bg, MIN=40) -> x 160.5..198.5 (w 38, not the 36 w-9 gave) y 302.5..305.5 (h 3), cx 179.5. Same box in dark (18.25.56 (2): x 161..198, y 302.5..305.5).",
+      "expect": {
+        "x": 161,
+        "y": 302.3,
+        "w": 38,
+        "h": 3,
+        "radius": 1.5,
+        "bg": "#009577"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 4
+      }
+    },
+    {
+      "key": "formCard",
+      "note": "row 420: page->card 17/18.5, card->page 341/346.5 (x 17.5 w 325); col 30: page to 328.5, card 330..608 (h 280); rows 332/337 corner inset solves r=16. Card->pill gutter is 20 (pill hairline 37, card content 37.5) — the 27.5 an earlier pass transcribed was the pill corner arc at y 420, not its edge.",
+      "expect": {
+        "x": 17.5,
+        "y": 328.3,
+        "w": 325,
+        "radius": 16,
+        "bg": "#ffffff",
+        "h": 280
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2.5,
+        "color": 4
+      }
+    },
+    {
+      "key": "label-reg",
+      "note": "bbox 30 328 330 378 (BG=card white, MIN=40) -> ink x 42..148 y 356..368 (cap+descender 12 on Registration number); Password gives x 42..91.5 y 450..458.5 (cap 8.5 -> 8.5/0.70 = 12.1). So 12 CSS, weight 500, ink starting 3 CSS inside the pill column.",
+      "expect": {
+        "x": 37.5,
+        "y": 353.3,
+        "w": 285,
+        "h": 15,
+        "fontSize": 12,
+        "fontWeight": "500",
+        "textAlign": "start",
+        "text": "ادخل رقم التسجيل"
+      },
+      "tol": {
+        "geom": 1.5
+      }
+    },
+    {
+      "key": "pill-reg",
+      "note": "Edges read at the widest row (row 403, the vertical middle): hairline 37..38.5 and 321..322.5 -> x 37.5 w 285. col 178: top border 379/380.5, bottom 425/426.5 -> y 379.5 h 46.5, so r = h/2 = 23.25 (row 380.5/383/387 arcs fit full-round). Fill box 200,400 80x15 = 1200 px of ONE colour #eef2f3 (dark #21252e) — the --field token (#e8eaee/#2a2e3a) is 8/12 off. Hairline at 37.5 390 samples #a1a3a2 on the white card and #93969d on the dark card; --field-border (#cfd3da/#3a3f4d) is 46/89 off.",
+      "expect": {
+        "x": 37.5,
+        "y": 379.3,
+        "w": 285,
+        "h": 46.5,
+        "radius": 23.25,
+        "borderWidth": 1,
+        "bg": "#eef2f3",
+        "borderColor": "#009577"
+      },
+      "tol": {
+        "geom": 1.5,
+        "radius": 1,
+        "color": 12
+      }
+    },
+    {
+      "key": "icon-reg",
+      "note": "bbox 47 385 100 420 (BG=pill fill, MIN=25) -> glyph ink x 52.5..67.5 y 395..409.5 (15 x 14.5), cx 60 cy 402.3 = the pill vertical centre (402.8); a 16 box at px-15 puts the ink at 53.5..69.5 -> 1 CSS off. It does NOT mirror in Arabic: row 403 on (4) reads grey ink 59..64, on (6) green ink 58.5..64.5 — same left side as EN, while the AR value hugs the right edge. Ink colour box 52,394 16x16: darkest frequent #949597 (light) / #95969b (dark); thin 16px strokes at 1.5x cannot resolve the core, so colour tol 12.",
+      "expect": {
+        "x": 53.5,
+        "y": 394.3,
+        "w": 16,
+        "h": 16,
+        "color": "#009577"
+      },
+      "tol": {
+        "geom": 1.5,
+        "color": 12
+      }
+    },
+    {
+      "key": "input-reg",
+      "note": "bbox 72 388 300 418 (BG=pill fill) on 18.25.56 (1) -> typed 202133010290 ink x 81..187.5 (w 106.5) y 396.5..407.5 (h 11); 12 digits over 106.5 = 8.9 advance = 0.55em = Poppins digits at 16 CSS. The same call on 02-login-en-light-filled.png measures 105 x 11.5. So 16/400, NOT the 13/500 the old class claimed — index.css declares input,textarea,button { font: inherit } OUTSIDE @layer, so a text-[] or font-[] utility on a form control is dead code and the control renders the inherited 16/400. The type now sits on the pill, where it is real.",
+      "expect": {
+        "x": 79.5,
+        "h": 24,
+        "fontSize": 16,
+        "fontWeight": "400"
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "label-pass",
+      "note": "bbox 30 428 330 472 -> ink x 42..91.5 y 450..458.5; box starts 20.5 below pill-reg bottom (425.8 -> 446.3 line box, 21 CSS spacer). In the validation state the message under pill-reg pushes it down and NO capture shows that layout, so y is not asserted there.",
+      "expect": {
+        "x": 37.5,
+        "w": 285,
+        "h": 15,
+        "fontSize": 12,
+        "fontWeight": "500",
+        "text": "ادخل كلمة المرور",
+        "y": 446.8
+      },
+      "tol": {
+        "geom": 1.5
+      }
+    },
+    {
+      "key": "pill-pass",
+      "note": "col 178: hairline pair 473..474.5 and 519.5..520.5 -> y 473 h 46.5; pitch reg->pass 93.5. Focused/filled accent follows the same measured rule as pill-reg. y is dropped in the validation state for the same reason as label-pass.",
+      "expect": {
+        "x": 37.5,
+        "w": 285,
+        "h": 46.5,
+        "radius": 23.25,
+        "bg": "#eef2f3",
+        "borderColor": "#009577",
+        "y": 472.8
+      },
+      "tol": {
+        "geom": 1.5,
+        "radius": 1,
+        "color": 12
+      }
+    },
+    {
+      "key": "loginBtn",
+      "note": "col 178 / col 60: brand 542.5..591.5 -> y 542.5 h 49, r = h/2 = 24.5 (row 548 reads 46.5..313 only because the arc curves in 9 at dy 5.5 from the top — the box is the same 37.5..321.5 column as the pills). Fill box 60,550 40x20 = 800 px of #009577; in dark box 60,560 40x20 = #1bb495. Label ink bbox 60 545 300 590 (BG=brand) -> x 158.5..200 (w 41.5) y 561..572.5 (cap 11.5) at cy 566.8 = the button centre.",
+      "expect": {
+        "x": 37.5,
+        "y": 542.3,
+        "w": 285,
+        "h": 49,
+        "radius": 24.5,
+        "bg": "#009577",
+        "fontSize": 16,
+        "fontWeight": "500",
+        "letterSpacing": -0.48,
+        "color": "#ffffff",
+        "text": "تسجيل الدخول"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 1.5,
+        "color": 6,
+        "letterSpacing": 0.1
+      }
+    },
+    {
+      "key": "copyright",
+      "note": "bbox 20 700 340 745 (BG=page bg, MIN=20) -> ink x 142..217.5 (w 75.5) y 718..728 (h 10), cx 179.8; identical box in dark. Cap+descender 10 = 0.94em -> 10.5 CSS, weight 500. Ink samples #8c9093/#a2a5aa = the muted grey (--muted #8a8f98), not --label #6b7280 (21 off). Box y 716 = ink top minus the 14px line-box half-leading; 780 - 730 = the 50 CSS footer padding.",
+      "expect": {
+        "cx": 180,
+        "y": 716,
+        "h": 14,
+        "fontSize": 10.5,
+        "fontWeight": "500",
+        "color": "#8a8f98",
+        "text": "جميع الحقوق محفوظة © 2026"
+      },
+      "tol": {
+        "geom": 2,
+        "color": 12
+      }
+    }
+  ]
+}

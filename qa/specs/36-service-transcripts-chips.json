@@ -1,0 +1,107 @@
+{
+  "source": "18.26.05*/18.26.06* captures, raw device px / 1.5 via qa/debug/{service-scan,art-geom,detail-scan,chips-scan}.mjs — pills y 102..138.7, first pill x 4.67, pill w 88 gap 16, row runs past x 360 so it scrolls; art at 165.8; NO caption under the art",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "svcHeader",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 91.7,
+        "bg": "#009577"
+      }
+    },
+    {
+      "key": "svcBand",
+      "expect": {
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 66.7
+      }
+    },
+    {
+      "key": "svcBack",
+      "expect": {
+        "x": 18,
+        "y": 35.7,
+        "w": 41.3,
+        "h": 41.3,
+        "radius": 20.65,
+        "bg": "rgba(255,255,255,0.2)"
+      }
+    },
+    {
+      "key": "svcTitle",
+      "expect": {
+        "y": 50.3,
+        "h": 16,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "textAlign": "center",
+        "color": "#ffffff",
+        "text": "Academic transcripts"
+      }
+    },
+    {
+      "key": "svcChipRow",
+      "expect": {
+        "x": 0,
+        "y": 91.7,
+        "w": 360,
+        "h": 47
+      }
+    },
+    {
+      "key": "svcChip",
+      "expect": {
+        "x": 4.7,
+        "y": 102,
+        "w": 88,
+        "h": 36.7,
+        "radius": 18.35,
+        "borderWidth": 1.5,
+        "borderColor": "#009577",
+        "color": "#009577",
+        "fontWeight": "700",
+        "text": "2025/2026"
+      }
+    },
+    {
+      "key": "svcChip2",
+      "expect": {
+        "x": 108.7,
+        "y": 102,
+        "w": 88,
+        "text": "2024/2025"
+      }
+    },
+    {
+      "key": "svcChip3",
+      "expect": {
+        "x": 212.7,
+        "y": 102,
+        "w": 88,
+        "text": "2023/2024"
+      }
+    },
+    {
+      "key": "svcArt",
+      "expect": {
+        "x": 28.7,
+        "y": 165.8,
+        "w": 302.7,
+        "h": 273.3
+      },
+      "tol": {
+        "geom": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "progress-webetu",
+  "private": true,
+  "version": "1.0.42",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "assets:crop": "node scripts/crop-assets.mjs",
+    "assets:icons": "node scripts/make-icons.mjs",
+    "qa:shots": "node scripts/verify-shots.mjs",
+    "qa:layout": "node scripts/check-layout.mjs",
+    "qa:montage": "node scripts/montage.mjs",
+    "qa:ruler": "node scripts/qa/ruler.mjs",
+    "qa:sheet": "node scripts/qa/sheet.mjs",
+    "qa:measure": "node scripts/qa/measure.mjs",
+    "qa:check": "node scripts/qa/check.mjs",
+    "qa:diff": "node scripts/qa/pixdiff.mjs",
+    "qa:all": "npm run build && npm run qa:measure && npm run qa:check && npm run qa:diff"
+  },
+  "dependencies": {
+    "@fontsource/cairo": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "framer-motion": "^14.6.0",
+    "i18next": "^26.5.11",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-i18next": "^17.1.9",
+    "react-qr-code": "^2.2.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "playwright": "^1.64.1",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0"
+  }
+}

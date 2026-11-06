@@ -1,0 +1,18 @@
+FAIL  40-profile-en-light
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  41-profile-en-dark
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  42-profile-ar-light
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  43-profile-ar-dark
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  44-profile-en-light-a360
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  45-profile-en-dark-a360
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  46-profile-ar-light-a360
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+FAIL  47-profile-ar-dark-a360
+        order.qaLogout->qaPob.order: qaPob y 195 is not below qaLogout y 569
+
+316 assertions passed, 8 failed across 8 scenarios

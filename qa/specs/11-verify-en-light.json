@@ -1,0 +1,458 @@
+{
+  "source": "WhatsApp Image 2026-10-25 at 18.35.12.jpeg — profile a394, 591x1280 device = 394x853 CSS, every number is device px ÷ 1.5. All values read as TEXT with scripts/qa/pxprobe.mjs (no image reads): card/banner outer edges from `row`/`col` scanlines (Δ>6 catches #ffffff against the #f5f6f8 page), text and glyph extents from `bbox` (BG=f5f6f8, MIN=45/100), fills and border inks from `box` histograms and `at`. Key probes: row y=590 across the OTP row (box left edges 48.5/98.5/149/199/249/298.5 = 50 CSS pitch); col x=70 and x=222 (box top border 578.5-580.5, bottom 631-633); bbox 195,578..250,582 vs #ffffff Δ>25 -> x 202..240.5 (corner inset -> radius 8-10); bbox 0,506..394,560 vs #f5f6f8 Δ>6 -> sheet card x 16..378; row y=530 -> white starts at x=16.0. Ink-vs-line-box: check.mjs reads the DOM box, the capture gives the ink box, so text elements are asserted on cx/cy with tol.geom 3 and containers with the default 2.",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "backBtn",
+      "expect": {
+        "x": -3,
+        "y": 92.5,
+        "w": 24,
+        "h": 24,
+        "radius": 12
+      },
+      "tol": {
+        "geom": 2
+      },
+      "note": "chevron ink x 4..13.5 y 96.5..112.5 (w 9.5 h 16); ChevronLeftIcon path m15 5-7 7 7 7 has ink 9.1x16.1 of its 24 box, so the capture's ink maps to a 24 CSS icon box at x=-2.75 — the glyph is 24 CSS, not 17, and it is NOT inside the 16 CSS gutter"
+    },
+    {
+      "key": "title",
+      "expect": {
+        "x": 26.5,
+        "cy": 105.3,
+        "fontSize": 13.5,
+        "fontWeight": "800",
+        "lineHeight": 20,
+        "color": "#1c1d21",
+        "text": "Two-factor authentication"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 26.5..218 x 99..111.5 (w 191.5 h 12.5)"
+    },
+    {
+      "key": "heading",
+      "expect": {
+        "cx": 196.8,
+        "cy": 143.8,
+        "x": 16,
+        "w": 362,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "lineHeight": 24,
+        "textAlign": "center",
+        "color": "#1c1d21",
+        "text": "Enable 2FA"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 156..237.5 x 138..149.5, cx 196.8 = page centre, so this heading IS centred (checked because the brief asked)"
+    },
+    {
+      "key": "subtitle",
+      "expect": {
+        "cx": 196.5,
+        "cy": 167.5,
+        "x": 16,
+        "w": 362,
+        "fontSize": 10.5,
+        "lineHeight": 15,
+        "textAlign": "center",
+        "color": "#737478",
+        "text": "Scan this QR code with Google Authenticator, Authy, or a similar app."
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 31..362 x 162.5..172.5 — one line, w 331, centred"
+    },
+    {
+      "key": "infoBanner",
+      "expect": {
+        "x": 16,
+        "y": 186,
+        "w": 362,
+        "h": 27.5,
+        "radius": 8,
+        "bg": "#eafbf3",
+        "color": "#0b7a5c"
+      },
+      "tol": {
+        "geom": 2,
+        "color": 6
+      },
+      "note": "mint fill spans y 186..213.5 (col x=45 Δ>8: #f6f7f9 -> #ebf7f3 at 186.5 -> #f4f8f7 at 212.5) and x 16..378 (row y=205 Δ>8: mint from x=19 to x=380); fill samples #e8f9f1/#ecfdf5/#eafbf3 vs --info-bg #e7f8f0 (Δ3)"
+    },
+    {
+      "key": "infoText",
+      "expect": {
+        "fontSize": 10,
+        "lineHeight": 13,
+        "fontWeight": "600",
+        "color": "#0b7a5c",
+        "text": "2FA protects your account, even if your password is ever exposed."
+      },
+      "tol": {
+        "color": 16
+      }
+    },
+    {
+      "key": "qrCard",
+      "expect": {
+        "x": 116,
+        "y": 218.5,
+        "cx": 197.5,
+        "w": 163,
+        "h": 165,
+        "radius": 13,
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "geom": 2
+      },
+      "note": "row y=225 Δ>8: #f5f6f8 -> #ffffff at 116 -> #f5f5f5 at 279; col x=120 Δ>6: white 218.5..383.5"
+    },
+    {
+      "key": "qr",
+      "expect": {
+        "x": 132.5,
+        "y": 236.5,
+        "w": 129,
+        "h": 129
+      },
+      "tol": {
+        "geom": 2
+      },
+      "note": "dark modules bbox 60,215..340,380 vs #f5f6f8 Δ>45 -> x 132.5..261.5 (w 129) y 236.5..365.5 (h 129); card padding 17 -> 129+34 = 163 square"
+    },
+    {
+      "key": "warnBanner",
+      "expect": {
+        "x": 16,
+        "y": 391.5,
+        "w": 362,
+        "h": 35.5,
+        "radius": 8,
+        "bg": "#fff6ed",
+        "color": "#b0761f"
+      },
+      "tol": {
+        "geom": 2,
+        "color": 16
+      },
+      "note": "bbox 0,392..394,424 vs #f5f6f8 Δ>8 -> x 16.5..376.5 y 392..424; col x=197 Δ>8 puts the fill from ~391 to ~427; the amber fill samples spread #efe7d2..#fff6ed across the banner (JPEG chroma) which is why tol.color is 16, and --warn-bg #fdf1df sits inside that spread"
+    },
+    {
+      "key": "warnText",
+      "expect": {
+        "fontSize": 10,
+        "lineHeight": 13.5,
+        "fontWeight": "500",
+        "color": "#b0761f",
+        "text": "If you lose this device, contact your institution's administration to reset your two-facto"
+      },
+      "tol": {
+        "color": 16
+      },
+      "note": "two lines in the capture (banner h 35.5 = 2x13.5 + 2x4). The expected text is the first 90 characters of the string because measure.mjs truncates the dumped textContent at 90 chars — the i18n value itself is the full sentence"
+    },
+    {
+      "key": "manualLabel",
+      "expect": {
+        "x": 17,
+        "cy": 443.5,
+        "fontSize": 9,
+        "lineHeight": 12,
+        "letterSpacing": 0.45,
+        "color": "#737478",
+        "text": "Can't scan? Enter this code manually"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 17..216 x 440.5..446.5 (w 199, cap height 6) — uppercase, left-aligned at the 16 CSS gutter; textTransform is not an assertable key in check.mjs, so the uppercase is carried by the component and verified by the ink cap-height/width match"
+    },
+    {
+      "key": "secretRow",
+      "expect": {
+        "x": 16,
+        "y": 457,
+        "w": 362,
+        "h": 36
+      },
+      "tol": {
+        "geom": 2
+      },
+      "note": "NO card surface: box 60,464 200x26 reads #f3f4f8 31% + #f4f5f9 29% (the #f5f6f8 page) and row y=487 across the full width has no edge at Δ>4. Only the 13 CSS inner padding is assertable, which is why bg is not asserted here"
+    },
+    {
+      "key": "secretText",
+      "expect": {
+        "x": 29,
+        "cy": 474.3,
+        "fontSize": 11.5,
+        "fontWeight": "700",
+        "lineHeight": 16,
+        "color": "#1c1d21"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 29..258.5 x 470..478.5 (w 229.5, cap height 8.5 -> 11.5 CSS). `text` is deliberately NOT asserted: the base32 groups are unreadable in this JPEG (my best read is \"P1SA ZL33 GU7V 63Q2 0HS 5CQU FEM 5731\" while src/data/student.js ships \"P7SA ZLK3 GUTK 63IQ RJKS GCQU FE7H ST7I\" — both 36 chars, so the ink width cannot arbitrate). student.js is outside my write scope anyway"
+    },
+    {
+      "key": "copyBtn",
+      "expect": {
+        "x": 350,
+        "cy": 473.3,
+        "w": 15,
+        "h": 15
+      },
+      "tol": {
+        "geom": 3
+      },
+      "note": "icon ink bbox 351..363.5 x 466.5..480 — the copy control is at the END of the row (right), the old component had it first (left)"
+    },
+    {
+      "key": "sheetCard",
+      "expect": {
+        "x": 16,
+        "y": 500,
+        "w": 362,
+        "h": 198.5,
+        "radius": 20,
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2
+      },
+      "note": "radius 20 inferred from the green top bar's inset: the bar's ink spans x 26.5..367.5 at y=502 while the card spans 16..378, and a rounded rect with r=20 clips its own top edge to exactly left+r-sqrt(2rd-d^2) = 27.3 at d=2"
+    },
+    {
+      "key": "sheetBar",
+      "expect": {
+        "x": 16,
+        "y": 500,
+        "w": 362,
+        "h": 5,
+        "bgImage": [
+          "#0f8b6f",
+          "#0bcba4"
+        ]
+      },
+      "tol": {
+        "geom": 2,
+        "color": 20
+      },
+      "note": "green bar ink y 500..504.5 = 4.5 CSS. bg NOT assertable: it is a horizontal gradient (at 28,502 -> #0f8b6f; at 300,502 -> #0bcba4) and check.mjs reads computed backgroundColor, which is transparent on a background-image element"
+    },
+    {
+      "key": "sheetLabel",
+      "expect": {
+        "x": 29,
+        "cy": 524,
+        "fontSize": 9,
+        "lineHeight": 13,
+        "letterSpacing": 0.45,
+        "color": "#737478",
+        "text": "Enter the generated code to confirm"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 29..229.5 x 520.5..527.5 (w 200.5, cap height 7) — uppercase, left inset 13 CSS from the card edge"
+    },
+    {
+      "key": "pasteBtn",
+      "expect": {
+        "x": 284.5,
+        "cy": 552.3,
+        "w": 80.5,
+        "h": 17,
+        "fontSize": 11.5,
+        "fontWeight": "600",
+        "color": "#009577",
+        "text": "Paste code"
+      },
+      "tol": {
+        "geom": 12,
+        "color": 16
+      },
+      "note": "ink bbox 288.5..360 x 546..558.5. tol.geom 12 on x/w only: the row's RIGHT edge is pinned to the sheet's 13 CSS content edge and lands on the capture's ink to 0.5 CSS (render ink 277.5..361 vs capture 288.5..360.5), but the run is 11 CSS wider because Poppins advances ~11% wider than the capture's typeface at the same 11.5 CSS size — the same effect shows on the subtitle (render ink 359 vs capture 331). y/h/fontSize/weight/colour are all at the default ±2/±0.5"
+    },
+    {
+      "key": "otpRow",
+      "expect": {
+        "x": 48.5,
+        "y": 578.5,
+        "w": 296,
+        "h": 54.5
+      },
+      "tol": {
+        "geom": 2
+      }
+    },
+    {
+      "key": "otp0",
+      "expect": {
+        "x": 48.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "bg": "#eef2f3",
+        "focused": true
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      },
+      "note": "box 1 of 6, and the FOCUSED one in the capture: row y=590 reads a green stroke at x 48.5..51 and 93..96 while box 2 starts grey #d8d8da at 98.5. Phase 1 gave measure.mjs a per-scenario focusTarget (this scenario: [data-qa=otp0]) so focus is now captured instead of blurred away; otp1..otp5 are left blurred and keep their idle border. borderColor is NOT asserted on this box: the focused stroke is 2 CSS px of #009577 under a 1.5x JPEG, which samples #1e7d69 / #158366 (30 off the real value) — the same under-sampled-stroke category that got the --field-border token rejected, so the STATE is asserted (focused:true, borderWidth 2) and the colour is not. OtpInput autofocuses box 0 by app behaviour (refs.current[digits.length].focus())."
+    },
+    {
+      "key": "otp1",
+      "expect": {
+        "x": 98.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#cccdd0",
+        "bg": "#eef2f3"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      }
+    },
+    {
+      "key": "otp2",
+      "expect": {
+        "x": 148.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#cccdd0",
+        "bg": "#eef2f3"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      }
+    },
+    {
+      "key": "otp3",
+      "expect": {
+        "x": 198.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#cccdd0",
+        "bg": "#eef2f3"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      }
+    },
+    {
+      "key": "otp4",
+      "expect": {
+        "x": 248.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#cccdd0",
+        "bg": "#eef2f3"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      }
+    },
+    {
+      "key": "otp5",
+      "expect": {
+        "x": 298.5,
+        "y": 578.5,
+        "w": 46,
+        "h": 54,
+        "radius": 8,
+        "borderWidth": 2,
+        "borderColor": "#cccdd0",
+        "bg": "#eef2f3"
+      },
+      "tol": {
+        "geom": 2,
+        "radius": 2,
+        "color": 12
+      }
+    },
+    {
+      "key": "cta",
+      "expect": {
+        "x": 29,
+        "y": 644,
+        "cx": 197,
+        "w": 336,
+        "h": 42,
+        "radius": 21,
+        "fontSize": 12.5,
+        "fontWeight": "700",
+        "color": "#ffffff",
+        "text": "Turn on 2FA",
+        "bgImage": [
+          "#73c6b2",
+          "#74e6cf"
+        ]
+      },
+      "tol": {
+        "geom": 2,
+        "color": 6
+      },
+      "note": "bbox 0,640..394,700 vs #ffffff Δ>13 -> x 27..366 y 644..686; row 646/665/684 Δ>60 -> the left edge is 42 at the top row and 28.5 mid-height, i.e. inset 13.5 at d=2 -> radius = h/2 = 21 (pill). bg NOT assertable: the capture's disabled fill is a horizontal gradient (at 40,670 -> #73c6b2; at 350,670 -> #74e6cf) and computed backgroundColor is transparent for a background-image"
+    },
+    {
+      "key": "laterBtn",
+      "expect": {
+        "cx": 196.8,
+        "cy": 718.8,
+        "fontSize": 10.5,
+        "fontWeight": "600",
+        "color": "#737478",
+        "text": "Later"
+      },
+      "tol": {
+        "geom": 3,
+        "color": 16
+      },
+      "note": "ink bbox 184..209.5 x 713..724.5. The 11.5 ink height for a 5-word with no descenders means the underline is inside the bbox (cap 7.5 + offset + rule) — the capture's \"Later\" is underlined, matching the component"
+    }
+  ]
+}

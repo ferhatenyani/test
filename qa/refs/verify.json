@@ -1,0 +1,36 @@
+{
+  "11-verify-en-light": {
+    "route": "/verify",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a394",
+    "focusTarget": "[data-qa=\"otp0\"]",
+    "capture": "WhatsApp Image 2026-10-25 at 18.35.12.jpeg",
+    "pairing": "verified — the only 2FA capture in the set; confirmed on the qa/sheet.png contact sheet (title \"Two-factor authentication\", Enable 2FA, QR, six digit boxes, Turn on 2FA)",
+    "note": "591x1280 device = 394x853 CSS; every spec number is device px ÷ 1.5 read through scripts/qa/pxprobe.mjs text output (row/col/bbox/box/at), no image reads."
+  },
+  "12-verify-ar-light": {
+    "route": "/verify",
+    "lang": "ar",
+    "theme": "light",
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no reference capture exists — RTL mirror of 11, gated by check.mjs numbers alone (x mirrored as 394 - x - w; the OTP row keeps dir=ltr so its boxes do not mirror)"
+  },
+  "13-verify-en-dark": {
+    "route": "/verify",
+    "lang": "en",
+    "theme": "dark",
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no reference capture exists — same geometry as 11, colours come from the [data-theme=dark] token block in src/index.css"
+  },
+  "14-verify-ar-dark": {
+    "route": "/verify",
+    "lang": "ar",
+    "theme": "dark",
+    "profile": "a394",
+    "capture": null,
+    "pairing": "no reference capture exists — mirrored geometry + dark tokens, gated by check.mjs numbers alone"
+  }
+}

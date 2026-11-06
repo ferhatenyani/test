@@ -1,0 +1,41 @@
+(node:7644) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+light/en         initial                    trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | home 24
+light/en         fwd-1 (slide 0->1)         trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta 346.0 CSS
+light/en         fwd-2 must CLAMP at end    trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta from f1 0.0 CSS
+light/en         back-1 (slide 1->0)        trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta 346.0 CSS
+light/en         back-2 must CLAMP at start trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta from back-1 0.0 CSS
+light/en         round-trip 1 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/en         round-trip 2 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/en         round-trip 3 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/en         dot-1 click                trackX -322 | vpW 346 | dots 8.0/16.0 | active 1
+light/ar         initial                    trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | home 24
+light/ar         fwd-1 (slide 0->1)         trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta 346.0 CSS
+light/ar         fwd-2 must CLAMP at end    trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta from f1 0.0 CSS
+light/ar         back-1 (slide 1->0)        trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta 346.0 CSS
+light/ar         back-2 must CLAMP at start trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta from back-1 0.0 CSS
+light/ar         round-trip 1 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/ar         round-trip 2 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/ar         round-trip 3 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+light/ar         dot-1 click                trackX -322 | vpW 346 | dots 8.0/16.0 | active 1
+dark/en          initial                    trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | home 24
+dark/en          fwd-1 (slide 0->1)         trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta 346.0 CSS
+dark/en          fwd-2 must CLAMP at end    trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta from f1 0.0 CSS
+dark/en          back-1 (slide 1->0)        trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta 346.0 CSS
+dark/en          back-2 must CLAMP at start trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta from back-1 0.0 CSS
+dark/en          round-trip 1 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/en          round-trip 2 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/en          round-trip 3 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/en          dot-1 click                trackX -322 | vpW 346 | dots 8.0/16.0 | active 1
+dark/ar          initial                    trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | home 24
+dark/ar          fwd-1 (slide 0->1)         trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta 346.0 CSS
+dark/ar          fwd-2 must CLAMP at end    trackX -322 | vpW 346 | dots 8.0/16.0 | active 1 | delta from f1 0.0 CSS
+dark/ar          back-1 (slide 1->0)        trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta 346.0 CSS
+dark/ar          back-2 must CLAMP at start trackX 24 | vpW 346 | dots 16.0/8.0 | active 0 | delta from back-1 0.0 CSS
+dark/ar          round-trip 1 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/ar          round-trip 2 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/ar          round-trip 3 (fwd+back)    out: active 1 trackX -322 | back: trackX 24 | vpW 346 | dots 16.0/8.0 | active 0
+dark/ar          dot-1 click                trackX -322 | vpW 346 | dots 8.0/16.0 | active 1
+
+36 probes · 0 failed
+OK — forward, backward, both clamps and 3 round trips measured real movement

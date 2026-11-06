@@ -1,0 +1,73 @@
+{
+  "source": "NO reference capture — ids 40-47 are gated by relations and transferred numbers only. Profile's only refs are \"WhatsApp Image 2026-10-25 at 18.34.09\" x2: 2048x1536 photos OF A PHYSICAL SCREEN (landscape, moire, perspective), usable for order/proportion, never for CSS px or colour. Nav numbers are transferred from qa/specs/20-home-en-light.json (same BottomNav, same a360 viewport, pill moved to the Profile slot). Colours come from the clean login/home captures. a360 carries no nav geometry (unverified for that viewport).",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "order": [
+    [
+      "qaHeaderCard",
+      "qaName",
+      "qaPiLabel",
+      "qaInfoCard",
+      "qaSetLabel",
+      "qaSetCard",
+      "qaLogout"
+    ],
+    [
+      "qaPob",
+      "qaInfoHair",
+      "qaDob"
+    ],
+    [
+      "qaLangRow",
+      "qaSetHair1",
+      "qaThemeRow",
+      "qaSetHair2",
+      "qa2faRow",
+      "qaSetHair3",
+      "qaNoteRow"
+    ]
+  ],
+  "components": [
+    {
+      "key": "qaPage",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "bg": "#f5f6f8"
+      },
+      "tol": {
+        "color": 6
+      }
+    },
+    {
+      "key": "qaHeaderCard",
+      "expect": {
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "color": 6
+      }
+    },
+    {
+      "key": "qaInfoCard",
+      "expect": {
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "color": 6
+      }
+    },
+    {
+      "key": "qaSetCard",
+      "expect": {
+        "bg": "#ffffff"
+      },
+      "tol": {
+        "color": 6
+      }
+    }
+  ]
+}

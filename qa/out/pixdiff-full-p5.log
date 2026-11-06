@@ -1,0 +1,26 @@
+09-login-ar-light-focus         25.15% differing  meanΔ 61.0  540x1170
+05-login-en-dark-focus          24.90% differing  meanΔ 45.2  540x1170
+03-login-en-light-focus         24.29% differing  meanΔ 59.4  540x1170
+11-verify-en-light               7.92% differing  meanΔ 14.7  591x1280
+07-login-ar-dark-filled          7.54% differing  meanΔ 12.9  540x1170
+08-login-ar-light                6.51% differing  meanΔ 12.1  540x1170
+02-login-en-light-filled         5.81% differing  meanΔ 11.6  540x1170
+04-login-en-dark                 5.74% differing  meanΔ  9.2  540x1170
+06-login-ar-dark                 5.04% differing  meanΔ  8.3  540x1170
+01-login-en-light                4.89% differing  meanΔ  9.4  540x1170
+22-home-en-dark                  4.73% differing  meanΔ  8.4  591x1280
+20-home-en-light                 4.60% differing  meanΔ  9.1  591x1280
+23-home-en-dark-slide2           4.58% differing  meanΔ 10.4  591x1280
+21-home-en-light-slide2          4.55% differing  meanΔ  8.7  591x1280
+24-home-ar-dark                  4.37% differing  meanΔ  7.6  591x1280
+25-home-ar-dark-slide2           4.18% differing  meanΔ  7.0  591x1280
+36-service-transcripts-chips     3.09% differing  meanΔ  6.0  540x1170
+37-service-timetable-days        2.96% differing  meanΔ  5.3  540x1170
+33-service-group-section         2.60% differing  meanΔ  4.7  540x1170
+32-service-exam-grades           2.49% differing  meanΔ  4.8  540x1170
+30-service-discharge-en          2.29% differing  meanΔ  4.3  540x1170
+34-service-exams-schedule        1.56% differing  meanΔ  2.5  540x1170
+31-service-discharge-ar          1.13% differing  meanΔ  2.2  540x1170
+35-service-assessment-blank      0.63% differing  meanΔ  1.2  540x1170
+
+24 compared · mean 6.73% differing · worst 09-login-ar-light-focus · threshold Δ>48/channel

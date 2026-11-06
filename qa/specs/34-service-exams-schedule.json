@@ -1,0 +1,76 @@
+{
+  "source": "18.26.05*/18.26.06* captures, raw device px / 1.5 via qa/debug/{service-scan,art-geom,detail-scan,chips-scan}.mjs — calendar-x glyph ink 34x37.3 on a #f3f4f6 disc at y 213.3, caption 42 CSS under it",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "svcHeader",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 91.7,
+        "bg": "#009577"
+      }
+    },
+    {
+      "key": "svcBand",
+      "expect": {
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 66.7
+      }
+    },
+    {
+      "key": "svcBack",
+      "expect": {
+        "x": 18,
+        "y": 35.7,
+        "w": 41.3,
+        "h": 41.3,
+        "radius": 20.65,
+        "bg": "rgba(255,255,255,0.2)"
+      }
+    },
+    {
+      "key": "svcTitle",
+      "expect": {
+        "y": 50.3,
+        "h": 16,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "textAlign": "center",
+        "color": "#ffffff",
+        "text": "Exams Schedule"
+      }
+    },
+    {
+      "key": "svcGlyphDisc",
+      "expect": {
+        "y": 213.3,
+        "w": 42.7,
+        "h": 42.7,
+        "cx": 180,
+        "radius": 21.35,
+        "bg": "#f3f4f6"
+      }
+    },
+    {
+      "key": "svcCaption",
+      "expect": {
+        "y": 297.3,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 12,
+        "fontWeight": "700",
+        "color": "#6c7278",
+        "text": "Data not available currently!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "10-login-en-light-394",
+  "scenario": {
+    "route": "/login",
+    "lang": "en",
+    "theme": "light",
+    "profile": "a394",
+    "capture": "WhatsApp Image 2026-10-25 at 18.56.55 (1).jpeg",
+    "pairing": "verified",
+    "_file": "login.json"
+  },
+  "dom": {
+    "dir": "ltr",
+    "lang": "en",
+    "scrollW": 394,
+    "clientW": 394,
+    "htmlBg": "rgba(0, 0, 0, 0)",
+    "bodyBg": "rgb(238, 240, 243)",
+    "count": 0,
+    "els": {}
+  }
+}

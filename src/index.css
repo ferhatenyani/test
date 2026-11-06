@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+/* 3-way theme: driven by data-theme on <html>, never prefers-color-scheme in CSS alone. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-cairo: "Cairo", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #009577;
+  --color-brand-dark: #008168;
+  --color-tile: #009577;
+  --color-tile-border: #39a38c;
+  --color-nav: #33354e;
+  --color-nav-active: #009577;
+  --color-nav-active-border: #328c7a;
+  --color-mint: #7fd6be;
+  --color-danger: #e14b3b;
+}
+
+/* Semantic tokens that flip with the theme. */
+@theme inline {
+  /* Dark mode paints large brand SURFACES a different green than light:
+     400 px of #1bb495 in the dark header band, 800 px in the dark LOGIN fill,
+     and the dark underline bar reads the same through its core. --color-brand
+     itself must NOT flip: the dark *line* brand (a focused pill's hairline,
+     the field glyph) samples #128d71/#138b70 = #009577, and qa/specs/05 asserts
+     dark pill-reg borderColor at #009577 — flipping the shared token would
+     repaint every brand border in dark and break it. Hence a separate surface
+     token. Home's dark tiles and nav pill measure #019477 (≈ #009577), so they
+     keep --color-tile / --color-nav-active and do not use this. */
+  --color-brand-surface: var(--brand-surface);
+  --color-app: var(--app);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-label: var(--label);
+  --color-hairline: var(--hairline);
+  --color-field: var(--field);
+  --color-field-border: var(--field-border);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-fg: var(--warn-fg);
+  --color-error: var(--err);
+}
+
+:root {
+  --app: #f5f6f8;
+  --card: #ffffff;
+  --ink: #111215;
+  --muted: #8a8f98;
+  --label: #6b7280;
+  --hairline: #ececef;
+  --field: #eef2f3;
+  /* #cfd3da kept: the login agent's #a1a3a2 was self-flagged as a LOWER BOUND from
+     an under-sampled 1px stroke. Probing the 2FA capture's OTP borders (row 612)
+     reads #d6d6d8..#dedede, i.e. ~#d8d9db — which agrees with this, not that. */
+  --field-border: #cfd3da;
+  --brand-surface: #009577;
+  --info-bg: #e7f8f0;
+  --info-fg: #0b7a5c;
+  --warn-bg: #fdf1df;
+  --warn-fg: #b0761f;
+  --err: #d9534f;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --app: #101115;
+  --card: #171a21;
+  --ink: #f2f3f7;
+  --muted: #8b90a0;
+  --label: #9aa0ad;
+  --hairline: #2c3040;
+  --field: #21252e;
+  /* Reverted to #3a3f4d. The proposed #93969d came from a single 1px stroke sample
+     ("row 402"), the same under-sampled-thin-stroke category that the light border
+     value was just REFUTED for by a real capture. There is no dark 2FA capture to
+     adjudicate it, so it stays unverified rather than promoted to a global token. */
+  --field-border: #3a3f4d;
+  --brand-surface: #1bb495;
+  --info-bg: #10322a;
+  --info-fg: #6fdcb6;
+  --warn-bg: #33270f;
+  --warn-fg: #e0b872;
+  --err: #f0706c;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--app);
+  color: var(--ink);
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Arabic swaps the whole stack to Cairo (D10). */
+html[dir="rtl"] body {
+  font-family: var(--font-cairo);
+}
+
+/* The keyed logo is black ink, which vanishes on the dark card. The reference
+   dark login shows it in white, so invert the ink while the alpha-keyed
+   background stays transparent; hue-rotate puts the swoosh colours back. */
+[data-theme="dark"] .logo-ink {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* iOS Safari URL bar: 100dvh only, never 100vh. */
+.app-shell {
+  min-height: 100dvh;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* No `input, textarea, button { font: inherit }` here on purpose.
+   Tailwind v4 preflight already applies it to form controls inside @layer base,
+   which lets text-*/font-* utilities win. Declaring it in this file instead put
+   it in the unlayered author origin (and `@layer base {}` here gets mangled to an
+   invalid `:is() input` selector by @tailwindcss/vite), which silently forced
+   every control back to the inherited 16px/400. */
+
+/* Native iOS pill removal. `border-radius: 0` is deliberately NOT repeated here:
+   Tailwind v4 preflight already applies it to form controls inside @layer base,
+   so inputs still reset to square by default — while an unlayered copy of it here
+   outranked every rounded-* utility and forced every text input to radius 0. */
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  appearance: none;
+}
+
+@keyframes shake-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: shake-x 300ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shake {
+    animation: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}

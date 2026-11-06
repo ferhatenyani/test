@@ -1,0 +1,14 @@
+PIXEL-IDENTICAL percentage            125x125  <- academic-transcripts-icon
+PIXEL-IDENTICAL academic-transcripts  134x106  <- percentage-icon
+PIXEL-IDENTICAL debts                 90x126  <- academic-vacation-icon
+PIXEL-IDENTICAL academic-vacation     97x125  <- debts-icon
+PIXEL-IDENTICAL discharge             97x125  <- discharge-icon
+PIXEL-IDENTICAL timetable             126x126  <- timetable-icon
+PIXEL-IDENTICAL group-section         134x102  <- group-section-icon
+PIXEL-IDENTICAL exams-schedule        126x126  <- exams-schedule-icon
+PIXEL-IDENTICAL exam-grades           143x115  <- exam-grades-icon
+PIXEL-IDENTICAL assessment            116x116  <- assessment-icon
+PIXEL-IDENTICAL enrollments           126x110  <- enrollments-icon
+PIXEL-IDENTICAL other-services        116x116  <- other-services-icon
+
+all tile glyphs map to the intended donor artwork

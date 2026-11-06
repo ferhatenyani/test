@@ -1,0 +1,80 @@
+{
+  "source": "18.26.05*/18.26.06* captures, raw device px / 1.5 via qa/debug/{service-scan,art-geom,detail-scan,chips-scan}.mjs — art top 165.8 and caption 440 here vs 171.3/445.3 on the two Discharge captures. reference set disagrees on this element; component follows the 18.26.05 pair",
+  "page": {
+    "dir": "ltr",
+    "lang": "en"
+  },
+  "components": [
+    {
+      "key": "svcHeader",
+      "expect": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 91.7,
+        "bg": "#009577"
+      }
+    },
+    {
+      "key": "svcBand",
+      "expect": {
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 66.7
+      }
+    },
+    {
+      "key": "svcBack",
+      "expect": {
+        "x": 18,
+        "y": 35.7,
+        "w": 41.3,
+        "h": 41.3,
+        "radius": 20.65,
+        "bg": "rgba(255,255,255,0.2)"
+      }
+    },
+    {
+      "key": "svcTitle",
+      "expect": {
+        "y": 50.3,
+        "h": 16,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 16,
+        "fontWeight": "800",
+        "textAlign": "center",
+        "color": "#ffffff",
+        "text": "Exam Grades"
+      }
+    },
+    {
+      "key": "svcArt",
+      "expect": {
+        "x": 28.7,
+        "y": 165.8,
+        "w": 302.7,
+        "h": 273.3
+      },
+      "tol": {
+        "geom": 6
+      }
+    },
+    {
+      "key": "svcCaption",
+      "expect": {
+        "y": 440,
+        "w": 360,
+        "cx": 180,
+        "fontSize": 13.5,
+        "fontWeight": "700",
+        "color": "#1a1a20",
+        "text": "Data not available currently!"
+      },
+      "tol": {
+        "geom": 6
+      }
+    }
+  ]
+}

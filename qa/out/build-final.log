@@ -1,0 +1,57 @@
+
+> progress-webetu@1.0.42 build
+> vite build
+
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+Found 1 warning while optimizing generated CSS:
+
+[2m│   padding-bottom: env(safe-area-inset-bottom);[22m
+[2m│ }[22m
+[2m│[22m font-* utilities win. Declaring it in this file instead put it in the unlayered author origin (and `@layer base {}` here gets mangled to an invalid `:is() input` selector by @tailwindcss/vite), which silently forced every control back to the inherited 16px/400. */ input[type="text"], input[type="password"], input[type="tel"] {
+[2m┆[22m      [33m[2m^--[22m Unexpected token Delim('*')[39m
+[2m┆[22m
+[2m│   appearance: none;[22m
+[2m│ }[22m
+
+✓ 527 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/registerSW.js                                     0.13 kB
+dist/index.html                                        1.35 kB │ gzip:   0.60 kB
+dist/assets/poppins-latin-500-normal-C8OXljZJ.woff2    7.74 kB
+dist/assets/poppins-latin-700-normal-Qrb0O0WB.woff2    7.81 kB
+dist/assets/poppins-latin-800-normal-Bd8-pIP1.woff2    7.82 kB
+dist/assets/poppins-latin-400-normal-cpxAROuN.woff2    7.88 kB
+dist/assets/poppins-latin-600-normal-zEkxB9Mr.woff2    8.00 kB
+dist/assets/poppins-latin-500-normal-DGXqpDMm.woff    10.37 kB
+dist/assets/poppins-latin-700-normal-BVuQR_eA.woff    10.43 kB
+dist/assets/poppins-latin-800-normal-YoItoZZV.woff    10.43 kB
+dist/assets/poppins-latin-400-normal-BOb3E3N0.woff    10.53 kB
+dist/assets/poppins-latin-600-normal-BJdTmd5m.woff    10.60 kB
+dist/assets/cairo-arabic-400-normal-DN15VWMM.woff2    13.29 kB
+dist/assets/cairo-arabic-800-normal-G1qvPr6G.woff2    13.88 kB
+dist/assets/cairo-arabic-500-normal-DDl0i4Xv.woff2    13.89 kB
+dist/assets/cairo-arabic-600-normal-rkrvveqO.woff2    13.89 kB
+dist/assets/cairo-arabic-700-normal-D3nDedWX.woff2    13.95 kB
+dist/assets/cairo-arabic-400-normal-CAYwymWN.woff     16.80 kB
+dist/assets/cairo-arabic-700-normal-CyOqhaeK.woff     17.26 kB
+dist/assets/cairo-arabic-800-normal-CVTPwINa.woff     17.30 kB
+dist/assets/cairo-arabic-600-normal-B3EOalmC.woff     17.33 kB
+dist/assets/cairo-arabic-500-normal-BADfnM6v.woff     17.34 kB
+dist/assets/index-CNy1sOzn.css                        42.73 kB │ gzip:   8.92 kB
+dist/assets/index-DH2_lQ6o.js                        531.10 kB │ gzip: 170.65 kB
+
+[33m[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 371ms[39m
+
+PWA v2.0.0
+mode      generateSW
+precache  94 entries (2576.88 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-774a133b.js
