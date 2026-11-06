@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "mobile": "npm run build && node scripts/serve-mobile.mjs",
     "assets:crop": "node scripts/crop-assets.mjs",
     "assets:icons": "node scripts/make-icons.mjs",
     "qa:shots": "node scripts/verify-shots.mjs",

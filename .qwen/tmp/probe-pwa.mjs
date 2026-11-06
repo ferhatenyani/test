@@ -1,111 +1,111 @@
-// PWA installability probe: serves dist/, asks Chrome itself why it will not offer install.
+// PWA installability probe. Compare a secure context (127.0.0.1) with a LAN IP
+// (the origin a phone reaches with `vite --host`), on the exact same dist/ build.
 import http from 'node:http'
 import fs from 'node:fs'
 import path from 'node:path'
+import os from 'node:os'
 import { chromium } from 'playwright'
 
 const ROOT = path.resolve('dist')
+const BIND = process.argv.includes('--lan') ? '0.0.0.0' : '127.0.0.1'
+const USE_LAN_ORIGIN = process.argv.includes('--lan')
+const BAD_MANIFEST_MIME = process.argv.includes('--bad-manifest-mime')
+
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
-  '.webmanifest': 'application/manifest+json; charset=utf-8',
+  '.webmanifest': BAD_MANIFEST_MIME ? 'application/octet-stream' : 'application/manifest+json; charset=utf-8',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
   '.ico': 'image/x-icon',
 }
-// allow override so we can test what a wrong content-type does
-const BAD_MANIFEST_MIME = process.argv.includes('--bad-manifest-mime')
 
 const server = http.createServer((req, res) => {
   const rel = decodeURIComponent(req.url.split('?')[0])
   let file = path.join(ROOT, rel)
   if (!path.extname(file)) file = path.join(ROOT, 'index.html')
   fs.readFile(file, (err, buf) => {
-    if (err) {
-      res.writeHead(404)
-      res.end('not found')
-      return
-    }
-    const ext = path.extname(file).toLowerCase()
-    let type = MIME[ext] || 'application/octet-stream'
-    if (BAD_MANIFEST_MIME && ext === '.webmanifest') type = 'application/octet-stream'
-    res.writeHead(200, { 'content-type': type })
+    if (err) return res.writeHead(404, { 'content-type': 'text/plain' }) + res.end('nf')
+    res.writeHead(200, { 'content-type': MIME[path.extname(file).toLowerCase()] || 'application/octet-stream' })
     res.end(buf)
   })
 })
 
-await new Promise((r) => server.listen(0, '127.0.0.1', r))
-const origin = `http://127.0.0.1:${server.address().port}`
-console.log('serving dist/ at', origin, BAD_MANIFEST_MIME ? '(manifest: application/octet-stream)' : '(manifest: application/manifest+json)')
+await new Promise((r) => server.listen(0, BIND, r))
+const port = server.address().port
+const host = USE_LAN_ORIGIN ? lanIp() : '127.0.0.1'
+const origin = `http://${host}:${port}`
+console.log(`\n=== ${USE_LAN_ORIGIN ? 'LAN IP (non-secure, = what the phone sees)' : '127.0.0.1 (secure context)'} ===`)
+console.log('serving dist/ at', origin, BAD_MANIFEST_MIME ? '| manifest served as application/octet-stream' : '')
+
+function lanIp() {
+  for (const addrs of Object.values(os.networkInterfaces())) {
+    for (const a of addrs ?? []) {
+      if (a.family === 'IPv4' && !a.internal && a.address.startsWith('10.')) return a.address
+    }
+  }
+  return host
+}
 
 const browser = await chromium.launch()
 const ctx = await browser.newContext()
 const page = await ctx.newPage()
-
-const bips = []
 await page.addInitScript(() => {
   window.__bip = []
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault()
-    window.__bip.push(e.platform?.map((p) => p.name) ?? 'no-platforms')
+    window.__bip.push(e.platforms?.map((p) => p.platform) ?? [])
   })
 })
-const swConsole = []
+const warnings = []
 page.on('console', (m) => {
-  if (/serviceworker|manifest|install/i.test(m.text())) swConsole.push(`[${m.type()}] ${m.text()}`)
+  const t = m.text()
+  if (/manifest|service ?worker|install|isolated|secure/i.test(t)) warnings.push(`[${m.type()}] ${t}`)
 })
 
-await page.goto(`${origin}/`, { waitUntil: 'networkidle' })
+await page.goto(`${origin}/`, { waitUntil: 'networkidle' }).catch((e) => console.log('nav error:', e.message))
 
-// 1. What does Chrome's own manifest parser say?
 const cdp = await ctx.newCDPSession(page)
-const manifest = await cdp.send('Page.getAppManifest', { url: `${origin}/` })
-console.log('\n--- Page.getAppManifest ---')
-console.log('manifest url:', manifest.url)
-console.log('parse errors:', JSON.stringify(manifest.errors))
-console.log('security issues:', JSON.stringify(manifest.security_errors ?? []))
-console.log('id:', manifest.id, '| name:', manifest.name, '| short_name:', manifest.short_name)
-console.log('start_url:', manifest.start_url, '| scope:', manifest.scope ?? '(absent)', '| display:', manifest.display)
-console.log('icons:', JSON.stringify(manifest.icons, null, 1))
+const dump = (label, obj) => console.log(`\n--- ${label} ---\n${JSON.stringify(obj, null, 1).slice(0, 2600)}`)
+try {
+  dump('Page.getAppManifest', await cdp.send('Page.getAppManifest', { url: `${origin}/` }))
+} catch (e) {
+  console.log('getAppManifest failed:', e.message)
+}
+try {
+  dump('Page.getInstallabilityErrors', await cdp.send('Page.getInstallabilityErrors'))
+} catch (e) {
+  console.log('getInstallabilityErrors failed:', e.message)
+}
 
-// 2. Chrome's installability failure list
-const { errors } = await cdp.send('Page.getInstallabilityErrors')
-console.log('\n--- Page.getInstallabilityErrors ---')
-console.log(errors.length ? JSON.stringify(errors, null, 1) : '(none — Chrome considers it installable)')
+const flags = await page.evaluate(() => ({
+  secureContext: window.isSecureContext,
+  serviceWorkerDefined: 'serviceWorker' in navigator,
+  standalone: matchMedia('(display-mode: standalone)').matches,
+}))
+console.log('\n--- page flags ---')
+console.log(JSON.stringify(flags))
 
-// 3. Service worker actually registered? fetch handler present?
 const sw = await page.evaluate(async () => {
-  const regs = await navigator.serviceWorker.getRegistrations()
-  return regs.map((r) => ({
-    scope: r.scope,
-    active: r.active?.scriptURL ?? null,
-    waiting: !!r.waiting,
-    controllerOnPage: !!navigator.serviceWorker.controller,
-  }))
+  try {
+    const regs = await navigator.serviceWorker.getRegistrations()
+    return regs.map((r) => ({ scope: r.scope, active: r.active?.scriptURL ?? null }))
+  } catch (e) {
+    return 'threw: ' + e.message
+  }
 })
-console.log('\n--- service worker ---')
+console.log('--- service worker registrations ---')
 console.log(JSON.stringify(sw, null, 1))
 
-// 4. Does the SW file itself wire up a fetch handler? (workbox does)
-const swText = await page.evaluate((u) => fetch(u).then((r) => r.text()), `${origin}/sw.js`)
-console.log('sw.js bytes:', swText.length, '| contains fetch handler:', /fetch|NavigationRoute|createHandler|registerRoute/.test(swText))
-
-// 5. fetch() the manifest the way the browser does
-const man = await page.evaluate(async (u) => {
-  const r = await fetch(u)
-  return { status: r.status, contentType: r.headers.get('content-type'), body: await r.text() }
-}, `${origin}/manifest.webmanifest`)
-console.log('\n--- manifest.webmanifest fetch ---')
-console.log('status:', man.status, '| content-type:', man.contentType)
-
-await page.waitForTimeout(2500)
+await page.waitForTimeout(3000)
+console.log('--- beforeinstallprompt ---')
 const fired = await page.evaluate(() => window.__bip)
-console.log('\n--- beforeinstallprompt ---')
-console.log(fired.length ? `FIRED ${fired.length}x, platforms ${JSON.stringify(fired)}` : 'did NOT fire')
-if (swConsole.length) console.log('\nrelated console:\n' + swConsole.join('\n'))
+console.log(fired?.length ? `FIRED, platforms ${JSON.stringify(fired)}` : 'did NOT fire')
+if (warnings.length) console.log('\nconsole:\n' + warnings.slice(0, 12).join('\n'))
 
 await browser.close()
 server.close()

@@ -241,7 +241,7 @@ Agents run as background subagents where their file sets do not overlap; every a
 ### Phase 0 — Scaffold (1 agent, sequential, blocks everything)
 **Agent: `shell-builder`**
 - Create the project per §3: `package.json` (D1 deps), `vite.config.js` (lift the `VitePWA` block from `old/webetu/vite.config.js` — keep `navigateFallback`, the font runtime caches, `maximumFileSizeToCacheInBytes`, iOS `skipWaiting`/`clientsClaim`), `index.html` (lift the iOS meta block from `old/webetu/index.html`, add `viewport-fit=cover`, `user-scalable=no`, font preloads, `theme-color` per scheme).
-- `public/manifest.webmanifest`: name `Progress Webetu` / short_name `Webetu`, `display: standalone`, `dir: "any"`, icon set, `background_color` `#F2F3F5`, `theme_color` `#009577`.
+- `public/manifest.webmanifest`: name `Progress Webetu` / short_name `Webetu`, `display: standalone`, `dir: "auto"` (`"any"` is not a valid `dir` value — Chrome logs `unknown 'dir' value ignored`), icon set, `background_color` `#F2F3F5`, `theme_color` `#009577`.
 - Router skeleton with all 7 routes rendering empty placeholders; the 3 contexts; `react-i18next` bootstrap with `en.json`/`ar.json` stubs; Tailwind `@theme` tokens from §4.
 - **Accept:** `npm run dev` serves `/login` without console errors; `npm run build` succeeds; Lighthouse PWA installable.
 
@@ -259,7 +259,7 @@ Agents run as background subagents where their file sets do not overlap; every a
   - `18.34.09.jpeg` (deskew first) → `avatar.png`, `icons-ui/{translate,theme-auto,theme-moon,theme-sun,pin,calendar,logout}.png`
   - `18.26.14 (1).jpeg` → `icons-ui/star-moon.png` (home theme toggle)
 - Every output at **3× the on-screen size** so high-DPI phones stay sharp; PNG, palette-quantized.
-- `scripts/make-icons.mjs`: derive all PWA/apple icon sizes + iOS splash images from `logo-progress.png`.
+- `scripts/make-icons.mjs`: derive all PWA/apple icon sizes from `public/icons/icon-512.png` (the app's own "P" mark). **Not** `logo-progress.png` — that file is the PROGRES ministry wordmark (swoosh + "PROGRES" + Arabic/French lines + flag), a different artwork. Maskable is rebuilt full-bleed on `#009577` with the mark at 80% so it survives the launcher mask.
 - Download + subset Poppins and Cairo `woff2` into `public/fonts/`, self-hosted (D10).
 - **Accept:** every file in §3 `public/assets` exists, is non-blank, and a contact sheet `public/assets/_contact-sheet.png` was eyeballed.
 
@@ -299,6 +299,7 @@ Agents run as background subagents where their file sets do not overlap; every a
 - iOS: `apple-mobile-web-app-capable`, `black-translucent` status bar, splash sizes, no double-tap zoom, `100dvh`, safe-area on green header + nav, momentum scroll, `-webkit-tap-highlight-color: transparent`.
 - Android: status-bar `theme-color` per light/dark, overscroll `none`, install/`beforeinstallprompt` handled quietly.
 - Theme `system` mode must follow `matchMedia` live.
+- Phone install needs a **secure origin**: `vite --host` on a LAN IP is not one (`isSecureContext=false`, `navigator.serviceWorker` undefined → no menu entry, and `devOptions.enabled: false` means dev ships no worker at all). `npm run mobile` builds and serves `dist/` and prints both ways to get a secure origin (Chrome's *Insecure origins treated as secure* flag, or an HTTPS tunnel).
 - **Accept:** `npm run build && npm run preview` → installable on both platforms, cold start offline on a real device, no white flash on dark theme.
 
 ### Phase 6 — Verification loop (1 agent, runs after each of P3–P5 and at the end)

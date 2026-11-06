@@ -1,0 +1,17 @@
+# Dependencies.
+# node_modules was committed from Windows, where npm's extensionless .bin shims are
+# recorded with git mode 100644 (no executable bit). A Linux builder then cannot run
+# them: `sh: node_modules/.bin/vite: Permission denied` / exit 126.
+node_modules/
+
+# Build output — Vercel runs `npm run build` itself.
+dist/
+.vercel/
+
+# Agent scratch space.
+.qwen/tmp/
+
+# Local overrides / OS noise.
+*.local
+.DS_Store
+Thumbs.db
