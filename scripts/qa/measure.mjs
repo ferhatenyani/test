@@ -15,7 +15,7 @@ import { chromium } from 'playwright'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import {
-  ROOT, QA, OUT, MEASURED, PROFILES, loadRefs, scenarios,
+  ROOT, QA, OUT, MEASURED, PROFILES, SAFE_INSETS, safeInsetInitScript, loadRefs, scenarios,
   startPreview, waitForServer, stopPreview, withRenderLock, runBuild,
 } from './lib.mjs'
 
@@ -106,6 +106,10 @@ try {
       localStorage.setItem('webetu.theme', o.theme || 'light')
       if (o.session) localStorage.setItem('webetu.session', '1')
     }, { ...sc, session: sc.route !== '/login' && sc.route !== '/' })
+    // env(safe-area-inset-*) is 0px headless; the capture's device had real
+    // insets, so the pages' --safe-top/--safe-bottom are pinned here rather than
+    // baked into the components as max() floors.
+    await ctx.addInitScript(safeInsetInitScript, SAFE_INSETS[sc.profile])
 
     const errors = []
     const page = await ctx.newPage()

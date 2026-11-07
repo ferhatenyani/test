@@ -17,7 +17,8 @@
  */
 import { chromium } from 'playwright'
 import {
-  PROFILES, startPreview, waitForServer, stopPreview, withRenderLock, runBuild,
+  PROFILES, SAFE_INSETS, safeInsetInitScript,
+  startPreview, waitForServer, stopPreview, withRenderLock, runBuild,
 } from './lib.mjs'
 
 const PORT = 4189
@@ -100,6 +101,7 @@ await withRenderLock(async () => {
           },
           { lang, theme },
         )
+        await ctx.addInitScript(safeInsetInitScript, SAFE_INSETS.a394)
         const page = await ctx.newPage()
         await page.goto(`${BASE}/home`, { waitUntil: 'networkidle' })
         await page.waitForTimeout(500)

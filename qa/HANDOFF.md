@@ -87,8 +87,11 @@ the keyboard-up state — the pixel probe was right. Trust the numbers, not the 
 - `node scripts/qa/check.mjs login` → **910 assertions, 0 failed, 10 scenarios**.
 - Full gate → **4121 passed / 1 failed, 38 scenarios**, i.e. the exact baseline. Only red
   is the deliberate `33-service-group-section`. **The no-keyboard geometry is unchanged.**
-- Still un-automated by decision (see §3): scenarios 03/05/09 stay ~24–25% in pixdiff.
-  `qa/PENDING.md` Login item 2 is corrected from "non-signal" to REFUTED.
+- Keyboard lift is now AUTOMATED — `scripts/qa/check-login-keyboard.mjs`, **24 probes / 0 failed**
+  across both viewport-resize modes. This reverses the earlier "leave it un-automated" call;
+  the reason is below, under "Verification, revisited".
+  Scenarios 03/05/09 still sit at ~24–25% in pixdiff, because a *static* render cannot enter the
+  lifted state — that caveat stands, it is just no longer the only evidence there is.
 
 
 ### Capture-derived end states (the authoritative statics)
@@ -108,15 +111,28 @@ the keyboard-up state — the pixel probe was right. Trust the numbers, not the 
 - Bounce character is now measured — see "Bounce character" above. Do not re-derive it
   from the video without also re-checking the captures (they disagree on scale: 0.65 vs 0.586).
 
-### Standing decision on verification — do not revisit
+### Verification, revisited (2026-11-06) — the lift IS now automated
 Headless Chromium has **no on-screen keyboard**, so the harness cannot reach this state
-naturally. The user's explicit decision: **leave it un-automated — no QA-only test hook in
-production code, no CDP virtual-keyboard emulation.** They will verify it by eye in the real
-PWA on a phone.
-- Consequence to record, not to "fix": scenarios **03 / 05 / 09 will stay at ~24–25%** because
-  the render cannot enter the keyboard state headless. That is expected, not a regression.
-- Do still add the animation in a way that cannot break the static scenarios: with no keyboard
-  the geometry must stay byte-identical to today's 4121/1 pass.
+*naturally*. The 2026-10-26 decision was therefore "leave it un-automated — no QA-only test
+hook in production code, no CDP virtual-keyboard emulation — verify by eye on a phone".
+The by-eye pass came back with two defects the static gate could not see (the PROGRES card
+scrolled off the top; the header bounced on the way in), which is exactly the failure mode an
+un-verified animation produces.
+
+It is now covered **without breaking either half of the original prohibition**:
+`check-login-keyboard.mjs` installs a fake `window.visualViewport` EventTarget from the
+harness via `addInitScript` and dispatches `resize` on it. Nothing ships in `src/` that exists
+only for the test, and no CDP keyboard is emulated — the app is driven through the same public
+signal a real keyboard emits.
+
+Two modes are driven because real devices disagree and the old hook only understood one:
+- `visual` — Chrome's web-page default: the layout viewport stays, the visual viewport shrinks.
+- `content` — **what an installed PWA on Android does**, because there is no browser UI left to
+  collapse into: `innerHeight` shrinks WITH the keyboard, so `innerHeight - vv.height` is 0 and
+  the old arithmetic reported "no keyboard". This was the on-device bug.
+
+Consequence that still stands: scenarios **03 / 05 / 09 stay at ~24–25%** in pixdiff — a static
+render cannot enter the lifted state. That is expected, not a regression.
 
 ## 3. NON-NEGOTIABLE RULES
 
@@ -209,8 +225,16 @@ PWA on a phone.
 
 ## 5. DECIDED — do not re-open
 
-- **Safe-area: keep per-page floors.** No global `--safe-top` token (a360 bakes 25 top; a394
-  bakes 51.5/42.5). Closed.
+- **Safe-area: per-page floors — SUPERSEDED 2026-11-06, do not restore them.** The old entry
+  ("keep `max(Npx, env(...))` floors, no shared token") is what produced the on-device
+  complaint. Those floors bake a *capture's* OS chrome into CSS: the a394 home capture's
+  51.5 top and 42.5 bottom ARE the status bar and the gesture area, so a phone reporting a
+  smaller inset pays for them twice — header too low, deck floating too high — while the
+  harness stays fully green, because headless `env()` is 0 and the floor silently becomes
+  the entire reserve. Now: `--safe-top` / `--safe-bottom` in index.css carry the real inset,
+  each page adds only its own margin (home 4.5, nav 8.5), and `measure.mjs` pins the vars to
+  the capture device's insets (`SAFE_INSETS` in `scripts/qa/lib.mjs`: a394 47/34, a360
+  25/22.7). That is option (b) of `qa/PENDING.md` Phase-2 item 3. Gate unchanged at 4121/1.
 - **`33-service-group-section`: accept the 3-of-4 agreement, leave it red.** 171.3 is canonical;
   do not pay +19.4 px across three green scenarios. Closed.
 - **Cards page: stays EXCLUDED until the user supplies a capture.** Do not model it on the donor

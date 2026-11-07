@@ -16,8 +16,14 @@ import { SERVICES } from '../data/services'
  *
  * Header row centre 77.5, 52 tall -> the block starts at y 51.5. The capture is
  * a standalone PWA on a phone: the top 0..~45 is the OS status bar the app sits
- * under and the nav ends at y 810.5, i.e. 42.5 above the 853 bottom. env()
- * resolves to 0 in the harness, so the inset is floored at the captured value.
+ * under and the nav ends at y 810.5, i.e. 42.5 above the 853 bottom.
+ *
+ * 51.5 is therefore inset + margin, not a constant: the capture's device drew a
+ * 47 CSS px status area and the app added 4.5. `--safe-top` carries the real
+ * inset (index.css) and `measure.mjs` pins it to 47 headless, where env() would
+ * otherwise be 0. A 24px floor keeps the title off the glass on a device that
+ * reports no inset at all. Baking 51.5 instead made every notched phone pay the
+ * status bar twice, which is why the header sat too low on-device.
  *
  * Banner 24,111 346x101. Dots 8 tall at y 222.5..230.5 (group 181..213).
  * Grid top 235.5; tiles 167x58, radius 9, column gap 12, row pitch 61.67
@@ -40,7 +46,7 @@ export default function Home() {
     >
       <div
         data-qa="homeContent"
-        className="px-6 pt-[max(51.5px,env(safe-area-inset-top))] pb-[120px]"
+        className="px-6 pt-[calc(max(24px,var(--safe-top))+4.5px)] pb-[120px]"
       >
         <header data-qa="homeHeader" className="flex h-[52px] items-center justify-between">
           <h1

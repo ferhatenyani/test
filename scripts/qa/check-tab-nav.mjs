@@ -20,7 +20,7 @@
  *   node scripts/qa/check-tab-nav.mjs
  */
 import { chromium } from 'playwright'
-import { PROFILES, startPreview, waitForServer, stopPreview, withRenderLock, runBuild } from './lib.mjs'
+import { PROFILES, SAFE_INSETS, safeInsetInitScript, startPreview, waitForServer, stopPreview, withRenderLock, runBuild } from './lib.mjs'
 
 const PORT = 4189
 const BASE = `http://localhost:${PORT}`
@@ -92,6 +92,7 @@ await withRenderLock(async () => {
           localStorage.setItem('webetu.theme', o.theme)
           localStorage.setItem('webetu.session', '1')
         }, { lang, theme })
+        await ctx.addInitScript(safeInsetInitScript, SAFE_INSETS.a360)
 
         const page = await ctx.newPage()
         await page.goto(`${BASE}/home`, { waitUntil: 'networkidle' })

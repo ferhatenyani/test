@@ -46,6 +46,17 @@
 }
 
 :root {
+  /* Safe-area indirection. Pages must never bake a reference capture's OS
+     chrome into a `max(Npx, env(...))` floor: the captures are full-screen
+     phone shots, so their top 27-51px and bottom 42.5px ARE the status bar and
+     the gesture area. Baking those numbers means an installed PWA on a device
+     with a *smaller* inset pays the difference twice — header too low, nav too
+     high. These vars carry the real inset only; each page adds its own margin,
+     and `measure.mjs` overrides them per profile so the harness still lands on
+     the capture's pixel grid. */
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+
   --app: #f5f6f8;
   --card: #ffffff;
   --ink: #111215;

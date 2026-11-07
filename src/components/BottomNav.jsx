@@ -20,8 +20,11 @@ const ITEMS = [
  *    60,790 in the light and the dark capture: identical)
  *  - icon ink centred at y 766.5, label ink 784..791.5
  *  - the bar's bottom edge is 42.5 above the 853 viewport bottom — the phone's
- *    gesture area. env() is 0 under the harness, so the padding is floored at
- *    the captured value rather than collapsing to 12.
+ *    gesture area. That is the capture's 34 CSS px inset plus the app's own 8.5,
+ *    so the padding is `max(10px, --safe-bottom) + 8.5px` and `measure.mjs` pins
+ *    the var to 34 headless. The old `max(42.5px, env(...))` floor reserved the
+ *    gesture area twice on a device that reports a smaller inset, which is what
+ *    left the deck floating too far off the bottom on a real phone.
  *
  * dir="ltr" is deliberate — the reference keeps Home on the left in Arabic too
  * (the green pill spans 24..139 in the AR capture exactly as in EN).
@@ -37,7 +40,7 @@ export default function BottomNav() {
       dir="ltr"
       aria-label="Primary"
       data-qa="bottomNav"
-      className="fixed bottom-0 left-0 right-0 z-50 px-6 pb-[max(42.5px,env(safe-area-inset-bottom))]"
+      className="fixed bottom-0 left-0 right-0 z-50 px-6 pb-[calc(max(10px,var(--safe-bottom))+8.5px)]"
     >
       <div
         data-qa="navBar"

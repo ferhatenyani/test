@@ -38,6 +38,14 @@ import InformationNoteModal from '../components/InformationNoteModal'
 // the only Profile refs are photos of a physical screen. The magnitudes below are
 // deliberately modest and are NOT written into any qa/specs/4x-profile-* file, so
 // they cannot become false greens; they need the user's eye to settle.
+//
+// Round 2 (2026-11-06, against screenshots/profile.jpeg — still a photo of a
+// physical screen, so still order/proportion only and still no spec numbers):
+// the PERSONAL INFORMATION / SETTINGS eyebrows, the LOGOUT label and the modal's
+// See CTA all read too heavy, so 700/800 -> 500/600; and the theme glyphs were the
+// wrong glyphs, not the wrong weight — the row icon and the third segment are the
+// same moon-star-slashed-sun mark, and the dark segment is an OUTLINED crescent
+// with two stars. See ThemeSystemIcon / ThemeMoonIcon in components/icons.jsx.
 const THEME_ORDER = ['light', 'dark', 'system']
 const THEME_ICONS = { system: ThemeSystemIcon, dark: ThemeMoonIcon, light: ThemeSunIcon }
 
@@ -98,7 +106,7 @@ export default function Profile() {
       <div className="px-[21px] pb-[120px]">
         <h2
           data-qa="qaPiLabel"
-          className="mt-[15px] px-[5px] text-[11px] leading-[15px] font-bold tracking-[0.07em] text-muted uppercase"
+          className="mt-[15px] px-[5px] text-[11px] leading-[15px] font-medium tracking-[0.07em] text-muted uppercase"
         >
           {t('profile.personalInformation')}
         </h2>
@@ -123,7 +131,7 @@ export default function Profile() {
 
         <h2
           data-qa="qaSetLabel"
-          className="mt-[13px] px-[5px] text-[11px] leading-[15px] font-bold tracking-[0.07em] text-muted uppercase"
+          className="mt-[13px] px-[5px] text-[11px] leading-[15px] font-medium tracking-[0.07em] text-muted uppercase"
         >
           {t('profile.settings')}
         </h2>
@@ -237,7 +245,7 @@ export default function Profile() {
           data-qa="qaLogout"
           type="button"
           onClick={logout}
-          className="relative mt-[10px] flex h-[44px] w-full items-center justify-center rounded-[14px] bg-danger text-[16px] font-extrabold text-white transition active:brightness-95"
+          className="relative mt-[10px] flex h-[44px] w-full items-center justify-center rounded-[14px] bg-danger text-[16px] font-semibold text-white transition active:brightness-95"
         >
           <span data-qa="qaLogoutLabel" className="relative inline-flex items-center">
             <LogoutIcon size={20} className="absolute inset-y-0 my-auto end-full me-[6px]" />

@@ -43,18 +43,18 @@
     "profile": "a360",
     "actions": ["focusRegFilled"],
     "focusTarget": "#reg",
-    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (3).jpeg",
-    "pairing": "verified",
-    "mask": [[0, 38], [628, 1170]],
-    "note": "Same keyboard-shot caveat as 03: `col 30 0 400` reads the form card top edge at y 207-208 (stills: 328.5), so this page is translated up ~120.5 CSS px and a static render cannot meet it."
+    "capture": "loginKeyboardActive.jpeg",
+    "pairing": "re-pointed 2026-11-06 — the user deleted 18.25.56 (3) and supplied loginKeyboardActive.jpeg, the same EN dark keyboard-up state",
+    "mask": [[0, 38], [667, 1170]],
+    "note": "Keyboard-up shot: the keyboard's own top edge is y 445 CSS (`col 180 380 560` reads the LOGIN green to 444, then #1a1e1d), so the mask starts at 667 device. The page in it is TRANSLATED — form card top 208 (stills 328.5), logo card 55..158 (stills 72.5..234.5), band gone — and a static render cannot meet that, so this scenario's pixdiff is a lift offset, not a geometry signal. Same finding as 03/09. The lifted state itself IS now verified, but by scripts/qa/check-login-keyboard.mjs, not by this diff."
   },
   "06-login-ar-dark": {
     "route": "/login",
     "lang": "ar",
     "theme": "dark",
     "profile": "a360",
-    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (4).jpeg",
-    "pairing": "verified"
+    "capture": "loginDark.jpeg",
+    "pairing": "re-pointed 2026-11-06 — the user deleted 18.25.56 (4) and supplied loginDark.jpeg; pxprobe reads the identical band 25..138 and card x 42.5..316.5 y 72.5..234.5, so spec 06's numbers stand unmodified"
   },
   "07-login-ar-dark-filled": {
     "route": "/login",

@@ -34,6 +34,45 @@ export const DEFAULT_MASK = {
   a394: [[0, 41], [1243, 1280]],
 }
 
+/**
+ * The OS insets each reference device was actually drawing, in CSS px.
+ *
+ * Pages no longer bake these into `max(Npx, env(...))` floors — they read
+ * `--safe-top` / `--safe-bottom` and add their own margin — so headless, where
+ * `env()` resolves to 0, has to supply what the phone supplied when the capture
+ * was shot. Without this the whole stack would render inside the status bar and
+ * every pinned y in qa/specs would move by its margin.
+ *
+ *   a394  header block top 51.5 = inset 47 + margin 4.5; nav bottom edge 42.5
+ *         above the 853 foot = inset 34 + margin 8.5. 47/34 are the standard
+ *         notched-phone insets and are the only pair that puts both edges on
+ *         their captured pixels with one shared margin per element.
+ *   a360  every login/service capture paints the first 25 CSS px as page
+ *         background and starts the band at 25 (inset 25, margin 0); the gesture
+ *         strip is 1170-1136 device = 22.7 CSS.
+ */
+export const SAFE_INSETS = {
+  a360: { top: '25px', bottom: '22.7px' },
+  a394: { top: '47px', bottom: '34px' },
+}
+
+/**
+ * Playwright cannot set env() directly, so the vars are overridden inline on
+ * <html>, which outranks the `:root` rule that points them at env(). Pass this
+ * to `context.addInitScript` with `SAFE_INSETS[profile]` as its argument; it is
+ * standalone because Playwright serialises it out of its module scope.
+ */
+export function safeInsetInitScript(insets) {
+  const apply = () => {
+    const r = document.documentElement
+    if (!r) return false
+    r.style.setProperty('--safe-top', insets.top)
+    r.style.setProperty('--safe-bottom', insets.bottom)
+    return true
+  }
+  if (!apply()) document.addEventListener('DOMContentLoaded', apply)
+}
+
 export const REFS = path.join(QA, 'refs')
 
 /**

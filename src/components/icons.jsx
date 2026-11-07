@@ -262,29 +262,71 @@ export function StarMoonIcon({ size = 26, ...rest }) {
   )
 }
 
+/**
+ * Unit 5-point star centred on the origin, outer radius 1, inner 0.382 — the
+ * golden-ratio pentagram star. Placed and sized with a transform so the three
+ * theme glyphs share one shape instead of three hand-tuned copies.
+ */
+const STAR =
+  'M0 -1 L.2245 -.309 L.9511 -.309 L.3633 .118 L.5878 .809 L0 .382 ' +
+  'L-.5878 .809 L-.3633 .118 L-.9511 -.309 L-.2245 -.309 Z'
+
+/**
+ * Profile > Theme: the row icon AND the third ("auto") segment — the reference
+ * uses the same glyph in both places. screenshots/profile.jpeg shows a solid
+ * crescent with a large and a small star at its upper right, a flat-ended slash,
+ * and the lower-right half of a rayed sun under that slash.
+ *
+ * The previous shape was a monitor with a slash through it, which is a different
+ * idea entirely. Half-disc, not a clipped circle: the cut is the chord through the
+ * sun's centre perpendicular to the slash, so the two read as one gesture rather
+ * than as a circle with a line pasted over it.
+ */
 export function ThemeSystemIcon({ size = 19, ...rest }) {
   return (
-    <svg {...base(size)} fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...rest}>
-      <path d="M4 4h16v11H4z" />
-      <path d="M9 19h6M12 15v4" />
-      <path d="m5.4 18.6 13.2-13.2" opacity=".9" />
+    <svg {...base(size)} fill="currentColor" {...rest}>
+      <path d="M12.32 11.97A5.2 5.2 0 1 1 5.99 4.53a5.2 5.2 0 0 0 6.33 7.44Z" />
+      <path d={STAR} transform="translate(14.2 3.9) scale(1.9)" />
+      <path d={STAR} transform="translate(11.2 7.2) scale(1.3)" />
+      {/* the sun's lower-right half; chord endpoints are C ± r*(1,-1)/√2, C=(14.2 13) r=3.6 */}
+      <path d="M16.75 10.45a3.6 3.6 0 0 1-5.1 5.1Z" />
+      {[45, 90, 135, -45].map((a) => (
+        <path
+          key={a}
+          d="M18.5 11.95 20.8 13 18.5 14.05Z"
+          transform={`rotate(${a} 14.2 13)`}
+        />
+      ))}
+      <path d="M4.4 18.6 18.6 4.4 19.9 5.7 5.7 19.9Z" />
     </svg>
   )
 }
 
+/**
+ * Profile > Theme, dark segment: an OUTLINED crescent with a large and a small
+ * star, per screenshots/profile.jpeg. The previous shape was a solid crescent
+ * with no star, which is the light-mode icon of a different app.
+ */
 export function ThemeMoonIcon({ size = 19, ...rest }) {
   return (
-    <svg {...base(size)} fill="currentColor" {...rest}>
-      <path d="M20.1 14.6A8.6 8.6 0 0 1 9.4 3.9a8.6 8.6 0 1 0 10.7 10.7Z" />
+    <svg {...base(size)} fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" {...rest}>
+      <path d="M15.6 15.1A6.9 6.9 0 0 1 8.1 7.6a6.9 6.9 0 1 0 7.5 7.5Z" />
+      <path d={STAR} transform="translate(18.2 5) scale(1.8)" fill="currentColor" stroke="none" />
+      <path d={STAR} transform="translate(20.6 9.4) scale(1.2)" fill="currentColor" stroke="none" />
     </svg>
   )
 }
 
+/**
+ * Profile > Theme, light segment: solid disc with eight detached dashes, which is
+ * what the reference draws. Unchanged from the previous shape except for the
+ * slightly larger core, which is what the photo shows at 17px.
+ */
 export function ThemeSunIcon({ size = 19, ...rest }) {
   return (
     <svg {...base(size)} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" {...rest}>
-      <circle cx="12" cy="12" r="4.1" fill="currentColor" stroke="none" />
-      <path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5" />
+      <circle cx="12" cy="12" r="4.4" fill="currentColor" stroke="none" />
+      <path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" />
     </svg>
   )
 }

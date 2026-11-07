@@ -24,13 +24,24 @@ const rise = { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 } }
  *   appear  t 1.287 -> 1.555 (0.27s): form card leads (home by frame 28), scale trails
  *   dismiss t 2.073 -> 2.357 (0.28s): scale passes rest by +4.5% (268 -> 284)
  *   So the bounce is on the way BACK only; the appear side never undershoots.
- * A spring at stiffness 420 / damping 28 gives ~5% overshoot settling in ~0.28s,
- * which is that asymmetry. The form card lands exactly and holds, so it is damped.
+ */
+/**
+ * Direction matters: the appear ramp never
+ * undershoots and only the dismiss passes rest, so ONE spring cannot serve both.
+ * The single 420/28 that used to do both bounced on the way IN as well — measured
+ * on this page at 1 -> 0.6317 -> 0.65 settling in ~450ms — and that wobble is what
+ * the eye reads as "not smooth". Critical damping (damping = 2*sqrt(stiffness)) is
+ * the fastest settle with no overshoot and lands in ~0.30s at these stiffnesses,
+ * i.e. the capture's 0.27s. The form card LEADS and the header TRAILS (the frame
+ * order in the video), so the form is the stiffer pair; the card lands and holds
+ * in both directions, so only the header ever bounces.
  */
 const KB_SCALE = 0.65
-const HEADER_SPRING = { type: 'spring', stiffness: 420, damping: 28 }
-const FORM_SPRING = { type: 'spring', stiffness: 480, damping: 36 }
+const HEADER_APPEAR = { type: 'spring', stiffness: 620, damping: 50 } // 2*sqrt(620) = 49.8
+const HEADER_DISMISS = { type: 'spring', stiffness: 700, damping: 28 } // ~5% of rest, ~0.29s
+const FORM_SPRING = { type: 'spring', stiffness: 760, damping: 55 } // 2*sqrt(760) = 55.1
 const BAND_FADE = { duration: 0.14, ease: 'easeOut' }
+const BAND_BACK = { duration: 0.22, ease: 'easeOut' }
 
 /**
  * Status reserve. Every login capture paints the FIRST 25 CSS px with the page
@@ -93,10 +104,16 @@ export default function Login() {
   }
 
   /**
-   * The form card rises by exactly the overlap between the keyboard and its own
-   * bottom edge, so its bottom lands ON the keyboard's top edge. That single rule
-   * reproduces both references: a360 -(293.5 - 171.5) = -122 (the capture's number)
-   * and the video device -(312 - 184) = -128 (measured, frame 28).
+   * The form card rises until its own bottom edge reaches the bottom of the
+   * VISIBLE area — the keyboard's top edge. That single rule reproduces both
+   * references: a360 -(293.5 - 171.5) = -122 (the capture's number) and the video
+   * device -(312 - 184) = -128 (measured, frame 28).
+   *
+   * The target is `keyboard.bottom`, not `innerHeight - keyboard.inset`, because
+   * the two keyboard resize modes put the visible bottom in different places: when
+   * the keyboard shrinks the layout viewport (an installed PWA on Android) the
+   * layout viewport IS the visible area and subtracting the inset would lift the
+   * card a keyboard-height too far.
    *
    * Driven by a MotionValue, not state: the target depends on a DOM measurement, so
    * holding it in state means either reading a ref during render or writing state
@@ -108,13 +125,14 @@ export default function Login() {
   useLayoutEffect(() => {
     const el = formWrapRef.current
     if (!el) return
-    if (!keyboard) {
+    const { inset, bottom } = keyboard
+    if (!inset) {
       if (formY.get() === 0) readRestBottom()
       else animate(formY, 0, { ...FORM_SPRING, onComplete: readRestBottom })
       return
     }
     const rest = restBottomRef.current || el.getBoundingClientRect().bottom
-    animate(formY, Math.min(0, window.innerHeight - keyboard - rest), FORM_SPRING)
+    animate(formY, Math.min(0, bottom - rest), FORM_SPRING)
   }, [keyboard, formY])
 
   const submit = (e) => {
@@ -126,8 +144,20 @@ export default function Login() {
     if (Object.keys(next).length === 0) navigate('/verify')
   }
 
+  const up = keyboard.inset > 0
+
   return (
-    <div className="app-shell relative flex flex-col overflow-hidden bg-app">
+    /*
+      Hard height, not the .app-shell min-height. When the keyboard resizes the
+      layout viewport the min-height collapses to the keyboard-free content height
+      and the document becomes scrollable — and the browser then scrolls the focused
+      input into view, which drags the PROGRES card off the top of the screen. That
+      is the on-device failure: the animation ran, the card was gone. Pinning the
+      shell to exactly the viewport and clipping it leaves the document with no
+      scroll range at all, so nothing can be scrolled out of frame and the only
+      movement is our own translate.
+    */
+    <div className="app-shell relative flex h-[100dvh] flex-col overflow-hidden bg-app">
       <div
         className="relative flex flex-1 flex-col items-center px-[17.5px]"
         style={{ paddingTop: INSET }}
@@ -145,28 +175,41 @@ export default function Login() {
           full 360 CSS px; the column's 17.5px padding would otherwise inset it.
           It is a flex container so the card's mt-[48px] stays inside the block
           instead of collapsing through the wrapper's top edge.
+
+          will-change promotes the block for the duration of the lift, which is what
+          makes the scale a compositor transform instead of a re-raster of the logo's
+          dark-mode `filter: invert()` on every frame — the other half of the jank.
         */}
         <motion.div
           data-qa="header"
           initial={false}
-          animate={{ scale: keyboard ? KB_SCALE : 1 }}
-          transition={HEADER_SPRING}
-          style={{ transformOrigin: 'top center' }}
+          animate={{ scale: up ? KB_SCALE : 1 }}
+          transition={up ? HEADER_APPEAR : HEADER_DISMISS}
+          style={{ transformOrigin: 'top center', willChange: 'transform' }}
           className="relative -mx-[17.5px] flex flex-col items-center self-stretch"
         >
           <motion.div
             data-qa="band"
             initial={false}
-            animate={{ opacity: keyboard ? 0 : 1 }}
-            transition={BAND_FADE}
+            animate={{ opacity: up ? 0 : 1 }}
+            transition={up ? BAND_FADE : BAND_BACK}
             className="absolute inset-x-0 top-0 bg-brand-surface h-[113.5px] rounded-b-[25px]"
           />
 
+          {/*
+            relative + z-index, not just DOM order. The band is `position: absolute`
+            and this card is an in-flow block, so once the mount rise finishes and
+            framer-motion drops the card's transform, CSS painting order puts the
+            absolutely-positioned band OVER the card — 65 CSS px of the card was
+            being repainted green at rest, which is exactly the "the card must sit on
+            top of the green bar" defect. loginDark.jpeg has the card on top, with the
+            band's rounded bottom corners visible either side of it.
+          */}
           <motion.div
             {...rise}
             transition={{ duration: 0.25, ease: 'easeOut' }}
             data-qa="logoCard"
-            className="mt-[48px] grid h-[162.25px] w-[273.5px] max-w-full place-items-center
+            className="relative z-10 mt-[48px] grid h-[162.25px] w-[273.5px] max-w-full place-items-center
             rounded-[16px] bg-card shadow-[0_10px_28px_rgba(15,25,35,0.12)]"
           >
             <img
@@ -201,7 +244,7 @@ export default function Login() {
         */}
         <motion.div
           ref={formWrapRef}
-          style={{ y: formY }}
+          style={{ y: formY, willChange: 'transform' }}
           className="flex flex-col items-center"
         >
           <motion.form

@@ -5,8 +5,8 @@
     "lang": "ar",
     "theme": "dark",
     "profile": "a360",
-    "capture": "WhatsApp Image 2026-10-25 at 18.25.56 (4).jpeg",
-    "pairing": "verified",
+    "capture": "loginDark.jpeg",
+    "pairing": "re-pointed 2026-11-06 — the user deleted 18.25.56 (4) and supplied loginDark.jpeg; pxprobe reads the identical band 25..138 and card x 42.5..316.5 y 72.5..234.5, so spec 06's numbers stand unmodified",
     "_file": "login.json"
   },
   "dom": {
@@ -18,8 +18,31 @@
     "activeKey": null,
     "htmlBg": "rgba(0, 0, 0, 0)",
     "bodyBg": "rgb(16, 17, 21)",
-    "count": 16,
+    "count": 17,
     "els": {
+      "header": {
+        "tag": "div",
+        "x": 0,
+        "y": 25,
+        "w": 360,
+        "h": 280.3,
+        "fontSize": 16,
+        "fontWeight": "400",
+        "fontFamily": "Cairo",
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textAlign": "start",
+        "color": "rgb(242, 243, 247)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImage": "none",
+        "radius": 0,
+        "borderWidth": 0,
+        "borderColor": "rgb(242, 243, 247)",
+        "boxShadow": "none",
+        "opacity": 1,
+        "focused": false,
+        "text": "بوابة الطالب"
+      },
       "band": {
         "tag": "div",
         "x": 0,

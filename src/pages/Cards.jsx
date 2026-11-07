@@ -148,7 +148,15 @@ export default function Cards() {
 
   return (
     <div className="h-[100dvh] bg-app flex flex-col overflow-hidden">
-      <div className="flex-1 flex items-start justify-center px-4 pt-[max(12px,env(safe-area-inset-top))] pb-[120px]">
+      {/*
+        The stage starts 10 CSS px INTO the top safe area rather than below it:
+        this is one hero graphic with no text near the top edge, and the deck is
+        already clear of the nav, so overlapping the status strip reads as the
+        card sitting higher on the screen instead of as a collision. No capture
+        exists for this page (qa/PENDING.md BLOCKED-ON-USER #3), so the offset is
+        the user's "a little more further to the top", not a transcribed number.
+      */}
+      <div className="flex-1 flex items-start justify-center px-4 pt-[max(4px,calc(var(--safe-top)-10px))] pb-[120px]">
         <div
           data-testid="card-stage"
           className="relative w-[80vw] h-[65vh] [perspective:1200px]"

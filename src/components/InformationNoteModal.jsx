@@ -124,13 +124,13 @@ export default function InformationNoteModal({ onClose }) {
           </li>
           <li data-qa="noteD3">
             3. {t('profile.note.d3')}{' '}
-            <a {...link} className="font-bold text-brand underline">
+            <a {...link} className="font-semibold text-brand underline">
               {t('profile.note.see')}
             </a>
           </li>
           <li data-qa="noteD4">
             4. {t('profile.note.d4')}{' '}
-            <a {...link} className="font-bold text-brand underline">
+            <a {...link} className="font-semibold text-brand underline">
               {t('profile.note.see')}
             </a>
           </li>
@@ -140,7 +140,7 @@ export default function InformationNoteModal({ onClose }) {
           {...link}
           data-qa="noteCta"
           className="mt-[16px] flex h-[44px] w-full items-center justify-center gap-2 rounded-[14px]
-            bg-brand-surface text-[15px] font-bold text-white transition active:brightness-95"
+            bg-brand-surface text-[15px] font-semibold text-white transition active:brightness-95"
         >
           <ExternalLinkIcon size={17} />
           {t('profile.note.seeDetails')}
