@@ -46,7 +46,7 @@ export default function Home() {
     >
       <div
         data-qa="homeContent"
-        className="px-6 pt-[calc(max(24px,var(--safe-top))+4.5px)] pb-[120px]"
+        className="px-6 pt-[calc(max(24px,var(--safe-top))+1.5px)] pb-[120px]"
       >
         <header data-qa="homeHeader" className="flex h-[52px] items-center justify-between">
           <h1
