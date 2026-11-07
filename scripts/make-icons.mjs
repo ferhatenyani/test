@@ -1,10 +1,17 @@
 /**
  * Derives every PWA / iOS icon size from the app's own mark.
  *
- * The master is public/icons/icon-512.png — the Webetu "P" tile (dark squircle on
- * #009577). It is deliberately NOT public/assets/logo-progress.png: that file is the
- * PROGRES ministry wordmark (swoosh + "PROGRES" + Arabic/French lines + flag), a
- * different artwork that would silently produce the wrong launcher icon.
+ * The master is public/assets/logo-removebg-preview.png — the WEBETU roundel:
+ * a light field disc with the orange + green swoosh and black wordmark, on
+ * transparency. It is deliberately NOT public/assets/logo-progress.png: that file
+ * is the PROGRES ministry wordmark (swoosh + "PROGRES" + Arabic/French lines +
+ * flag), a different artwork that would silently produce the wrong launcher icon.
+ *
+ * FLATTEN_BG is not the brand green any more. The disc is 447x434 inside a 500x500
+ * frame, so its own field colour is what must fill the corners: flattening onto
+ * #009577 would ring the disc with green and, for the maskable cut, would show
+ * green at every edge. Flattening onto the measured field colour makes the disc
+ * disappear into a seamless full-bleed square, which is what a maskable icon needs.
  *
  * Run: npm run assets:icons
  */
@@ -12,20 +19,23 @@ import fs from 'node:fs'
 import path from 'node:path'
 import sharp from 'sharp'
 
-const ICONS_DIR = path.resolve('public/icons')
-const MASTER = path.join(ICONS_DIR, 'icon-512.png')
-const BG = '#009577' // sampled from the master's own edge pixels
+const ROOT = path.resolve(import.meta.dirname, '..')
+const ICONS_DIR = path.join(ROOT, 'public/icons')
+const MASTER = path.join(ROOT, 'public/assets/logo-removebg-preview.png')
+const BG = '#e2e2e0' // median of the disc's own field, sampled below and asserted
 
 const TARGETS = [
   { file: 'icon-192.png', size: 192, note: 'manifest "any" 192 — Chrome installability requires this size' },
+  { file: 'icon-512.png', size: 512, note: 'manifest "any" 512 — also what Android uses for the cold-start splash' },
   { file: 'apple-touch-icon.png', size: 180, note: 'iOS Home Screen; must be opaque' },
   { file: 'favicon.png', size: 48, note: 'tab icon' },
 ]
 
 // A maskable icon must bleed to every edge and keep its content inside the central
-// 80% safe zone. The master's mark fills ~95% and carries transparent pixels in the
-// diagonal corners, so it is flattened onto the brand green and scaled into the safe zone.
+// 80% safe zone. The master's disc fills ~89% and carries transparent pixels in the
+// diagonal corners, so it is flattened onto its own field colour and scaled in.
 const MASKABLE = { file: 'maskable-512.png', size: 512, contentScale: 0.8 }
+
 
 async function decodedSize(file) {
   const { width, height } = await sharp(file).metadata()

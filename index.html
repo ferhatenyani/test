@@ -25,6 +25,54 @@
     <meta name="apple-mobile-web-app-title" content="Webetu" />
   </head>
   <body>
+    <!--
+      Cold-start splash, painted from the HTML itself so it is on screen BEFORE
+      the JS bundle and the stylesheet arrive — which is the whole point of a
+      loading screen. It reproduces public/assets/loadingPage.jpeg as measured:
+      a flat #e0e0e0 field with the PROGRES wordmark centred horizontally and its
+      centre at 46.8% of the viewport height (the capture's logo box is x
+      135.3..222.7, y 346.7..383.3 CSS in a 360x780 frame, so 88 CSS px wide).
+
+      The mark is public/assets/splash-logo.png — the real artwork, trimmed to its
+      ink box from logo-progress.png — NOT a redrawn SVG, and not the launcher
+      icon: the OS splash can only ever show the manifest icon, so an in-app layer
+      is the only way to get this image on the first frame. main.jsx removes it
+      once React has mounted.
+
+      It stays light on purpose: that is what the reference shows. The manifest
+      background_color is set to the same #e0e0e0 so the OS splash and this layer
+      are one continuous field with no white flash between them.
+    -->
+    <div id="boot-splash" aria-hidden="true">
+      <img src="/assets/splash-logo.png" alt="" draggable="false" />
+    </div>
+    <style>
+      #boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #boot-splash img {
+        width: 88px;
+        max-width: 24.5vw;
+        height: auto;
+        /* 46.8% of the height is the logo's CENTRE in the reference, not its top */
+        margin-top: -3.2vh;
+      }
+      #boot-splash[data-hide='1'] {
+        transition: opacity 0.22s ease-out;
+        opacity: 0;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot-splash[data-hide='1'] {
+          transition: none;
+        }
+      }
+    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

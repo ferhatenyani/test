@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "mobile": "npm run build && node scripts/serve-mobile.mjs",
     "assets:crop": "node scripts/crop-assets.mjs",
+    "assets:user": "node scripts/crop-user-assets.mjs",
     "assets:icons": "node scripts/make-icons.mjs",
     "qa:shots": "node scripts/verify-shots.mjs",
     "qa:layout": "node scripts/check-layout.mjs",

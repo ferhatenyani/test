@@ -42,7 +42,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN YaniPersonal informationPlace of BirthAKBOUDate of Birth2003-03-12SettingsChange "
+        "text": "BENBERKAN SidaliPersonal informationPlace of BirthAKBOUDate of Birth2004-01-09SettingsChan"
       },
       "qaHeaderCard": {
         "tag": "section",
@@ -65,7 +65,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN Yani"
+        "text": "BENBERKAN Sidali"
       },
       "qaAvatar": {
         "tag": "img",
@@ -92,9 +92,9 @@
       },
       "qaName": {
         "tag": "h1",
-        "x": 117,
+        "x": 102,
         "y": 85,
-        "w": 160,
+        "w": 190,
         "h": 26,
         "fontSize": 21,
         "fontWeight": "800",
@@ -111,7 +111,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN Yani"
+        "text": "BENBERKAN Sidali"
       },
       "qaPiLabel": {
         "tag": "h2",
@@ -157,7 +157,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "Place of BirthAKBOUDate of Birth2003-03-12"
+        "text": "Place of BirthAKBOUDate of Birth2004-01-09"
       },
       "qaPob": {
         "tag": "div",
@@ -295,7 +295,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "Date of Birth2003-03-12"
+        "text": "Date of Birth2004-01-09"
       },
       "qaDobIcon": {
         "tag": "span",
@@ -364,7 +364,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "2003-03-12"
+        "text": "2004-01-09"
       },
       "qaSetLabel": {
         "tag": "h2",

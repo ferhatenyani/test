@@ -10,7 +10,7 @@
   "orientation": "portrait",
   "dir": "auto",
   "lang": "en",
-  "background_color": "#F2F3F5",
+  "background_color": "#e0e0e0",
   "theme_color": "#009577",
   "categories": ["education", "productivity"],
   "icons": [

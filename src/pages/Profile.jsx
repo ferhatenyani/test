@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
 import { useLang } from '../context/LangContext'
 import { useTheme } from '../context/ThemeContext'
-import { STUDENT } from '../data/student'
+import { STUDENT, nameOf, placeOfBirthOf } from '../data/student'
 import {
   CalendarIcon,
   ChevronRightIcon,
@@ -75,7 +75,7 @@ export default function Profile() {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const { signOut } = useAuth()
-  const { lang, setLang } = useLang()
+  const { lang, setLang, isRtl } = useLang()
   const { theme, setTheme } = useTheme()
   const [noteOpen, setNoteOpen] = useState(false)
 
@@ -93,13 +93,13 @@ export default function Profile() {
       >
         <img
           data-qa="qaAvatar"
-          src="/assets/avatar.png"
-          alt={STUDENT.fullName}
-          className="h-[48px] w-[48px] rounded-full object-cover shadow-[0_2px_10px_rgba(0,0,0,0.18)] ring-[2px] ring-hairline select-none dark:ring-[#21252e]"
+          src="/assets/avatar.jpg"
+          alt={nameOf(isRtl)}
+          className="h-[48px] w-[48px] rounded-full object-cover object-top shadow-[0_2px_10px_rgba(0,0,0,0.18)] ring-[2px] ring-hairline select-none dark:ring-[#21252e]"
           draggable={false}
         />
         <h1 data-qa="qaName" className="mt-[21px] text-[21px] font-extrabold leading-[26px] tracking-[-0.01em]">
-          {STUDENT.fullName}
+          {nameOf(isRtl)}
         </h1>
       </section>
 
@@ -118,7 +118,7 @@ export default function Profile() {
             qa="qaPob"
             icon={<PinIcon size={20} />}
             label={t('profile.placeOfBirth')}
-            value={STUDENT.placeOfBirth}
+            value={placeOfBirthOf(isRtl)}
           />
           <Hair qa="qaInfoHair" />
           <InfoRow

@@ -39,3 +39,27 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+/**
+ * Retire the cold-start splash from index.html.
+ *
+ * Two animation frames, not a timeout: the first rAF fires when the browser has
+ * decided to paint, the second when that paint is actually on screen, so the
+ * splash is never removed over an empty #root. The fade is the CSS transition on
+ * [data-hide]; the node is removed after it so it cannot catch clicks.
+ *
+ * This has to be prompt rather than a fixed "minimum splash time": the accuracy
+ * harness screenshots each route after load, and a splash still covering the page
+ * would render every scenario as a grey rectangle.
+ */
+function retireBootSplash() {
+  const el = document.getElementById('boot-splash')
+  if (!el) return
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => {
+      el.dataset.hide = '1'
+      setTimeout(() => el.remove(), 260)
+    }),
+  )
+}
+retireBootSplash()

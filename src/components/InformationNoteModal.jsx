@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { BuildingIcon, UserIcon, CloseIcon, ExternalLinkIcon } from './icons'
-import { STUDENT } from '../data/student'
+import { useLang } from '../context/LangContext'
+import { nameOf } from '../data/student'
 
 /**
  * ASSUMPTION, not read from any reference: the four photos never show what the CTA
@@ -35,6 +36,7 @@ const DONNEES_URL = 'https://progres.mesrs.dz/donnees/'
  */
 export default function InformationNoteModal({ onClose }) {
   const { t } = useTranslation()
+  const { isRtl } = useLang()
   const closeRef = useRef(null)
 
   useEffect(() => {
@@ -107,7 +109,7 @@ export default function InformationNoteModal({ onClose }) {
                 {t('profile.note.undersigned')}
               </span>
               <span data-qa="noteName" className="mt-[1px] block text-[14px] leading-5 font-bold text-ink">
-                {STUDENT.fullName}
+                {nameOf(isRtl)}
               </span>
             </span>
           </div>

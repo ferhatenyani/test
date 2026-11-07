@@ -42,7 +42,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN Yaniالمعلومات الشخصيةمكان الميلادAKBOUتاريخ الميلاد2003-03-12الإعداداتتغيير اللغة"
+        "text": "بن بركان سيد عليالمعلومات الشخصيةمكان الميلادأقبوتاريخ الميلاد2004-01-09الإعداداتتغيير الل"
       },
       "qaHeaderCard": {
         "tag": "section",
@@ -65,7 +65,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN Yani"
+        "text": "بن بركان سيد علي"
       },
       "qaAvatar": {
         "tag": "img",
@@ -92,9 +92,9 @@
       },
       "qaName": {
         "tag": "h1",
-        "x": 102,
+        "x": 97.6,
         "y": 85,
-        "w": 156,
+        "w": 164.8,
         "h": 26,
         "fontSize": 21,
         "fontWeight": "800",
@@ -111,7 +111,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "FERHATEN Yani"
+        "text": "بن بركان سيد علي"
       },
       "qaPiLabel": {
         "tag": "h2",
@@ -157,7 +157,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "مكان الميلادAKBOUتاريخ الميلاد2003-03-12"
+        "text": "مكان الميلادأقبوتاريخ الميلاد2004-01-09"
       },
       "qaPob": {
         "tag": "div",
@@ -180,7 +180,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "مكان الميلادAKBOU"
+        "text": "مكان الميلادأقبو"
       },
       "qaPobIcon": {
         "tag": "span",
@@ -249,7 +249,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "AKBOU"
+        "text": "أقبو"
       },
       "qaInfoHair": {
         "tag": "div",
@@ -295,7 +295,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "تاريخ الميلاد2003-03-12"
+        "text": "تاريخ الميلاد2004-01-09"
       },
       "qaDobIcon": {
         "tag": "span",
@@ -364,7 +364,7 @@
         "boxShadow": "none",
         "opacity": 1,
         "focused": false,
-        "text": "2003-03-12"
+        "text": "2004-01-09"
       },
       "qaSetLabel": {
         "tag": "h2",
