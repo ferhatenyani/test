@@ -80,7 +80,9 @@ const startMoveProbe = (page, frames = 40) =>
         const xs = []
         let n = 0
         const step = () => {
-          const el = document.querySelector('#root > div')
+          // The page is #root > div > div: the outer div is the grid that lets the
+          // two route pages share one cell during the overlapping push.
+          const el = document.querySelector('#root > div > div')
           xs.push(el ? el.getBoundingClientRect().x : NaN)
           if (++n < frames) requestAnimationFrame(step)
           else resolve(xs)

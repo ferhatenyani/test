@@ -40,7 +40,7 @@ const PORT = 4191
 const BASE = `http://localhost:${PORT}`
 const REG = '202133010290'
 const KB = 294 // CSS px taken by the reference device's keyboard (a360: 780 -> 486)
-const KB_SCALE = 0.65
+const KB_SCALE = 0.63
 
 const fails = []
 const rows = []
@@ -84,6 +84,7 @@ const RECORD = ({ up, mode, kb }) =>
     const header = document.querySelector('[data-qa=header]')
     const band = document.querySelector('[data-qa=band]')
     const card = document.querySelector('[data-qa=logoCard]')
+    const bar = document.querySelector('[data-qa=titleBar]')
     const form = document.querySelector('[data-qa=formCard]')
     const step = () => {
       const t = performance.now() - t0
@@ -93,6 +94,7 @@ const RECORD = ({ up, mode, kb }) =>
         scale: Number((/matrix\(([^)]+)\)/.exec(getComputedStyle(header).transform)?.[1] ?? '1,0,0,1,0,0').split(',')[0]),
         band: Number(getComputedStyle(band).opacity),
         cardTop: Math.round(card.getBoundingClientRect().top * 10) / 10,
+        barBottom: Math.round(bar.getBoundingClientRect().bottom * 10) / 10,
         formBottom: Math.round(r.bottom * 10) / 10,
         formTop: Math.round(r.top * 10) / 10,
         scrollY: Math.round(window.scrollY * 10) / 10,
@@ -182,8 +184,14 @@ await withRenderLock(async () => {
         Math.abs(lifted.scale - KB_SCALE) <= 0.005)
       rec(id, 'card-visible', `logo card top ${lifted.cardTop} in viewport 0..${lifted.innerH} (capture: 55)`,
         lifted.cardTop >= 25 && lifted.cardTop <= 60)
-      rec(id, 'card-on-keyboard', `form bottom ${lifted.formBottom} vs visible bottom ${lifted.innerH - (mode === 'visual' ? KB : 0)}`,
-        Math.abs(lifted.formBottom - (lifted.innerH - (mode === 'visual' ? KB : 0))) <= 3)
+      // The lift is bounded by TWO rules and the smaller one wins. On this
+      // viewport the header cap is the binding one, which is what the donor does:
+      // public/assets/target.jpeg lifts ~124 and lets the LOGIN button tuck behind
+      // the keyboard rather than clearing the whole card above it.
+      rec(id, 'title-not-covered', `form top ${lifted.formTop} vs scaled title-underline bottom ${lifted.barBottom} — the card may never rise above it`,
+        lifted.formTop >= lifted.barBottom - 0.5)
+      rec(id, 'lift-bounded', `form bottom ${lifted.formBottom} vs visible bottom ${lifted.innerH - (mode === 'visual' ? KB : 0)} — the card tucks under the keyboard, as the donor's does`,
+        lifted.formBottom >= lifted.innerH - (mode === 'visual' ? KB : 0) - 3)
 
       /* ---- the document must not be able to scroll the header away ---- */
       rec(id, 'no-scroll', `scrollY ${lifted.scrollY}, scrollHeight ${lifted.docH} vs innerHeight ${lifted.innerH}`,

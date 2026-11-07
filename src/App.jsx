@@ -35,14 +35,17 @@ function AnimatedRoutes() {
   const onTab = TABS.some((t) => path.startsWith(t))
 
   /*
-   * No `exit` for the tab pages. AnimatePresence runs in mode="wait", so an
-   * exiting element is awaited before the next one mounts; giving the tabs an
-   * empty exit makes removal immediate instead of stalling the incoming page for
-   * the length of a fade-out. A cross-fade (mode="sync") was the other option and
-   * is rejected: both pages carry .app-shell { min-height: 100dvh }, so for the
-   * overlap window the document is briefly 200dvh tall.
+   * No `exit` for the tab pages: giving them an empty exit makes removal immediate
+   * instead of stalling the incoming page for the length of a fade-out.
+   *
+   * The push gets its own shorter duration. Measured with mode="wait" the auth push
+   * was click -> 307ms of exit -> a ~58ms frame where the old page had unmounted and
+   * the new one was still parked at x:100% -> 43ms of enter, so ~410ms with a visible
+   * stall in the middle. That two-stage gap is the "stutter"; the donor's push reads
+   * as instant because both pages move at once.
    */
-  const variants = PUSH.has(path)
+  const isPush = PUSH.has(path)
+  const variants = isPush
     ? {
         initial: { x: '100%', opacity: 0.4 },
         animate: { x: 0, opacity: 1 },
@@ -55,13 +58,43 @@ function AnimatedRoutes() {
 
   return (
     <>
-      <AnimatePresence initial={false} mode="wait">
-        <motion.div
-          key={path}
-          {...variants}
-          transition={{ type: 'tween', duration: 0.26, ease: [0.22, 0.61, 0.36, 1] }}
-          className="app-shell"
-        >
+      {/*
+        grid + one shared cell, not a stack: the two route pages have to occupy the
+        SAME cell for mode="sync" to be safe. Without it the document briefly held
+        two .app-shell { min-height: 100dvh } boxes — measured 1562 CSS px tall at a
+        780 viewport, which is what made sync unacceptable before.
+
+        grid-cols-[minmax(0,1fr)] is load-bearing, not decoration. A bare `grid`
+        sizes its auto column to the item's min-content width, and the timetable
+        page's day strip is wider than the screen, so the column grew to 683.1 CSS
+        px and every full-width element on every Service page reported that width
+        (svcHeader/svcBand/svcTitle/svcDayStrip all Δ323 red). minmax(0,…) lets the
+        track shrink back to the container.
+
+        overflow-clip, NOT overflow-hidden: the incoming page starts at x:100%, which
+        overflows this box, and `hidden` makes it a scroll container — the browser
+        then scrolls it when the OTP field autofocuses (measured: the whole stack
+        shifted -214 CSS px mid-push). `clip` paints the same and is not scrollable.
+
+        sync, not wait. `wait` holds the incoming page until the outgoing one has
+        finished leaving, which measured as click -> 307ms exit -> a ~58ms frame with
+        nothing on screen -> enter: ~410ms with a visible stall in the middle. That
+        stall is the "stutter". The donor reads as instant because both pages move at
+        once. (popLayout was tried first and rejected: its layout projection animates
+        the exiting element's own position and fights the explicit x slide.)
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] overflow-clip">
+        <AnimatePresence initial={false} mode="sync">
+          <motion.div
+            key={path}
+            {...variants}
+            transition={{
+              type: 'tween',
+              duration: isPush ? 0.18 : 0.26,
+              ease: [0.22, 0.61, 0.36, 1],
+            }}
+            className="app-shell col-start-1 row-start-1"
+          >
           <Routes location={location}>
             <Route path="/" element={<Navigate to={signedIn ? '/home' : '/login'} replace />} />
             <Route path="/login" element={<Login />} />
@@ -74,8 +107,9 @@ function AnimatedRoutes() {
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </motion.div>
-      </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
+      </div>
       {onTab && <BottomNav />}
     </>
   )

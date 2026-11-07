@@ -105,6 +105,13 @@ body,
   height: 100%;
 }
 
+/* The route push uses AnimatePresence mode="popLayout", which takes the outgoing
+   page out of flow with position:absolute. Without a containing block that snapshot
+   resolves against the viewport and jumps if the page is scrolled. */
+#root {
+  position: relative;
+}
+
 body {
   margin: 0;
   background: var(--app);

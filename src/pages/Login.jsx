@@ -36,7 +36,14 @@ const rise = { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 } }
  * order in the video), so the form is the stiffer pair; the card lands and holds
  * in both directions, so only the header ever bounces.
  */
-const KB_SCALE = 0.65
+// Was 0.65 (from 18.25.56, the "open dial" in qa/HANDOFF.md §2). Three later
+// reads of the same state agree it is lower: target.jpeg measures the lifted card
+// 174 wide (174/273.5 = 0.636) and 100 tall (100/162.25 = 0.616), and
+// loginKeyboardActive.jpeg 103/162.25 = 0.635. 0.63 is the centre of that band;
+// at 0.65 the lifted card top sat 8.7 CSS px below the donor's.
+const KB_SCALE = 0.63
+// Air the donor leaves between the scaled underline and the lifted card.
+const HEADER_GAP = 6
 const HEADER_APPEAR = { type: 'spring', stiffness: 620, damping: 50 } // 2*sqrt(620) = 49.8
 const HEADER_DISMISS = { type: 'spring', stiffness: 700, damping: 28 } // ~5% of rest, ~0.29s
 const FORM_SPRING = { type: 'spring', stiffness: 760, damping: 55 } // 2*sqrt(760) = 55.1
@@ -52,14 +59,18 @@ const BAND_BACK = { duration: 0.22, ease: 'easeOut' }
  * the *screen*, not the top of the app.
  *
  * The harness viewport is 360x780 — the capture's full height including that
- * strip — and `env(safe-area-inset-top)` resolves to 0px headless. With the
- * band pinned at top-0 every element under it rendered 25 CSS px above its
- * reference, which is the single biggest error in the pixel diff. Flooring the
- * inset at 25px (the same convention ServiceHeader.jsx uses) puts page
- * coordinates and capture coordinates on the same origin and still honours a
- * real notch.
+ * strip — and `env(safe-area-inset-top)` resolves to 0px headless, so
+ * `measure.mjs` pins `--safe-top` to the capture device's 25px and page
+ * coordinates and capture coordinates share one origin.
+ *
+ * It must NOT be floored at 25px in the component. public/assets/mine.jpeg vs
+ * target.jpeg (same phone, keyboard up) is the proof: when the OS draws its own
+ * status strip instead of letting the app paint under it, `env()` is 0 and a
+ * `max(25px, env(...))` floor reserves a second status bar — the PROGRES card
+ * landed 19 CSS px lower than the donor's and the lifted form card then covered
+ * the title entirely. `var(--safe-top)` alone is correct in both cases.
  */
-const INSET = 'max(25px, env(safe-area-inset-top))'
+const INSET = 'var(--safe-top)'
 
 /**
  * Transcribed with scripts/qa/pxprobe.mjs from the a360 login set
@@ -95,44 +106,78 @@ export default function Login() {
   const { t } = useTranslation()
   const keyboard = useKeyboardInset()
   const formWrapRef = useRef(null)
-  const restBottomRef = useRef(0)
+  const headerRef = useRef(null)
+  // Everything below is the UNTRANSFORMED geometry, sampled only while the page is
+  // at rest, so a measurement can never be taken mid-lift and feed itself.
+  const restRef = useRef({ formTop: 0, formBottom: 0, headerTop: 0, headerBottom: 0 })
   const formY = useMotionValue(0)
 
-  const readRestBottom = () => {
+  const readRest = () => {
     const el = formWrapRef.current
-    if (el) restBottomRef.current = el.getBoundingClientRect().bottom
+    const hd = headerRef.current
+    if (!el || !hd) return
+    const r = el.getBoundingClientRect()
+    const h = hd.getBoundingClientRect()
+    const card = el.firstElementChild
+    // The wrapper starts 23 CSS px ABOVE the card, because the card's mt-[23px]
+    // lives inside it (that is what stops the margin collapsing out and moving the
+    // box the gate asserts). Capping against the wrapper's top would let the card
+    // rise 23 px too far and cover the title — which is the bug being fixed. The
+    // card's own top is its bottom minus its layout height, and offsetHeight is
+    // free of the mount rise, unlike a rect taken while the rise is still running.
+    const cardH = card ? card.offsetHeight : r.height
+    restRef.current = {
+      formTop: r.bottom - cardH,
+      formBottom: r.bottom,
+      headerTop: h.top,
+      headerBottom: h.bottom,
+    }
   }
 
   /**
    * The form card rises until its own bottom edge reaches the bottom of the
-   * VISIBLE area — the keyboard's top edge. That single rule reproduces both
-   * references: a360 -(293.5 - 171.5) = -122 (the capture's number) and the video
-   * device -(312 - 184) = -128 (measured, frame 28).
+   * VISIBLE area — the keyboard's top edge. That rule reproduces the still
+   * captures: a360 -(293.5 - 171.5) = -122 and the video device -(312 - 184) = -128.
    *
-   * The target is `keyboard.bottom`, not `innerHeight - keyboard.inset`, because
-   * the two keyboard resize modes put the visible bottom in different places: when
-   * the keyboard shrinks the layout viewport (an installed PWA on Android) the
-   * layout viewport IS the visible area and subtracting the inset would lift the
-   * card a keyboard-height too far.
+   * But it is a CEILING, not the target. public/assets/target.jpeg (donor, keyboard
+   * up) vs mine.jpeg (ours, same phone) shows why: the donor lifts only ~124 CSS px
+   * and lets the LOGIN button tuck behind the keyboard, leaving the title and its
+   * green underline visible in the 6 CSS px it keeps under the scaled header. The
+   * unbounded rule lifts ~172 on that device, which drags the card up OVER the
+   * title and hides it — the single most visible difference between the two.
+   *
+   * So the lift is clamped to the header's own scaled bottom edge: the card may not
+   * rise above where the shrunken header ends. Both bounds are measured from the DOM
+   * rather than assumed, so the rule holds at every viewport height and every
+   * keyboard height — on a short screen the keyboard bound wins, on a tall keyboard
+   * the header bound wins, which is exactly the donor's behaviour.
    *
    * Driven by a MotionValue, not state: the target depends on a DOM measurement, so
    * holding it in state means either reading a ref during render or writing state
    * synchronously in an effect — both are real cascading-render bugs and the lint
    * rules reject them. The measured element is the wrapper rather than the form
-   * because the wrapper never carries the mount rise, and the rest bottom is only
-   * sampled while formY is at 0, so the transform can never feed itself.
+   * because the wrapper never carries the mount rise.
    */
   useLayoutEffect(() => {
     const el = formWrapRef.current
     if (!el) return
     const { inset, bottom } = keyboard
     if (!inset) {
-      if (formY.get() === 0) readRestBottom()
-      else animate(formY, 0, { ...FORM_SPRING, onComplete: readRestBottom })
+      if (formY.get() === 0) readRest()
+      else animate(formY, 0, { ...FORM_SPRING, onComplete: readRest })
       return
     }
-    const rest = restBottomRef.current || el.getBoundingClientRect().bottom
-    animate(formY, Math.min(0, bottom - rest), FORM_SPRING)
+    if (!restRef.current.formBottom) readRest()
+    const { formTop, formBottom, headerTop, headerBottom } = restRef.current
+    // The header scales about its own top edge, so its lifted bottom is that top
+    // plus the scaled height — plus the air the donor keeps under it (target.jpeg
+    // measures the underline ending at 198.5 and the card starting at 204.5).
+    const ceiling = headerTop + (headerBottom - headerTop) * KB_SCALE + HEADER_GAP
+    animate(
+      formY,
+      Math.min(0, Math.max(bottom - formBottom, ceiling - formTop)),
+      FORM_SPRING,
+    )
   }, [keyboard, formY])
 
   const submit = (e) => {
@@ -181,6 +226,7 @@ export default function Login() {
           dark-mode `filter: invert()` on every frame — the other half of the jank.
         */}
         <motion.div
+          ref={headerRef}
           data-qa="header"
           initial={false}
           animate={{ scale: up ? KB_SCALE : 1 }}

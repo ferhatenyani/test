@@ -77,10 +77,18 @@ the keyboard-up state — the pixel probe was right. Trust the numbers, not the 
   while the form card is already home. **The bounce is on the way BACK only.**
 - Shipped as `{type:'spring', stiffness:420, damping:28}` (header, ~5% overshoot in
   ~0.28 s) and `{stiffness:480, damping:36}` (form, lands and holds).
-- **OPEN dial**: the capture says scale 0.65, the video says 0.586. Shipped 0.65 because
-  the gate is pinned to the captures. If the on-device eye check says the header shrinks
-  too little, `KB_SCALE` in `Login.jsx` is the single constant to revisit — do not
-  re-derive it from the video without also re-checking the captures.
+- **Dial RESOLVED 2026-11-06 → 0.63.** It had been left at 0.65 (from `18.25.56`) against the
+  video's 0.586. Two later on-device shots of the same state close it: `target.jpeg` measures
+  the lifted card **174 wide** (174/273.5 = 0.636) and **100 tall** (100/162.25 = 0.616), and
+  `loginKeyboardActive.jpeg` 103/162.25 = 0.635. At 0.65 the lifted card top sat 8.7 CSS px
+  below the donor's; at 0.63 it is 3.1 px off (207.6 vs 204.5) and the logo card top is 55.2
+  vs the capture's 55. `KB_SCALE` in `Login.jsx` is still the single constant — but it is no
+  longer an open question, and `check-login-keyboard.mjs` now pins it.
+- **Springs re-tuned same day.** The 420/28 + 480/36 pair below was ONE spring per element
+  serving both directions, which made the appear undershoot (measured 1 → 0.6317 → 0.65,
+  ~450 ms) — the exact wobble the video says belongs to the dismiss only. Now appear is
+  critically damped (620/50 header, 760/55 form) and only the dismiss bounces (700/28,
+  measured peak +5.2% of rest).
 
 ### Verification
 - `npm run lint` 0 errors / 6 pre-existing warnings; `npm run build` ✓ 391 ms.
@@ -98,18 +106,23 @@ the keyboard-up state — the pixel probe was right. Trust the numbers, not the 
 | element | keyboard DOWN `18.25.55` | keyboard UP `18.25.56` | behaviour |
 |---|---|---|---|
 | green band, curved bottom corners | `col 20`: bg→green **y24.5**, green→bg **y138** | `col 20`: `#f5f6f8` across all 200 CSS, **zero transitions** | **disappears entirely** |
-| PROGRES logo card | `col 190`: top **y72.5** → bottom **y235** (h **162.5**) | top **≈y57** → bottom **≈y163** (h **≈106**) | **scales to ≈0.65×** |
-| "بوابة الطالب" title ink | **15.5** tall | **≈10** tall | **scales to ≈0.65×** |
-| form card (white card with the 2 fields + LOGIN) | top **y330** | top **y208** | **translates −122 CSS, height UNCHANGED** |
+| PROGRES logo card | `col 190`: top **y72.5** → bottom **y235** (h **162.5**) | top **≈y57** → bottom **≈y163** (h **≈106**); target.jpeg 174 wide | **scales to ≈0.63×** |
+| "بوابة الطالب" title ink | **15.5** tall | **≈10** tall | **scales to ≈0.63×** |
+| form card (white card with the 2 fields + LOGIN) | top **y330** | top **y208** (target.jpeg **204.5**) | **translates −120 CSS, height UNCHANGED** |
 
-- The logo card and the title scale by the **same ratio (~0.65)**, which is what proves it is
+- The logo card and the title scale by the **same ratio (~0.63)**, which is what proves it is
   a **scale** and not a re-layout.
+- **The lift is capped, not unbounded.** `target.jpeg` vs `mine.jpeg` on the same phone: the
+  donor lifts ~120 and lets the LOGIN button tuck behind the keyboard, keeping the title and
+  its underline visible. Lifting the whole card clear of the keyboard (~172 on that device)
+  drags it up OVER the title and hides it. `Login.jsx` therefore takes the smaller of the
+  keyboard bound and `scaledHeaderBottom + HEADER_GAP`, both measured from the DOM.
 - **The bounce applies to the header block as ONE unit** — logo card + title + green underline
   together, as a single transform. **NOT character-by-character, NOT element-by-element.**
 - **The form card does NOT scale.** It only moves up to make room for the keyboard.
 - On keyboard dismiss, **everything returns to place** (reverse).
-- Bounce character is now measured — see "Bounce character" above. Do not re-derive it
-  from the video without also re-checking the captures (they disagree on scale: 0.65 vs 0.586).
+- Bounce character is now measured — see "Bounce character" above. The scale disagreement
+  (0.65 stills / 0.586 video) is CLOSED at 0.63 — see the dial entry above.
 
 ### Verification, revisited (2026-11-06) — the lift IS now automated
 Headless Chromium has **no on-screen keyboard**, so the harness cannot reach this state
@@ -133,6 +146,26 @@ Two modes are driven because real devices disagree and the old hook only underst
 
 Consequence that still stands: scenarios **03 / 05 / 09 stay at ~24–25%** in pixdiff — a static
 render cannot enter the lifted state. That is expected, not a regression.
+
+### 2026-11-06 on-device pass — three things the harness could not see
+1. **`Login.jsx` INSET is no longer floored.** It was `max(25px, env(safe-area-inset-top))`.
+   When the OS draws its own status strip (so the app does NOT paint under it), `env()` is 0
+   and the 25 floor reserves a second status bar: `mine.jpeg` put the PROGRES card 19 CSS px
+   lower than `target.jpeg` on the same phone. Now `var(--safe-top)`, which `measure.mjs` pins
+   to 25 for a360 — so every login spec still passes untouched. **`ServiceHeader.jsx` and
+   `Verify.jsx` still carry the same kind of floor and are the next candidates.**
+2. **The route push overlaps now.** `mode="wait"` measured click → 307 ms exit → a ~58 ms
+   frame with nothing mounted → enter, i.e. ~410 ms with a stall; that stall was the reported
+   "stutter". `mode="sync"` plus both pages in one grid cell (`grid-cols-[minmax(0,1fr)]
+   overflow-clip`) gives a single continuous 180 ms overlap, max document height 791 instead
+   of 1562. Three traps in that one line, each measured the hard way: a bare `grid` sizes its
+   column to min-content and blew every Service width to 683.1; `overflow-hidden` makes the
+   box a scroll container that the OTP autofocus then scrolls (-214 px mid-push); and
+   `popLayout`'s layout projection fights an explicit `x` slide (overshoot to -269).
+3. **Home's top floor dropped 24 → 8** and **Cards' stage moved below the safe area**
+   (`max(8px, --safe-top) + 16`). Both are harness-invisible by construction: the pinned a394
+   inset of 47 and a360 inset of 25 are larger than either floor, so the gate is unchanged at
+   4121/1 while the device changes by 16 and 20 CSS px.
 
 ## 3. NON-NEGOTIABLE RULES
 
