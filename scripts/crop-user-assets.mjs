@@ -115,41 +115,51 @@ async function compareLogoSources() {
 }
 
 /**
- * The OS cold-start splash.
+ * The OS cold-start splash marks.
  *
  * Chrome composites the PWA launch splash from the manifest `background_color`
- * plus the LARGEST `purpose:"any"` icon — there is no splash-image field in the
- * Web App Manifest. That icon was the WEBETU roundel, so the disc appeared in the
- * middle of the loading screen even though the in-app #boot-splash layer already
- * paints the PROGRES wordmark (that layer only appears AFTER the OS one).
+ * plus a `purpose:"any"` icon — the Web App Manifest has no splash-image field.
+ * The in-app #boot-splash already paints the PROGRES wordmark, but it only appears
+ * AFTER the OS layer, so it can never change the mark in the middle of that first
+ * screen.
  *
- * So the 512 "any" slot carries the ministry wordmark on the measured #e0e0e0
- * field, and the WEBETU roundel keeps the launcher through `maskable-512`,
- * `apple-touch-icon` and `icon-192`.
+ * First attempt pointed only the 512 "any" slot at the wordmark and left
+ * `icon-192.png` (the WEBETU roundel) in the other "any" slot. A full uninstall +
+ * reinstall still showed the roundel: Android asks for a splash icon in the
+ * ~192-256px range, so the 192 entry is what it resolved and the 512 change was a
+ * no-op. So EVERY "any" slot now carries the wordmark, at both sizes.
  *
- * Width 360 of the 512 canvas: the wordmark is 2.376:1, so it stands 152 tall,
- * and at that height the inscribed circle of the maskable cut still spans 489 —
- * the mark survives being masked to a circle, which a full-bleed wordmark would not.
+ * The roundel keeps the HOME SCREEN through `maskable-512.png` (which Android
+ * adaptive icons prefer) and `apple-touch-icon.png` (which iOS uses) — neither is
+ * an "any" icon, so neither can be picked for the splash. That separation is the
+ * whole trick, and it is platform behaviour I cannot verify from a headless
+ * harness: if the launcher ever shows the wordmark, swap these two slots back.
+ *
+ * The mark is capped at 70.3% of each canvas so a maskable cut's inscribed circle
+ * still contains it: at 360 wide on 512 the wordmark stands 152 tall, and the
+ * circle at that height spans 489.
  */
-const SPLASH_ICON = 512
-const SPLASH_MARK_W = 360
+const SPLASH_SIZES = [512, 192]
+const SPLASH_MARK_RATIO = 0.703
 
 async function buildSplashIcon() {
-  const mark = await sharp(path.join(DIR, 'splash-logo.png'))
-    .resize({ width: SPLASH_MARK_W })
-    .png()
-    .toBuffer()
-  const m = await sharp(mark).metadata()
-  const out = path.join(ROOT, 'public/icons/splash-512.png')
-  await sharp({ create: { width: SPLASH_ICON, height: SPLASH_ICON, channels: 4, background: '#e0e0e0' } })
-    .composite([{ input: mark, gravity: 'centre' }])
-    .flatten({ background: '#e0e0e0' })
-    .png({ compressionLevel: 9 })
-    .toFile(out)
-  console.log(
-    `\nsplash-512.png ${SPLASH_ICON}x${SPLASH_ICON} on #e0e0e0 with the wordmark ${m.width}x${m.height} centred ` +
-      `(${(fs.statSync(out).size / 1024).toFixed(0)}KB) — manifest 512 "any", i.e. what the OS splash shows`,
-  )
+  for (const size of SPLASH_SIZES) {
+    const mark = await sharp(path.join(DIR, 'splash-logo.png'))
+      .resize({ width: Math.round(size * SPLASH_MARK_RATIO) })
+      .png()
+      .toBuffer()
+    const m = await sharp(mark).metadata()
+    const out = path.join(ROOT, `public/icons/splash-${size}.png`)
+    await sharp({ create: { width: size, height: size, channels: 4, background: '#e0e0e0' } })
+      .composite([{ input: mark, gravity: 'centre' }])
+      .flatten({ background: '#e0e0e0' })
+      .png({ compressionLevel: 9 })
+      .toFile(out)
+    console.log(
+      `splash-${size}.png ${size}x${size} on #e0e0e0, wordmark ${m.width}x${m.height} centred ` +
+        `(${(fs.statSync(out).size / 1024).toFixed(0)}KB) — manifest "any" ${size}, what the OS splash can resolve to`,
+    )
+  }
 }
 
 async function main() {
