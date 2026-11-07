@@ -114,11 +114,50 @@ async function compareLogoSources() {
   console.log('reference: bg #e0e0e0, logo cx 180/360, cy 365/780 (46.8% of height)')
 }
 
+/**
+ * The OS cold-start splash.
+ *
+ * Chrome composites the PWA launch splash from the manifest `background_color`
+ * plus the LARGEST `purpose:"any"` icon — there is no splash-image field in the
+ * Web App Manifest. That icon was the WEBETU roundel, so the disc appeared in the
+ * middle of the loading screen even though the in-app #boot-splash layer already
+ * paints the PROGRES wordmark (that layer only appears AFTER the OS one).
+ *
+ * So the 512 "any" slot carries the ministry wordmark on the measured #e0e0e0
+ * field, and the WEBETU roundel keeps the launcher through `maskable-512`,
+ * `apple-touch-icon` and `icon-192`.
+ *
+ * Width 360 of the 512 canvas: the wordmark is 2.376:1, so it stands 152 tall,
+ * and at that height the inscribed circle of the maskable cut still spans 489 —
+ * the mark survives being masked to a circle, which a full-bleed wordmark would not.
+ */
+const SPLASH_ICON = 512
+const SPLASH_MARK_W = 360
+
+async function buildSplashIcon() {
+  const mark = await sharp(path.join(DIR, 'splash-logo.png'))
+    .resize({ width: SPLASH_MARK_W })
+    .png()
+    .toBuffer()
+  const m = await sharp(mark).metadata()
+  const out = path.join(ROOT, 'public/icons/splash-512.png')
+  await sharp({ create: { width: SPLASH_ICON, height: SPLASH_ICON, channels: 4, background: '#e0e0e0' } })
+    .composite([{ input: mark, gravity: 'centre' }])
+    .flatten({ background: '#e0e0e0' })
+    .png({ compressionLevel: 9 })
+    .toFile(out)
+  console.log(
+    `\nsplash-512.png ${SPLASH_ICON}x${SPLASH_ICON} on #e0e0e0 with the wordmark ${m.width}x${m.height} centred ` +
+      `(${(fs.statSync(out).size / 1024).toFixed(0)}KB) — manifest 512 "any", i.e. what the OS splash shows`,
+  )
+}
+
 async function main() {
   await buildCard('etudiant.jpeg', 'card-recto.jpg')
   await buildCard('resident.jpeg', 'card-verso.jpg')
   await buildAvatar()
   await compareLogoSources()
+  await buildSplashIcon()
 }
 
 main().catch((e) => {
