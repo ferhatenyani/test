@@ -20,11 +20,37 @@ import path from 'node:path'
 const ROOT = path.resolve(import.meta.dirname, '..')
 const DIR = path.join(ROOT, 'public/assets')
 
-const ROTATE = 90
-/** Landscape ID-1 card ratio both faces are normalised to. */
-const CARD_ASPECT = 1.585
-/** ~4x the ~310 CSS px the card renders at, so hi-DPI phones stay sharp. */
-const CARD_W = 1200
+/*
+ * Card orientation and size.
+ *
+ * The two card photos arrive as PORTRAIT frames whose printed content lies
+ * sideways. Rotating 90° CW stands that content up — which is what this script
+ * used to ship, as a landscape card — but it does NOT match the donor.
+ * old/webetu/public/cards/recto.png is 429x691, i.e. a PORTRAIT canvas with the
+ * same sideways content as the raw photo. So the upright-then-rotate-left the
+ * user asked for lands back on the raw orientation, and ROTATE = 0 is the
+ * faithful result: rotate(90) then rotate(-90) is the identity, and the donor's
+ * own artwork proves that orientation is the intended one.
+ *
+ * Size is taken from the donor and applied to BOTH faces, which their own files
+ * are not: recto.png is 429x691 (aspect 0.6208) and verso.png 593x948 (0.6255).
+ * The recto is the canonical one — it is the ratio the webetu2 placeholder
+ * already carried as aspect-[429/691] — so both faces are emitted at exactly
+ * 2x it, 858x1382, identical to each other.
+ */
+const ROTATE_CARD = 0
+const CARD_ASPECT = 429 / 691
+/** 2x the donor's recto.png, so hi-DPI phones stay sharp. */
+const CARD_W = 858
+const CARD_H = 1382
+
+/**
+ * The portrait is a different case from the cards: pic.jpeg is a sideways head
+ * shot with no card frame to inherit, and rotate(90) CW is the only turn that
+ * stands the face up (checked against rotate(270), which leaves it on its side).
+ * It must NOT share the cards' constant — the two sources want opposite turns.
+ */
+const ROTATE_PORTRAIT = 90
 
 async function sizeOf(buf) {
   const m = await sharp(buf).metadata()
@@ -32,25 +58,25 @@ async function sizeOf(buf) {
 }
 
 async function buildCard(file, outName) {
-  const rotated = await sharp(path.join(DIR, file)).rotate(ROTATE).toBuffer()
-  const rInfo = (await sharp(rotated).metadata())
-  const trimmedBuf = await sharp(rotated).trim({ threshold: 12 }).toBuffer()
-  const tInfo = await sharp(trimmedBuf).metadata()
-  const wasted = 1 - (tInfo.width * tInfo.height) / (rInfo.width * rInfo.height)
+  const rotated = await sharp(path.join(DIR, file)).rotate(ROTATE_CARD).toBuffer()
+  const rInfo = await sharp(rotated).metadata()
   const out = path.join(DIR, outName)
-  await sharp(trimmedBuf)
-    .resize({ width: CARD_W, height: Math.round(CARD_W / CARD_ASPECT), fit: 'cover' })
+  // `cover` on a centre crop: the photos are 0.644/0.653 against the target
+  // 0.6208, so ~4% of the width is trimmed evenly. The crop is checked by eye
+  // against the donor's recto.png after this runs, not assumed.
+  await sharp(rotated)
+    .resize({ width: CARD_W, height: CARD_H, fit: 'cover', position: 'centre' })
     .jpeg({ quality: 82, mozjpeg: true })
     .toFile(out)
   const kb = (fs.statSync(out).size / 1024).toFixed(0)
   console.log(
-    `${file}  rotated ${rInfo.width}x${rInfo.height} → trim ${tInfo.width}x${tInfo.height} ` +
-      `(${(wasted * 100).toFixed(1)}% was background) → ${outName} ${CARD_W}x${Math.round(CARD_W / CARD_ASPECT)} ${kb}KB`,
+    `${file}  source ${rInfo.width}x${rInfo.height} (aspect ${(rInfo.width / rInfo.height).toFixed(4)}) ` +
+      `→ ${outName} ${CARD_W}x${CARD_H} (aspect ${(CARD_W / CARD_H).toFixed(4)}) ${kb}KB`,
   )
 }
 
 async function buildAvatar() {
-  const rotated = await sharp(path.join(DIR, 'pic.jpeg')).rotate(ROTATE).toBuffer()
+  const rotated = await sharp(path.join(DIR, 'pic.jpeg')).rotate(ROTATE_PORTRAIT).toBuffer()
   const { width, height } = await sharp(rotated).metadata()
   // A portrait ID photo puts the head in the upper half; a square crop anchored at
   // 42% of the surplus height keeps the face centred in a 48 CSS px circle without
